@@ -1,0 +1,33 @@
+body{
+    background-color: white !important;
+}
+header{
+    background-color: #414190;
+    .site-header-main{
+        .site-branding{
+            a{
+                img{
+
+                }
+            }
+        }
+        button.menu-toggle{
+            color: white;
+            &:hover, &:focus {
+                background-color: transparent;
+                border-color: white;
+                outline: 0;
+            }
+        }
+        .site-header-menu{
+            ul.primary-menu{
+                li{
+                    a{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
