@@ -1,0 +1,11 @@
+/*
+Theme Name: Aviation Theme
+Theme URI: http: //mysite.com/
+Description: This is a custom child theme of twentysixteen.
+Author: Terrificminds
+Author URI: http://terrificminds.com/
+Template: twentysixteen
+Version: 0.1
+*/
+
+@import url("../twentysixteen/style.css");
