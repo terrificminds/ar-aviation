@@ -1,16 +1,24 @@
 @import "alvfonts";
 body {
     background-color: white !important; //TODO : Remove to avoid conflit
+    .site {
+        margin: 0;
+    }
     .site-inner {
         max-width: none;
     }
+    &::before {
+        display: none !important;
+    }
 }
 
-header {
+header.site-header {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
     background-color: #414190;
+    max-width: 1290px;
+    margin: 0 auto;
     .site-header-main {
-        max-width: 1290px;
-        margin: 0 auto;
         .site-branding {
             a {
                 img {}
@@ -34,6 +42,7 @@ header {
             }
         }
         .site-header-menu {
+            margin: 0;
             ul.primary-menu {
                 li {
                     a {
@@ -77,5 +86,32 @@ header {
                 }
             }
         }
+    }
+    &.fixed {
+        position: fixed;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: none;
+        width: 100%;
+        animation: smoothScroll 1s forwards;
+        z-index: 99999;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        .site-header-main {
+            max-width: 1290px;
+            margin: 0 auto;
+            padding:0 4.5455%;
+        }
+    }
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

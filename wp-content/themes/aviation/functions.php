@@ -116,12 +116,16 @@ function aviation_custom_scripts() {
 add_action( 'admin_enqueue_scripts', 'aviation_custom_scripts');
 
 function add_theme_scripts() {
-
     wp_enqueue_style( 'style',
        get_stylesheet_directory_uri() . '/css/custom.css',
       array(),
        '1.1', 
        'all'
+    );
+    wp_enqueue_script(
+        'custom-script',
+        get_stylesheet_directory_uri() . '/js/custom.js',
+        array( 'jquery' )
     );
 }
 
