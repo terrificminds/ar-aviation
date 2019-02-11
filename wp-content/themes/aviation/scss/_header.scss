@@ -1,30 +1,78 @@
-body{
-    background-color: white !important;
+@import "alvfonts";
+body {
+    background-color: white !important; //TODO : Remove to avoid conflit
+    .site-inner {
+        max-width: none;
+    }
 }
-header{
-    background-color: #414190;
-    .site-header-main{
-        .site-branding{
-            a{
-                img{
 
-                }
+header {
+    background-color: #414190;
+    .site-header-main {
+        max-width: 1290px;
+        margin: 0 auto;
+        .site-branding {
+            a {
+                img {}
             }
         }
-        button.menu-toggle{
-            color: white;
-            &:hover, &:focus {
+        button.menu-toggle {
+            color: transparent;
+            background: url(../images/menu.png) no-repeat center;
+            border: none;
+            width: 34px;
+            &:hover,
+            &:focus {
                 background-color: transparent;
                 border-color: white;
                 outline: 0;
             }
+            &.toggled-on {
+                background: url(../images/close.png) no-repeat center;
+                color: transparent;
+                border: none;
+            }
         }
-        .site-header-menu{
-            ul.primary-menu{
-                li{
-                    a{
+        .site-header-menu {
+            ul.primary-menu {
+                li {
+                    a {
                         color: white;
-                        font-weight: bold;
+                        font-family: SourceSans-Semib;
+                        font-size: 18px;
+                        text-decoration: none;
+                        outline: none;
+                        @media all and (min-width: 910px) and (max-width: 1082px) {
+                            padding: 0.65625em 9px;
+                            font-size: 16px;
+                        }
+                        @media all and (max-width: 910px) {
+                            text-align: right;
+                        }
+                        @media all and (min-width: 910px) {
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 0;
+                                height: 2px;
+                                margin-top: 3px;
+                                background: #fff;
+                                transition: width .3s;
+                            }
+                            &:hover::after {
+                                width: 100%; //transition: width .3s;
+                            }
+                        }
+                    }
+                    &.current-menu-item {
+                        @media all and (min-width: 910px) {
+                            a {
+                                &::after {
+                                    width: auto;
+                                    transition: none;
+                                }
+                            }
+                        }
                     }
                 }
             }
