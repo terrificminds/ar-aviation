@@ -24,6 +24,11 @@
             // $description = the_content();
             // $summary = the_excerpt();
             $logoUrl = get_post_meta(get_the_ID(), 'partnerlogo', TRUE);
+            $websiteLink = get_post_meta(get_the_ID(), 'partner-website', TRUE);
+            $modalImage = get_post_meta(get_the_ID(), 'partner-modal-image', TRUE);
+            $modalLogo = get_post_meta(get_the_ID(), 'partner-modal-logo', TRUE);
+            if(!isset($modalLogo) || empty($modalLogo))
+            $modalLogo = $logoUrl;
             $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );    
         ?>
         <div class = "partner-slider">
@@ -45,7 +50,20 @@
                 <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
             </div>
             <div class = "partner-1-modal">
-                <?php the_content();?>
+                <div class = "partner-modal-left">
+                    <div class = "partner-logo">
+                    <img src="<?php echo $modalLogo;?>">
+                    </div>
+                    <div class = "partner-body">
+                        <?php the_content();?>
+                    <div>
+                    <a href = "<?php echo $websiteLink?>">
+                        <button type="button"> Visit Website </button>
+                    </a>
+                </div>
+                <div class = "partner-modal-right">
+                    <img src="<?php echo $modalImage;?>">  
+                </div>    
             </div>
         </div>
         <?php    }
