@@ -22,7 +22,8 @@ get_header(); ?>
 
         <?php 
         
-        get_template_part( 'template-parts/content', 'partners' );
+		get_template_part( 'template-parts/content', 'partners' );
+		get_template_part( 'template-parts/content', 'news' );
         if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

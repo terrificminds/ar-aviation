@@ -131,4 +131,5 @@ function add_theme_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 include_once( get_stylesheet_directory() .'/includes/footer-section.php');
+include_once( get_stylesheet_directory() .'/includes/news.php');
 ?>
