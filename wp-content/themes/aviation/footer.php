@@ -34,7 +34,7 @@
 					<div class = "footer-column-3">
 						<div class = "title">ADDRESS</div>	
 						<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
-						<div class = "tel"><span>Tele:</span><?php echo get_theme_mod('telephone-block') ;?></div>				
+						<div class = "tel"><span>Tel:</span><?php echo get_theme_mod('telephone-block') ;?></div>				
 					</div>
 				</div>
 				<div class = "footer-bottom">
@@ -42,8 +42,8 @@
 						<div class = "copyright"><?php echo get_theme_mod('website-copyright') ;?></div>
 					</div>
 					<div class = "footer-column-2">
-						<div class = "footerlinks">
-							<a href="<?php echo get_page_link(get_theme_mod('website-terms'))?>">Terms and Conditions</a>
+						<div class = "footer-links">
+							<a href="<?php echo get_page_link(get_theme_mod('website-terms'))?>">Terms and Conditions</a> |
 							<a href="<?php echo get_page_link(get_theme_mod('website-policy'))?>">Privacy Policy</a>
 						</div>
 					</div>	
