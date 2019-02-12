@@ -1,4 +1,6 @@
 .partners-wrapper {
+  clear: both;
+  overflow: hidden;
   .partner-1-background, .partner-2-background {
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,14 +11,26 @@
     h2, .partner-slider, .partner-2-content {
       max-width: 1290px;
       margin: 0 auto;
+      @media all and (max-width: 1330px) {
+        padding: 0 20px;
+      }
     }
   }
   .partner-1-background {
     background-image: url('../images/partners-section-bg.jpg');
+    padding-bottom: 80px;
     h2 {
       color: #fff;
       font-size: 24px;
-      padding-bottom: 30px;
+      padding-bottom: 40px;
+      &:after {
+        display: block;
+        content: "";
+        width: 200px;
+        border-bottom: solid 6px white;
+        border-radius: 20px;
+        margin-top: 5px;
+      }
     }
     .partner-slider {
       background-color: #0000008a;
@@ -24,23 +38,81 @@
       width: 100%;
       overflow: hidden;
       padding: 30px;
+      @media all and (max-width: 991px) {
+        width: 90%;
+      }
+      /*Style for Slider*/
+      #partner-home {
+        &.slider {
+            width: 100%;
+            margin: 0 auto;
+        }
+        // .slick-slide {
+        //   margin: 0px 30px;
+        // }
+        // .slick-slide img {
+        //   width: 100%;
+        // }
+        .slick-prev:before,
+        .slick-next:before {
+          color: black;
+          background-color: #e0e0e0;
+          font-size: 40px;
+        }
+        .slick-slide {
+          transition: all ease-in-out .3s;
+          opacity: .2;
+        }
+        .slick-active {
+          opacity: .5;
+        }
+        .slick-current {
+          opacity: 1;
+        }
+      }
+
+      /*Style for Slider*/
       .partner-1-left {
         width: 50%;
         float: left;
+        @media all and (max-width: 991px) {
+          width: 100%;
+        }
         .partner-1-left-content {
           .partner-1-logo {
             padding: 20px 0;
+            @media all and (max-width: 991px) {
+              img {
+                margin: 0 auto;
+              }
+            }
           }
           .partner-1-title {
             color: #fff;
             font-size: 18px;
             padding-bottom: 15px;
           }
+          .partner-image-mob {
+            display: none;
+            @media all and (max-width: 991px) {
+              display: block;
+              img {
+                margin: 20px auto;
+              }
+            }
+          }
           .partner-1-excerpt{
             color: #fff;
             font-size: 14px;
           }
           .read-more {
+            position: relative;
+            width: 155px;
+            @media all and (max-width: 991px) {
+              width: 160px;
+              margin: 0 auto;
+              text-align: left;
+            }
             a {
               color: #fff;
               font-size: 16px;
@@ -48,14 +120,30 @@
                 text-decoration: none;
                 color: #fff;
               }
+              &:after {
+                display: block;
+                position: absolute;
+                content: "";
+                width: 60px;
+                height: 2px;
+                right: 0;
+                background-color: #ffffff;
+                top: 15px;
+              }
             }
           }
         }
       }
       .partner-1-right {
-        width: 50%;
+        width: 48%;
         float: left;
         text-align: center;
+        @media all and (max-width: 991px) {
+          display: none;
+        }
+         img {
+           margin: 0 auto;
+         }
       }
       .partner-1-modal {
         border: 1px solid red;
@@ -67,27 +155,55 @@
   }
   .partner-2-background {
     background-image: url('../images/partners-bg-spicejet.jpg');
+    padding-top: 80px;
+    padding-bottom: 80px;
     .partner-2-content {
       .partner-2-left{
         width: 50%;
         float: left;
+        @media all and (max-width: 1200px) {
+          width: 100%;
+        }
         .partner-2-logo {
           padding: 30px 0 20px;
         }
         h2 {
           color: #fff;
           font-size: 24px;
-          padding-bottom: 30px;
+          padding: 0 0 30px;
         }
         .partner-2-body {
           color: #fff;
           font-size: 14px;
+          padding-right: 10px;
+          @media all and (max-width: 1200px) {
+            padding-right: 0;
+          }
+          img {
+            display: none;
+            @media all and (max-width: 1200px) {
+              display: block;
+              float: right;
+              width: 40%;
+              margin-left: 20px;
+              margin-bottom: 20px;
+            }
+            @media all and (max-width: 480px) {
+              float: none;
+              margin-left: 0;
+              margin-right: 0;
+              width: auto;
+            }
+          }
         }
       }
       .partner-2-right {
         width: 50%;
         float: left;
         text-align: right;
+        @media all and (max-width: 1200px) {
+          display: none;
+        }
       }
     }
   }

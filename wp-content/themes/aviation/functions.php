@@ -44,7 +44,7 @@ add_action( 'init', 'aviation_post_partners' );
 function aviation_taxonomies_partners() {
 
     //labels array
-    
+
     $labels = array(
     'name' => _x( 'Partner Categories', 'taxonomy general name' ),
     'singular_name' => _x( 'Partner Category', 'taxonomy singular name' ),
@@ -58,14 +58,14 @@ function aviation_taxonomies_partners() {
     'new_item_name' => __( 'New Partner Category' ),
     'menu_name' => __( ' Partner Categories' ),
     );
-    
+
     //args array
-    
+
     $args = array(
     'labels' => $labels,
     'hierarchical' => true,
     );
-    
+
     register_taxonomy( 'partner_category', 'partner', $args );
 }
 
@@ -152,7 +152,7 @@ function aviation_partner_website_meta_box(){
     <?php
 }
 
-function save_aviation_fields_meta( $post_id ) {   
+function save_aviation_fields_meta( $post_id ) {
     global $post;
     update_post_meta($post->ID, "partnerlogo", $_POST["partnerlogo"]);
     update_post_meta($post->ID, "partner-modal-image", $_POST["partner-modal-image"]);
@@ -166,25 +166,49 @@ add_action( 'save_post', 'save_aviation_fields_meta' );
  * Register and enqueue a custom script in the WordPress admin.
  */
 function aviation_custom_scripts() {
+
     wp_enqueue_script(
         'custom-script',
         get_stylesheet_directory_uri() . '/js/custom.js',
         array( 'jquery' )
     );
+
 }
- 
+
 add_action( 'admin_enqueue_scripts', 'aviation_custom_scripts');
 
 function add_theme_scripts() {
-    wp_enqueue_style( 'style',
+    wp_enqueue_style( 'custom',
        get_stylesheet_directory_uri() . '/css/custom.css',
       array(),
-       '1.1', 
+       '1.1',
+       'all'
+    );
+    wp_enqueue_style( 'slick',
+       get_stylesheet_directory_uri() . '/css/slick.css',
+      array(),
+       '1.1',
+       'all'
+    );
+    wp_enqueue_style( 'slick-theme',
+       get_stylesheet_directory_uri() . '/css/slick-theme.css',
+      array(),
+       '1.1',
        'all'
     );
     wp_enqueue_script(
         'custom-script',
         get_stylesheet_directory_uri() . '/js/custom.js',
+        array( 'jquery' )
+    );
+    wp_enqueue_script(
+        'my-script',
+        get_stylesheet_directory_uri() . '/js/my-script.js',
+        array( 'jquery' )
+    );
+    wp_enqueue_script(
+        'slick-script',
+        get_stylesheet_directory_uri() . '/js/slick.js',
         array( 'jquery' )
     );
 }
