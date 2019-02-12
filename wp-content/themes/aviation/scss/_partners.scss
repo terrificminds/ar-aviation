@@ -1,0 +1,94 @@
+.partners-wrapper {
+  .partner-1-background, .partner-2-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    float: left;
+    padding: 50px 0;
+    h2, .partner-slider, .partner-2-content {
+      max-width: 1290px;
+      margin: 0 auto;
+    }
+  }
+  .partner-1-background {
+    background-image: url('../images/partners-section-bg.jpg');
+    h2 {
+      color: #fff;
+      font-size: 24px;
+      padding-bottom: 30px;
+    }
+    .partner-slider {
+      background-color: #0000008a;
+      clear: both;
+      width: 100%;
+      overflow: hidden;
+      padding: 30px;
+      .partner-1-left {
+        width: 50%;
+        float: left;
+        .partner-1-left-content {
+          .partner-1-logo {
+            padding: 20px 0;
+          }
+          .partner-1-title {
+            color: #fff;
+            font-size: 18px;
+            padding-bottom: 15px;
+          }
+          .partner-1-excerpt{
+            color: #fff;
+            font-size: 14px;
+          }
+          .read-more {
+            a {
+              color: #fff;
+              font-size: 16px;
+              &:hover {
+                text-decoration: none;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .partner-1-right {
+        width: 50%;
+        float: left;
+        text-align: center;
+      }
+      .partner-1-modal {
+        border: 1px solid red;
+        clear: both;
+        width: 100%;
+        display: none;
+      }
+    }
+  }
+  .partner-2-background {
+    background-image: url('../images/partners-bg-spicejet.jpg');
+    .partner-2-content {
+      .partner-2-left{
+        width: 50%;
+        float: left;
+        .partner-2-logo {
+          padding: 30px 0 20px;
+        }
+        h2 {
+          color: #fff;
+          font-size: 24px;
+          padding-bottom: 30px;
+        }
+        .partner-2-body {
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+      .partner-2-right {
+        width: 50%;
+        float: left;
+        text-align: right;
+      }
+    }
+  }
+}
