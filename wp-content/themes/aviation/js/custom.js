@@ -31,4 +31,17 @@ jQuery(document).ready(function ($) {
       // Opens the media library frame.
       meta_image_frame.open();
     });
+
+    //Sticky Header
+    $(window).scroll(function() {
+      var sticky = $('.site-header'),
+        scroll = $(window).scrollTop();
+       
+      if (scroll >= 120) { 
+        sticky.addClass('fixed'); }
+      else { 
+       sticky.removeClass('fixed');
+    
+    }
+    });
   });
