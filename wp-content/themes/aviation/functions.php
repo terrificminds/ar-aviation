@@ -29,7 +29,8 @@ function aviation_post_partners() {
     'description' => 'Displays partner details',
     'public' => true,
     'menu_position' => 4,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'menu_icon' => 'dashicons-groups',
+    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt'),
     'has_archive' => true,
     );
 
@@ -126,4 +127,5 @@ function add_theme_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+include_once( get_stylesheet_directory() .'/includes/services.php');
 ?>
