@@ -49,6 +49,7 @@
         &.slider {
             width: 100%;
             margin: 0 auto;
+            z-index: 1050;
         }
         // .slick-slide {
         //   margin: 0px 30px;
@@ -130,8 +131,10 @@
               margin: 0 auto;
               text-align: left;
             }
-            a {
+            a.btn {
               color: #fff;
+              padding: 0;
+              line-height: 1.7;
               font-size: 16px;
               &:hover {
                 text-decoration: none;
