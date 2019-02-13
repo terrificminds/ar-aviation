@@ -21,7 +21,7 @@ get_header(); ?>
  
 
         <?php 
-        
+        get_template_part( 'template-parts/content', 'services' );
 		get_template_part( 'template-parts/content', 'partners' );
 		get_template_part( 'template-parts/content', 'news' );
         if ( have_posts() ) : ?>

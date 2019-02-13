@@ -1,5 +1,23 @@
 @import "header";
-
-
-
+@import 'partners';
 @import "footer";
+
+body:not(.custom-background-image):before, body:not(.custom-background-image):after {
+  height: 0px !important;
+}
+
+#page {
+  margin: 0;
+  .site-inner {
+    max-width: 100%;
+  }
+}
+#content {
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  border: solid red;
+  .content-area {
+    width: 100%;
+  }
+}
