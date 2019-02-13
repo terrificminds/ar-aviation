@@ -1,16 +1,4 @@
 @import "alvfonts";
-body {
-    background-color: white !important; //TODO : Remove to avoid conflit
-    .site {
-        margin: 0;
-    }
-    .site-inner {
-        max-width: none;
-    }
-    &::before {
-        display: none !important;
-    }
-}
 
 header.site-header {
     padding-top: 20px !important;
