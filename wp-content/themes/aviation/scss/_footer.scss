@@ -1,0 +1,141 @@
+$footer-font-size:18px;
+$footer-font-size-resp:16px;
+footer {
+    background-color: #001658;
+    padding: 80px 0 !important;
+    @media all and (max-width: 800px) {
+        padding: 40px 0 !important;
+    }
+    .footer-container {
+        max-width: 1290px;
+        margin: 0 auto;
+        width: 100%;
+        @media all and (max-width: 1290px) {
+            padding: 0 15px;
+        }
+        p,
+        a,
+        div {
+            color: white;
+        }
+        a {
+            cursor: pointer;
+        }
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            @media all and (max-width: 800px) {
+                display: block;
+            }
+            .title {
+                font-family: SourceSans-Bd;
+                font-size: $footer-font-size;
+                margin-bottom: 15px;
+                @media all and (max-width: 500px) {
+                    font-size: $footer-font-size-resp;
+                }
+            }
+            .footer-column {
+                &-1 {
+                    flex-basis: 40%;
+                    img {
+                        margin-bottom: 30px;
+                    }
+                    p {
+                        max-width: 260px;
+                        font-family: SourceSans-Semib;
+                        font-size: 16px;
+                        line-height: 21px;
+                        margin-bottom: 0;
+                        @media all and (max-width: 500px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-2 {
+                    flex-basis: 30%;
+                    nav.footer-navigation {
+                        ul.footer-menu {
+                            list-style: none;
+                            margin: 0;
+                            li {
+                                margin-bottom: 15px;
+                                line-height: normal;
+                                a {
+                                    font-family: SourceSans-Semib;
+                                    font-size: $footer-font-size;
+                                    text-transform: capitalize;
+                                    @media all and (max-width: 500px) {
+                                        font-size: $footer-font-size-resp;
+                                    }
+                                }
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-3 {
+                    //  flex-basis: 30%;
+                    font-size: $footer-font-size;
+                    @media all and (max-width: 500px) {
+                        font-size: $footer-font-size-resp;
+                    }
+                    .address {
+                        font-family: SourceSans-Semib !important;
+                        line-height: 21px;
+                    }
+                    .tel {
+                        font-family: SourceSans-Semib !important;
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                &-1,
+                &-2,
+                &-3 {
+                    @media all and (max-width: 800px) {
+                        margin-top: 25px;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #1d3b96ad;
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: $footer-font-size;
+            margin-top: 40px;
+            @media all and (max-width: 800px) {
+                display: block;
+                margin-top: 20px;
+            }
+            @media all and (max-width: 500px) {
+                font-size: $footer-font-size-resp;
+            }
+            .footer-column {
+                &-1 {
+                    .copyright {
+                        font-family: SourceSans-Semib !important;
+                    }
+                }
+                &-2 {
+                    .footer-links {
+                        a {
+                            font-family: SourceSans-Semib !important;
+                        }
+                    }
+                }
+                &-1,
+                &-2 {
+                    @media all and (max-width: 800px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
