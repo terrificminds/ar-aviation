@@ -20,7 +20,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
  
 
-        <?php 
+		<?php 
+		get_template_part( 'template-parts/content', 'banner' );
 		get_template_part( 'template-parts/content', 'services' );?>
 		<div class = "about-wrapper">
 			<div class = "about-content">
