@@ -179,6 +179,14 @@ function aviation_custom_scripts() {
 add_action( 'admin_enqueue_scripts', 'aviation_custom_scripts');
 
 function add_theme_scripts() {
+    // Css file for modal pop up
+    wp_enqueue_style( 'bootstrap',
+       get_stylesheet_directory_uri() . '/css/bootstrap.min.css',
+      array(),
+       '1.1',
+       'all'
+    );
+    // End Css file for modal pop up
     wp_enqueue_style( 'custom',
        get_stylesheet_directory_uri() . '/css/custom.css',
       array(),
@@ -197,6 +205,13 @@ function add_theme_scripts() {
        '1.1',
        'all'
     );
+    // JS file for modal pop up //
+    wp_enqueue_script(
+        'bootstrap-script',
+        get_stylesheet_directory_uri() . '/js/bootstrap.min.js',
+        array( 'jquery' )
+    );
+    // End JS file for modal pop up //
     wp_enqueue_script(
         'custom-script',
         get_stylesheet_directory_uri() . '/js/custom.js',

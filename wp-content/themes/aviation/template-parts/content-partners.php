@@ -19,6 +19,7 @@
         <h2><?php echo $category->name;?></h2>
         <div class = "partner-slider">
           <section class="regular slider" id="partner-home">
+            <?php echo $count=1;  //modal popup count// ?>
             <?php while ($partner_1->have_posts()) {
                 $partner_1->the_post();
                 $post_id = get_the_ID();
@@ -33,11 +34,11 @@
                 $modalLogo = $logoUrl;
                 $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
             ?>
-            <div>
+            <div class="<?php echo $count; //modal popup count// ?> js-slide">
               <div class = "partner-1-left">
                 <div class="partner-1-left-content">
                   <div class = 'partner-1-logo'>
-                      <img src="<?php echo $logoUrl;?>">
+                      <?php echo $count.":" ?><img src="<?php echo $logoUrl;?>">
                   </div>
                   <div class = "partner-image-mob">
                       <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
@@ -48,15 +49,23 @@
                   <div class = 'partner-1-excerpt'>
                       <?php the_excerpt();?>
                   </div>
-                  <div class = 'read-more'>
-                      <a href = "/">Read More</a>
+                  <div class = 'js-readmore read-more'>
+                      <!-- <a href = "">Read More</a> -->
+                      <!-- model pop up link -->
+                      <a href = ""  class="btn btn-info btn-lg" data-toggle="modal" data-target="#readMore">Read More</a>
+
+                      <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Open Large Modal</button> -->
+                      <!-- model pop up link -->
+
                   </div>
                 </div>
               </div>
               <div class = "partner-1-right">
                   <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
               </div>
-              <div class = "partner-1-modal">
+
+              <!-- Div added by Nithin for content in modal popup. Hide by css -->
+              <div class = "partner-1-modal js-partner-modal">
                   <div class = "partner-modal-left">
                       <div class = "partner-logo">
                         <img src="<?php echo $modalLogo;?>">
@@ -72,10 +81,12 @@
                       <img src="<?php echo $modalImage;?>">
                   </div>
               </div>
+              <!-- End Div added by Nithin for content in modal popup. Hide by css -->
             </div>
-        <?php    }
+        <?php $count++;  }//modal popup count//
         wp_reset_query(); ?>
         </section>
+
       </div>
     </div>
   </div>
@@ -121,4 +132,21 @@
     <?php    }
     wp_reset_query(); ?>
   </div>
+</div>
+<!-- Modal For Partners ReadMore Link -->
+<div class="modal fade" id="readMoreModal" role="dialog">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <!-- <h4 class="modal-title">Modal Header</h4> -->
+         </div>
+         <div class="modal-body js-modal-body">
+            <!-- modal data -->
+         </div>
+         <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div> -->
+      </div>
+   </div>
 </div>
