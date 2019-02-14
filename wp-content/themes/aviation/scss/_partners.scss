@@ -49,7 +49,10 @@
         &.slider {
             width: 100%;
             margin: 0 auto;
-            z-index: 1050;
+          //  z-index: 1050;
+          .slick-list{
+            z-index: 1041;
+          }
         }
         // .slick-slide {
         //   margin: 0px 30px;
@@ -86,6 +89,7 @@
         }
         .slick-current {
           opacity: 1;
+          position: relative;
         }
       }
 
@@ -136,9 +140,15 @@
               padding: 0;
               line-height: 1.7;
               font-size: 16px;
-              &:hover {
+              background-color: transparent;
+              border: none;
+              &:hover,&:focus,&:active {
                 text-decoration: none;
                 color: #fff;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                box-shadow: none;
               }
               &:after {
                 display: block;
@@ -170,6 +180,9 @@
         clear: both;
         width: 100%;
         display: none;
+      }
+      .modal{
+        position: absolute;
       }
     }
   }
