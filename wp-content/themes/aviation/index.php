@@ -20,9 +20,30 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
  
 
-        <?php 
-        
-        get_template_part( 'template-parts/content', 'partners' );
+		<?php 
+		get_template_part( 'template-parts/content', 'banner' );
+		get_template_part( 'template-parts/content', 'services' );?>
+		<div class = "about-wrapper">
+			<div class = "about-content">
+				<div class = "about-left" style="background-image: url(<?php echo wp_get_attachment_url(get_theme_mod('about-background')) ?>)">
+					<div class = "about-title">
+						<h2><?php echo get_theme_mod('about-title')?></h2>
+					</div>
+					<div class = "about-description">
+						<p><?php echo get_theme_mod('about-shortdescription')?></p>
+					</div>
+					<div class = "about-readmore">	
+						<a href="<?php echo get_page_link(get_theme_mod('about-readmore'))?>">Read more</a>
+					</div>
+				</div>
+				<div class = "about-right">
+					<img class="about-image" src="<?php echo wp_get_attachment_url(get_theme_mod('about-image')) ?>"/>		
+				</div>
+			</div>
+		</div>
+		<?php
+		get_template_part( 'template-parts/content', 'partners' );
+		get_template_part( 'template-parts/content', 'news' );
         if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

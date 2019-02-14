@@ -1,6 +1,7 @@
 @import "header";
 @import 'partners';
 @import "footer";
+@import "news";
 
 body:not(.custom-background-image):before, body:not(.custom-background-image):after {
   height: 0px !important;
