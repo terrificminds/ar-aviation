@@ -34,7 +34,7 @@
                 $modalLogo = $logoUrl;
                 $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
             ?>
-            <div class="<?php echo $count; //modal popup count// ?>">
+            <div class="<?php echo $count; //modal popup count// ?> js-slide">
               <div class = "partner-1-left">
                 <div class="partner-1-left-content">
                   <div class = 'partner-1-logo'>
@@ -49,10 +49,10 @@
                   <div class = 'partner-1-excerpt'>
                       <?php the_excerpt();?>
                   </div>
-                  <div class = 'read-more'>
+                  <div class = 'js-readmore read-more'>
                       <!-- <a href = "">Read More</a> -->
                       <!-- model pop up link -->
-                      <a href = ""  class="btn btn-info btn-lg" data-toggle="modal" data-target="#readMore<?php echo $count; //modal popup count// ?>">Read More</a>
+                      <a href = ""  class="btn btn-info btn-lg" data-toggle="modal" data-target="#readMore">Read More</a>
 
                       <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Open Large Modal</button> -->
                       <!-- model pop up link -->
@@ -65,7 +65,7 @@
               </div>
 
               <!-- Div added by Nithin for content in modal popup. Hide by css -->
-              <div class = "partner-1-modal">
+              <div class = "partner-1-modal js-partner-modal">
                   <div class = "partner-modal-left">
                       <div class = "partner-logo">
                         <img src="<?php echo $modalLogo;?>">
@@ -82,31 +82,7 @@
                   </div>
               </div>
               <!-- End Div added by Nithin for content in modal popup. Hide by css -->
-              <!-- model pop up link -->
-              <div class="modal fade" id="readMore<?php echo $count; //modal popup count// ?>" role="dialog">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">Modal Header <?php echo $count; //Modal popup count// ?></h4>
-                    </div>
-                    <div class="modal-body">
-                      <p>This is a large modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- model pop up link -->
-
             </div>
-
-
-
-
-
         <?php $count++;  }//modal popup count//
         wp_reset_query(); ?>
         </section>
@@ -156,4 +132,21 @@
     <?php    }
     wp_reset_query(); ?>
   </div>
+</div>
+<!-- Modal For Partners ReadMore Link -->
+<div class="modal fade" id="readMoreModal" role="dialog">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <!-- <h4 class="modal-title">Modal Header</h4> -->
+         </div>
+         <div class="modal-body js-modal-body">
+            <!-- modal data -->
+         </div>
+         <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div> -->
+      </div>
+   </div>
 </div>
