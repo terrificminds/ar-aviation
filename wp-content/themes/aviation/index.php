@@ -25,7 +25,9 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', 'services' );?>
 		<div class = "about-wrapper">
 			<div class = "about-content">
-				<div class = "about-left" style="background-image: url(<?php echo wp_get_attachment_url(get_theme_mod('about-background')) ?>)">
+				<div class = "about-left">
+					<div class="about-det-wrapper"  style="background-image: url(<?php echo wp_get_attachment_url(get_theme_mod('about-background')) ?>)">
+					
 					<div class = "about-title">
 						<h2><?php echo get_theme_mod('about-title')?></h2>
 					</div>
@@ -34,6 +36,7 @@ get_header(); ?>
 					</div>
 					<div class = "about-readmore">	
 						<a href="<?php echo get_page_link(get_theme_mod('about-readmore'))?>">Read more</a>
+					</div>
 					</div>
 				</div>
 				<div class = "about-right">
