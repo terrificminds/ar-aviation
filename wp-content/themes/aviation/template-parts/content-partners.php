@@ -123,6 +123,9 @@
             <div class = 'partner-2-body'>
                 <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
                 <?php echo the_content();?>
+                <a href = "<?php echo $websiteLink?>">
+                          <button type="button"> Visit Website </button>
+                </a>
             </div>
         </div>
         <div class = "partner-2-right">

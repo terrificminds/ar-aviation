@@ -3,23 +3,41 @@
 @import "footer";
 @import "news";
 @import "about";
+body:not(.custom-background-image):before,
+body:not(.custom-background-image):after {
+    height: 0px !important;
+}
 
-body:not(.custom-background-image):before, body:not(.custom-background-image):after {
-  height: 0px !important;
+body {
+    div,
+    p,
+    a {
+        font-family: SourceSans-Rg;
+    }
 }
 
 #page {
-  margin: 0;
-  .site-inner {
-    max-width: 100%;
-  }
+    margin: 0;
+    .site-inner {
+        max-width: 100%;
+        .site-main {
+            margin-bottom: 60px;
+            @media all and (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }
+
 #content {
-  padding: 0;
-  max-width: 100%;
-  margin: 0 auto;
-  //border: solid red;
-  .content-area {
-    width: 100%;
-  }
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto; //border: solid red;
+    .content-area {
+        width: 100%;
+    }
+}
+
+article.post {
+    display: none;
 }
