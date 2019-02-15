@@ -34,3 +34,33 @@ $args = array(
 register_post_type( 'news', $args );
 }
 add_action( 'init', 'aviation_post_news' );
+
+function add_aviation_news_meta_box() {
+	add_meta_box(
+		'add_aviation_news_meta_box', // $id
+		'News Banner Image', // $title
+		'aviation_news_banner_meta_box', // $callback
+		'news', // $screen
+		'normal', // $context
+		'high' // $priority
+    );
+}
+add_action( 'add_meta_boxes', 'add_aviation_news_meta_box' );
+
+function aviation_news_banner_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'newsbanner', true);?>
+    <p>
+        <label for="newsbanner">News Banner Upload</label><br>
+        <input type="text" name="newsbanner" id="newsbanner" class="newsbanner regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="button" class="button news-banner-upload" value="Browse">
+    </p>
+    <div class="news-banner-preview"><img class = "news-banner" src="<?php echo $meta; ?>" style="max-width: 250px;"></div>
+    <?php
+}
+
+function save_aviation_news_fields_meta( $post_id ) {
+    global $post;
+    update_post_meta($post->ID, "newsbanner", $_POST["newsbanner"]);
+}
+add_action( 'save_post', 'save_aviation_news_fields_meta' );
