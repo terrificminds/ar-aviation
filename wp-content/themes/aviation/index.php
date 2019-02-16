@@ -29,12 +29,12 @@ get_header(); ?>
 					<div class="about-det-wrapper"  style="background-image: url(<?php echo wp_get_attachment_url(get_theme_mod('about-background')) ?>)">
 					
 					<div class = "about-title">
-						<h2><?php echo get_theme_mod('about-title')?></h2>
+						<h2 class="block-title"><?php echo get_theme_mod('about-title')?></h2>
 					</div>
 					<div class = "about-description">
 						<p><?php echo get_theme_mod('about-shortdescription')?></p>
 					</div>
-					<div class = "about-readmore">	
+					<div class = "about read-more">	
 						<a href="<?php echo get_page_link(get_theme_mod('about-readmore'))?>">Read more</a>
 					</div>
 					</div>

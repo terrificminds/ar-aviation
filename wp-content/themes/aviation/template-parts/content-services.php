@@ -9,6 +9,7 @@
       )); 
       $count = 1;
       ?>
+            <section class="regular slider" id="services-home">
       <?php while ($services->have_posts()) { 
           $serial = sprintf("%02d", $count);
           $services->the_post();
@@ -17,6 +18,7 @@
           $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );  
           if($show_in_homepage == '1'):  
       ?>
+ 
         <div class = "service-slider">
             <div class = "service-block-left">
                   <img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
@@ -40,5 +42,6 @@
           endif; 
         }
       wp_reset_query(); ?>
+       </section>
     </div>
 </div>
