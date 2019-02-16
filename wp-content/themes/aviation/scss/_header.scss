@@ -30,6 +30,10 @@ header.site-header {
             border: none;
             width: 34px;
             height: 34px;
+            @media all and (max-width: 600px) {
+                background-size: 80% !important;
+            }
+            
             &:hover,
             &:focus {
                 background-color: transparent;
@@ -116,10 +120,10 @@ header.site-header {
         padding-top: 10px !important;
         padding-bottom: 10px !important;
         background-color: #0b2758;
+        box-shadow: 2px 2px 15px -2px #d7d7d76b;
         .site-header-main {
             max-width: 1290px;
-            margin: 0 auto;
-            //padding: 0 4.5455%;
+            margin: 0 auto; //padding: 0 4.5455%;
         }
     }
 }
@@ -148,7 +152,8 @@ header.site-header {
             display: block;
             width: 100%;
             height: 100%;
-            background-color: #0b275845;
+            background-color: #000;
+            opacity: 0.5;
         }
         .social-links {
             position: absolute;
@@ -182,6 +187,7 @@ header.site-header {
                     display: flex;
                     flex-direction: column-reverse;
                     li {
+                        margin: 7px 0;
                         a {
                             border: none;
                             font-size: 20px;
@@ -232,7 +238,7 @@ header.site-header {
         }
         .banner-text-container {
             position: absolute;
-            top: 30%;
+            top: 25%;
             z-index: 990;
             color: #fff;
             left: 12%;
@@ -274,32 +280,11 @@ header.site-header {
                         font-size: 20px;
                     }
                     @media all and (max-width: 768px) {
-                        font-size: 15px;
+                        font-size: 14px;
                     }
                 }
             }
-            .banner-btn {
-                a {
-                    button {
-                        // width: 245px;
-                        // height: 60px;
-                        padding: 20px 75px;
-                        font-size: 19px;
-                        font-family: SourceSans-Lt;
-                        text-transform: none;
-                        color: #001658;
-                        background-color: white;
-                        border-radius: 5px;
-                        @media all and (max-width: 1200px) {
-                            padding: 10px 50px;
-                        }
-                        @media all and (max-width: 768px) {
-                            padding: 7px 40px;
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
+            
         }
     }
 }

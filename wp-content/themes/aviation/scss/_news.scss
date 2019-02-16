@@ -1,22 +1,15 @@
 @import "alvfonts";
 .news-wrapper {
     background-color: #fff;
-    padding-top: 80px;
-    //padding-bottom: 80px;
+    padding-top: 80px; //padding-bottom: 80px;
     text-align: center;
-    h2 {
-        color: #3c3c3c;
-        font-size: 30px;
-        padding-bottom: 40px;
+    h2.block-title {
+        color: #3c3c3c !important;
+        padding-bottom: 40px !important;
         display: inline-block;
-        font-family: SourceSans-Bd;
         &:after {
-            display: block;
-            content: "";
+            border-bottom-color: #001658 !important;
             width: 230px;
-            border-bottom: solid 6px #001658;
-            border-radius: 20px;
-            margin-top: 5px;
         }
     }
     .news-content {
@@ -179,7 +172,7 @@
                                 top: 11px;
                             }
                         }
-                        &:hover{
+                        &:hover {
                             text-decoration: none;
                         }
                     }

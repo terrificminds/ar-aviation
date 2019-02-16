@@ -22,18 +22,10 @@
     .partner-1-background {
         background-image: url('../images/partners-section-bg.jpg');
         padding-bottom: 80px;
-        h2 {
-            color: #fff;
-            font-size: 30px;
-            font-family: SourceSans-Bd;
-            padding-bottom: 40px;
+        h2.block-title {
+            color: #fff !important;
             &:after {
-                display: block;
-                content: "";
-                width: 200px;
-                border-bottom: solid 6px white;
-                border-radius: 20px;
-                margin-top: 20px;
+                border-bottom-color: white !important;
             }
         }
         .partner-slider {
@@ -86,7 +78,7 @@
                 }
             }
             /*Style for Slider*/
-            .js-slide{
+            .js-slide {
                 @media all and (min-width: 992px) {
                     display: flex !important;
                 }
@@ -112,6 +104,9 @@
                         font-size: 24px;
                         padding-bottom: 10px;
                         font-family: SourceSans-Semib;
+                        @media all and (max-width: 768px) {
+                            font-size: 23px;
+                        }
                     }
                     .partner-image-mob {
                         display: none;
@@ -128,44 +123,15 @@
                             font-size: 18px;
                             font-family: SourceSans-Rg;
                             line-height: 22px;
+                            @media all and (max-width: 768px) {
+                                font-size: 17px;
+                            }
                         }
                     }
                     .read-more {
-                        position: relative;
-                        width: 155px;
                         @media all and (max-width: 991px) {
-                            width: 160px;
                             margin: 0 auto;
                             text-align: left;
-                        }
-                        a.btn {
-                            color: #fff;
-                            padding: 0;
-                            line-height: 1.7;
-                            font-size: 18px;
-                            background-color: transparent;
-                            border: none;
-                            font-family: SourceSans-Semib;
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                text-decoration: none;
-                                color: #fff;
-                                background-color: transparent;
-                                border: none;
-                                outline: none;
-                                box-shadow: none;
-                            }
-                            &:after {
-                                display: block;
-                                position: absolute;
-                                content: "";
-                                width: 60px;
-                                height: 2px;
-                                right: 0;
-                                background-color: #ffffff;
-                                top: 15px;
-                            }
                         }
                     }
                 }
@@ -176,7 +142,7 @@
                 text-align: center;
                 @media all and (min-width: 992px) {
                     display: flex !important;
-                    img{
+                    img {
                         align-self: center;
                     }
                 }
@@ -214,18 +180,11 @@
                 .partner-2-logo {
                     padding: 30px 0 45px;
                 }
-                h2 {
-                    color: #fff;
-                    font-size: 30px;
+                h2.block-title {
+                    color: #fff !important;
                     padding: 0 0 30px;
-                    font-family: SourceSans-Bd;
                     &:after {
-                        display: block;
-                        content: "";
-                        width: 180px;
-                        border-bottom: solid 6px white;
-                        border-radius: 20px;
-                        margin-top: 20px;
+                        border-bottom-color: white !important;
                     }
                 }
                 .partner-2-body {
@@ -254,17 +213,8 @@
                         font-size: 19px;
                         font-family: SourceSans-Bd;
                         line-height: 22px;
-                    }
-                    button {
-                        font-size: 15px;
-                        font-family: SourceSans-Semib;
-                        margin-top: 20px;
-                        padding: 20px 70px;
                         @media all and (max-width: 768px) {
-                            padding: 15px 50px;
-                        }
-                        @media all and (max-width: 500px) {
-                            padding: 10px 40px;
+                            font-size: 17px;
                         }
                     }
                 }

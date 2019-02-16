@@ -18,7 +18,7 @@
                 width: 785px;
                 margin: 0 auto;
                 @media all and (max-width: 991px) {
-                    width: 60%;
+                    width: 70%;
                 }
                 @media all and (max-width: 768px) {
                     width: 85%;
@@ -60,16 +60,16 @@
                                 font-size: 60px;
                                 font-family: SourceSans-Bl;
                                 color: #c4c4c4;
-                                @media all and (max-width: 700px) {
-                                    font-size: 40px; 
+                                @media all and (max-width: 768px) {
+                                    font-size: 50px;
                                 }
                             }
                         }
                         .service-title {
                             font-size: 25px;
                             font-family: SourceSans-Bd;
-                            @media all and (max-width: 700px) {
-                                font-size: 20px; 
+                            @media all and (max-width: 768px) {
+                                font-size: 20px;
                             }
                         }
                         .service-excerpt {
@@ -80,49 +80,26 @@
                                 padding-top: 20px;
                                 padding-right: 50px;
                                 display: -webkit-box;
-                                height:130px;
+                                height: 130px;
                                 margin-bottom: 20px;
                                 line-height: 22px;
                                 -webkit-line-clamp: 5;
                                 -webkit-box-orient: vertical;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
-                                @media all and (max-width: 700px) {
-                                    font-size: 16px; 
+                                @media all and (max-width: 768px) {
+                                    font-size: 16px;
                                     margin-bottom: 15px;
                                     padding-right: 20px;
                                     -webkit-line-clamp: 3;
-                                    height:86px;
+                                    height: 86px;
                                 }
                             }
                         }
                         .view-more {
-                            position: relative;
                             width: 220px;
                             @media all and (max-width: 991px) {
                                 width: 215px
-                            }
-                            a {
-                                color: white;
-                                font-size: 18px;
-                                font-family: SourceSans-Semib;
-                                @media all and (max-width: 700px) {
-                                    font-size: 16px; 
-                                }
-                                &:hover {
-                                    text-decoration: none;
-                                    color: white;
-                                }
-                                &:after {
-                                    display: block;
-                                    position: absolute;
-                                    content: "";
-                                    width: 60px;
-                                    height: 2px;
-                                    right: 0;
-                                    background-color: #fff;
-                                    top: 17px;
-                                }
                             }
                         }
                     }
@@ -159,9 +136,8 @@
                         left: 20px;
                         top: 200px;
                     }
-                    @media all and (max-width: 700px) {
+                    @media all and (max-width: 500px) {
                         left: 10px;
-                        
                     }
                 }
                 &.slick-next {
@@ -174,9 +150,8 @@
                         right: 20px;
                         top: 200px;
                     }
-                    @media all and (max-width: 700px) {
+                    @media all and (max-width: 500px) {
                         right: 10px;
-                        
                     }
                 }
             }
