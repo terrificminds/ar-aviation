@@ -34,12 +34,18 @@ body {
     padding: 0;
     max-width: 100%;
     margin: 0 auto;
-     //border: solid red;
     .content-area {
         width: 100%;
-    } 
-    
-    //common styling 
+    }
+    a {
+        outline: none;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+            outline: none;
+        }
+    } //common styling 
     h2.block-title {
         color: #3c3c3c;
         font-size: 28px;
@@ -61,14 +67,15 @@ body {
             }
         }
     }
-    .read-more,.view-more {
+    .read-more,
+    .view-more {
         position: relative;
         width: 155px;
         @media all and (max-width: 991px) {
             width: 160px;
-          
         }
-        a.btn ,a {
+        a.btn,
+        a {
             color: #fff;
             padding: 0;
             line-height: 1.7;
@@ -77,7 +84,7 @@ body {
             border: none;
             font-family: SourceSans-Semib;
             @media all and (max-width: 768px) {
-                font-size: 16px; 
+                font-size: 16px;
             }
             &:hover,
             &:focus,
@@ -90,28 +97,43 @@ body {
                 box-shadow: none;
             }
             &:after {
-                display: block;
-                position: absolute;
+                display: inline-block;
                 content: "";
                 width: 60px;
                 height: 2px;
                 right: 0;
                 background-color: #ffffff;
                 top: 15px;
+                transform: translate(15px, -3px);
+                @media all and (min-width: 768px) {
+                    -webkit-transition: width 0.6s;
+                    transition: width 0.6s;
+                }
+                @media all and (max-width: 768px) {
+                    transform: translate(10px, -2px);
+                }
+            }
+            &:hover {
+                @media all and (min-width: 768px) {
+                    &:after {
+                        width: 30px;
+                    }
+                }
             }
         }
-    }
-    //banner and partner2 button
-    .banner-btn,.partner-2-body {
-        a.grey-big-btn{
-            button {               
-                padding: 20px 75px;
+    } //banner and partner2 button
+    .banner-btn,
+    .partner-2-body {
+        a.grey-big-btn {
+            button {
+                padding: 18px 73px;
                 font-size: 19px;
                 font-family: SourceSans-Lt;
                 text-transform: none;
                 color: #001658;
                 background-color: white;
                 border-radius: 5px;
+                border: 2px solid #fff;
                 @media all and (max-width: 1200px) {
                     padding: 15px 55px;
                     font-size: 16px;
@@ -119,6 +141,16 @@ body {
                 @media all and (max-width: 768px) {
                     padding: 15px 50px;
                     font-size: 14px;
+                }
+                &:hover {
+                    @media all and (min-width: 768px) {
+                        background-color:transparent;
+                        -webkit-transition: background-color .15s linear;
+                        -ms-transition: background-color .15s linear;
+                        transition: background-color .15s linear;
+                        color: #fff;
+                        border: 2px solid #fff;
+                    }
                 }
             }
         }

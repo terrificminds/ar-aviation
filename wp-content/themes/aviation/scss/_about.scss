@@ -1,12 +1,8 @@
 .about-wrapper {
     .about-content {
-        //max-width: 1290px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        @media all and (max-width: 1330px) {
-            //padding: 0 20px;
-        }
         @media all and (max-width: 600px) {
             flex-direction: column;
         }
@@ -34,7 +30,7 @@
                 @media all and (max-width: 600px) {
                     background-size: 50%;
                 }
-            } 
+            }
             .about-description {
                 p {
                     font-family: SourceSans-Rg;
