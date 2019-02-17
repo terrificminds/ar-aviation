@@ -34,7 +34,7 @@
                     <p><?php echo get_theme_mod('banner-subtitle')?></p>
                 </div>
                 <div class = "banner-btn">	
-                    <a href="<?php echo get_page_link(get_theme_mod('banner-button-link'))?>">
+                    <a class="grey-big-btn" href="<?php echo get_page_link(get_theme_mod('banner-button-link'))?>">
                         <button type="button"> <?php echo get_theme_mod('banner-button-label')?> </button>
                     </a>
                 </div>

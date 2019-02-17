@@ -1,5 +1,5 @@
 <div class = "news-wrapper">
-    <h2>News and Events</h2>
+    <h2 class="block-title">News and Events</h2>
     <div class = "news-content">
         <?php 
         $news = new WP_Query(array(
