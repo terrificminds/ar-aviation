@@ -7,7 +7,15 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+    //To Instantiate Services slider
+  $("#services-home").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 
+  //to display contents in modal pop up - homepage patners read more link
   $("body").on("click",".js-readmore a",function(e){
     e.preventDefault();
     var slideParent = $(this).closest('.js-slide');
@@ -15,19 +23,20 @@ jQuery(document).ready(function ($) {
     $("#readMoreModal")
       .find(".modal-body").empty().append(data).end()					
       .modal("show");
-  }) 
-  //Sticky Header
-  // $(window).scroll(function () {
-  //   var sticky = $('.site-header'),
-  //     scroll = $(window).scrollTop();
+  });
 
-  //   if (scroll >= 120) {
-  //     sticky.addClass('fixed');
-  //   }
-  //   else {
-  //     sticky.removeClass('fixed');
-  //   }
-  // });
+  //Sticky Header
+  $(window).scroll(function () {
+    var sticky = $('.site-header'),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 120) {
+      sticky.addClass('fixed');
+    }
+    else {
+      sticky.removeClass('fixed');
+    }
+  });
 
   //Hover interaction for news item
   var width = $(window).width();
@@ -50,7 +59,8 @@ jQuery(document).ready(function ($) {
 
     });
   }
-
+  
+  //add class to header to add background color for resp header menu
   $("body").on("click","#menu-toggle",function(e){
     var status = $(this).hasClass("toggled-on");
     if(status){

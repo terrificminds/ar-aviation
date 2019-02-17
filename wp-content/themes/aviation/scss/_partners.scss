@@ -22,23 +22,16 @@
     .partner-1-background {
         background-image: url('../images/partners-section-bg.jpg');
         padding-bottom: 80px;
-        h2 {
-            color: #fff;
-            font-size: 24px;
-            padding-bottom: 40px;
+        h2.block-title {
+            color: #fff !important;
             &:after {
-                display: block;
-                content: "";
-                width: 200px;
-                border-bottom: solid 6px white;
-                border-radius: 20px;
-                margin-top: 5px;
+                border-bottom-color: white !important;
             }
         }
         .partner-slider {
             background-color: #0000008a;
             clear: both;
-            width: 100%; //overflow: hidden;
+            width: 100%;
             padding: 30px;
             @media all and (max-width: 1350px) {
                 width: 94%;
@@ -50,16 +43,8 @@
             #partner-home {
                 &.slider {
                     width: 100%;
-                    margin: 0 auto; //  z-index: 1050;
-                    .slick-list {
-                        // z-index: 1041;
-                    }
-                } // .slick-slide {
-                //   margin: 0px 30px;
-                // }
-                // .slick-slide img {
-                //   width: 100%;
-                // }
+                    margin: 0 auto;
+                }
                 .slick-prev:before,
                 .slick-next:before {
                     color: black;
@@ -93,6 +78,11 @@
                 }
             }
             /*Style for Slider*/
+            .js-slide {
+                @media all and (min-width: 992px) {
+                    display: flex !important;
+                }
+            }
             .partner-1-left {
                 width: 50%;
                 float: left;
@@ -100,6 +90,7 @@
                     width: 100%;
                 }
                 .partner-1-left-content {
+                    padding-left: 10px;
                     .partner-1-logo {
                         padding: 20px 0;
                         @media all and (max-width: 991px) {
@@ -110,8 +101,12 @@
                     }
                     .partner-1-title {
                         color: #fff;
-                        font-size: 18px;
-                        padding-bottom: 15px;
+                        font-size: 24px;
+                        padding-bottom: 10px;
+                        font-family: SourceSans-Semib;
+                        @media all and (max-width: 768px) {
+                            font-size: 23px;
+                        }
                     }
                     .partner-image-mob {
                         display: none;
@@ -124,43 +119,19 @@
                     }
                     .partner-1-excerpt {
                         color: #fff;
-                        font-size: 14px;
+                        p {
+                            font-size: 18px;
+                            font-family: SourceSans-Rg;
+                            line-height: 22px;
+                            @media all and (max-width: 768px) {
+                                font-size: 17px;
+                            }
+                        }
                     }
                     .read-more {
-                        position: relative;
-                        width: 155px;
                         @media all and (max-width: 991px) {
-                            width: 160px;
                             margin: 0 auto;
                             text-align: left;
-                        }
-                        a.btn {
-                            color: #fff;
-                            padding: 0;
-                            line-height: 1.7;
-                            font-size: 16px;
-                            background-color: transparent;
-                            border: none;
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                text-decoration: none;
-                                color: #fff;
-                                background-color: transparent;
-                                border: none;
-                                outline: none;
-                                box-shadow: none;
-                            }
-                            &:after {
-                                display: block;
-                                position: absolute;
-                                content: "";
-                                width: 60px;
-                                height: 2px;
-                                right: 0;
-                                background-color: #ffffff;
-                                top: 15px;
-                            }
                         }
                     }
                 }
@@ -169,6 +140,12 @@
                 width: 48%;
                 float: left;
                 text-align: center;
+                @media all and (min-width: 992px) {
+                    display: flex !important;
+                    img {
+                        align-self: center;
+                    }
+                }
                 @media all and (max-width: 991px) {
                     display: none;
                 }
@@ -201,16 +178,17 @@
                     width: 100%;
                 }
                 .partner-2-logo {
-                    padding: 30px 0 20px;
+                    padding: 30px 0 45px;
                 }
-                h2 {
-                    color: #fff;
-                    font-size: 24px;
+                h2.block-title {
+                    color: #fff !important;
                     padding: 0 0 30px;
+                    &:after {
+                        border-bottom-color: white !important;
+                    }
                 }
                 .partner-2-body {
                     color: #fff;
-                    font-size: 14px;
                     padding-right: 10px;
                     @media all and (max-width: 1200px) {
                         padding-right: 0;
@@ -229,6 +207,14 @@
                             margin-left: 0;
                             margin-right: 0;
                             width: auto;
+                        }
+                    }
+                    p {
+                        font-size: 19px;
+                        font-family: SourceSans-Bd;
+                        line-height: 22px;
+                        @media all and (max-width: 768px) {
+                            font-size: 17px;
                         }
                     }
                 }
@@ -285,23 +271,21 @@
                     }
                 }
                 .partner-body {
-                    font-size: 13px;
-                    font-family: SourceSans-Semib;
                     p {
                         margin-bottom: 10px;
+                        font-size: 13px;
+                        font-family: SourceSans-Semib;
+                        margin-bottom: 25px;
                     }
                 }
                 button {
+                    box-shadow: 3px 3px 12px 1px #afadad8f;
+                    font-size: 12px;
+                    font-family: SourceSans-Rg;
                     margin-top: 30px;
                     padding: 15px 45px;
-                    color: black;
-                    text-transform: none;
-                    font-family: SourceSans-Semib;
-                    border-radius: 4px;
-                    background-color: white;
-                    box-shadow: 3px 3px 12px 1px #afadad8f;
                     @media all and (max-width: 500px) {
-                      padding: 10px 35px;
+                        padding: 10px 35px;
                     }
                 }
             }
@@ -315,6 +299,20 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.partner-2-body,
+#readMoreModal .modal-body {
+    button {
+        color: black;
+        text-transform: none;
+        border-radius: 4px;
+        background-color: white;
+        &:hover,
+        &:active {
+            background: white;
         }
     }
 }

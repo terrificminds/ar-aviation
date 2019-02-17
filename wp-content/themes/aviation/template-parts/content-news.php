@@ -1,5 +1,5 @@
 <div class = "news-wrapper">
-    <h2>News and Events</h2>
+    <h2 class="block-title">News and Events</h2>
     <div class = "news-content">
         <?php 
         $news = new WP_Query(array(
@@ -28,7 +28,7 @@
                     <?php the_excerpt();?>
                 </div> 
                 <div class = 'news-readmore'>
-                <a href="#">Read More</a>
+                <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
                 </div>     
             </div>            
         </div>

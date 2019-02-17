@@ -16,7 +16,7 @@
         ));
         $category = get_term_by( 'term_taxonomy_id', '3', 'partner_category');
         ?>
-        <h2><?php echo $category->name;?></h2>
+        <h2 class="block-title"><?php echo $category->name;?></h2>
         <div class = "partner-slider">
           <section class="regular slider" id="partner-home">
             <?php echo $count=1;  //modal popup count// ?>
@@ -119,10 +119,13 @@
             <div class = "partner-2-logo">
                 <img src="<?php echo $logoUrl;?>">
             </div>
-            <h2><?php echo $category->name;?></h2>
+            <h2 class="block-title"><?php echo $category->name;?></h2>
             <div class = 'partner-2-body'>
                 <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
                 <?php echo the_content();?>
+                <a class="grey-big-btn" href = "<?php echo $websiteLink?>">
+                          <button type="button"> Visit Website </button>
+                </a>
             </div>
         </div>
         <div class = "partner-2-right">

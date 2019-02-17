@@ -1,12 +1,8 @@
 .about-wrapper {
     .about-content {
-        //max-width: 1290px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        @media all and (max-width: 1330px) {
-            //padding: 0 20px;
-        }
         @media all and (max-width: 600px) {
             flex-direction: column;
         }
@@ -35,59 +31,21 @@
                     background-size: 50%;
                 }
             }
-            .about-title {
-                h2 {
-                    color: #3c3c3c;
-                    font-size: 28px;
-                    padding-bottom: 20px;
-                    font-family: SourceSans-Bd;
-                    @media all and (max-width: 860px) {
-                        font-size: 24px;
-                    }
-                    &:after {
-                        display: block;
-                        content: "";
-                        width: 200px;
-                        border-bottom: solid 6px #2a2e31;
-                        border-radius: 20px;
-                        margin-top: 5px;
-                        @media all and (max-width: 860px) {
-                            width: 150px;
-                            border-bottom: solid 5px #2a2e31;
-                        }
-                    }
-                }
-            }
             .about-description {
                 p {
                     font-family: SourceSans-Rg;
                     line-height: 22px;
                     font-size: 18px;
+                    @media all and (max-width: 768px) {
+                        font-size: 17px;
+                    }
                 }
             }
-            .about-readmore {
-                position: relative;
-                width: 155px;
-                @media all and (max-width: 991px) {
-                    width: 160px;
-                }
+            .read-more {
                 a {
-                    color: #001658;
-                    font-size: 18px;
-                    font-family: SourceSans-Semib;
-                    &:hover {
-                        text-decoration: none;
-                        color: #001658;
-                    }
+                    color: #001658 !important;
                     &:after {
-                        display: block;
-                        position: absolute;
-                        content: "";
-                        width: 60px;
-                        height: 2px;
-                        right: 0;
-                        background-color: #001658;
-                        top: 17px;
+                        background-color: #001658 !important;
                     }
                 }
             }
