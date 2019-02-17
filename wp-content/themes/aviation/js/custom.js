@@ -124,4 +124,5 @@ jQuery(document).ready(function ($) {
       // Opens the media library frame.
       meta_logo_frame.open();
     });
+    
   });
