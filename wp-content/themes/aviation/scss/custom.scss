@@ -4,6 +4,7 @@
 @import "news";
 @import "about";
 @import "services";
+@import "news-inner";
 body:not(.custom-background-image):before,
 body:not(.custom-background-image):after {
     height: 0px !important;
@@ -45,7 +46,8 @@ body {
             text-decoration: none;
             outline: none;
         }
-    } //common styling 
+    } 
+    /*common styling*/ 
     h2.block-title {
         color: #3c3c3c;
         font-size: 28px;
@@ -121,7 +123,8 @@ body {
                 }
             }
         }
-    } //banner and partner2 button
+    }
+    /*banner and partner2 button*/
     .banner-btn,
     .partner-2-body {
         a.grey-big-btn {

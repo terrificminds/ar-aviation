@@ -24,7 +24,7 @@
         .news-block {
             margin-bottom: 3px;
             margin-right: 3px;
-            flex-basis: 24.7%;
+            flex-basis: 24.6%;
             color: white;
             position: relative;
             font-family: SourceSans-Rg;
@@ -101,6 +101,7 @@
                 }
                 .news-title {
                     p {
+                        font-size: 18px; 
                         white-space: nowrap;
                         width: 100%;
                         overflow: hidden;
