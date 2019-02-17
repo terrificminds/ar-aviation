@@ -236,4 +236,5 @@ include_once( get_stylesheet_directory() .'/includes/news.php');
 include_once( get_stylesheet_directory() .'/includes/about.php');
 include_once( get_stylesheet_directory() .'/includes/banner.php');
 include_once( get_stylesheet_directory() .'/includes/careers.php');
+include_once( get_stylesheet_directory() .'/includes/contact.php');
 ?>
