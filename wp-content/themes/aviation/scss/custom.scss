@@ -16,6 +16,11 @@ body {
     a {
         font-family: SourceSans-Rg;
     }
+    * {
+        @-moz-document url-prefix() {
+            font-weight: normal;
+        }
+    }
 }
 
 #page {
@@ -47,8 +52,7 @@ body {
     .content-area {
         width: 100%;
     }
-  
-    /*common styling*/ 
+    /*common styling*/
     h2.block-title {
         color: #3c3c3c;
         font-size: 28px;
@@ -148,12 +152,8 @@ body {
                 }
                 &:hover {
                     @media all and (min-width: 768px) {
-                        background-color:transparent;
-                        -webkit-transition: background-color .15s linear;
-                        -ms-transition: background-color .15s linear;
-                        transition: background-color .15s linear;
-                        color: #fff;
-                        border: 2px solid #fff;
+                        background-color: #efefef;
+                        border: 2px solid #efefef;
                     }
                 }
             }
