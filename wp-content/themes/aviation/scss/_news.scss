@@ -1,8 +1,11 @@
 @import "alvfonts";
 .news-wrapper {
     background-color: #fff;
-    padding-top: 80px;
+    padding-top: 60px;
     text-align: center;
+    @media all and (max-width: 1330px) {
+        padding-top: 40px;
+    }
     h2.block-title {
         color: #3c3c3c !important;
         padding-bottom: 40px !important;
@@ -32,7 +35,7 @@
                 flex-basis: 32.9%;
             }
             @media all and (max-width: 768px) {
-                flex-basis: 49%;
+                flex-basis: 49.5%;
             }
             @media all and (max-width: 400px) {
                 flex-basis: 100%;

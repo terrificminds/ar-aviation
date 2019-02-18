@@ -22,6 +22,15 @@ body {
     margin: 0;
     .site-inner {
         max-width: 100%;
+        a {
+            outline: none;
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+                outline: none;
+            }
+        }
         .site-main {
             margin-bottom: 60px;
             @media all and (max-width: 768px) {
@@ -38,15 +47,7 @@ body {
     .content-area {
         width: 100%;
     }
-    a {
-        outline: none;
-        &:hover,
-        &:focus,
-        &:active {
-            text-decoration: none;
-            outline: none;
-        }
-    } 
+  
     /*common styling*/ 
     h2.block-title {
         color: #3c3c3c;
