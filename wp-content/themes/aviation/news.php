@@ -13,11 +13,11 @@ $categories = get_terms( array(
 		<div class="news-wrapper">
 			<div class="new-container">
 				<div class="news-top">
-					<div class="news-title">
+					<div class="newslist-title">
 						<?php single_post_title();?>
 					</div>
                 </div>
-                <div class="news-bottom">    
+                <div class="news-bottom news-content">    
                 <?php 
                     $news = new WP_Query(array(
                         'post_type' => 'news',
@@ -51,7 +51,8 @@ $categories = get_terms( array(
                     </div>
                     <?php endwhile;
                     wp_reset_query(); ?>
-				</div>
+                </div>
+                <div class="loadmore-btn"><button>Load More</button></div>
 			</div>
 		</div>
 		<?php endwhile;?>	

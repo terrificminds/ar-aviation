@@ -5,20 +5,26 @@ header.site-header {
     top: 0;
     left: 0;
     right: 0;
-    max-width: 1290px;
-    margin: 0 auto;
     z-index: 999;
     &.openMenu {
         background-color: #001658;
-        box-shadow: 2px 2px 15px -2px #d7d7d76b;
+        box-shadow: 0 4px 20px -1px #0000006e;
     }
     @media all and (max-width: 1300px) {
         padding: 60px 20px 20px !important;
     }
     @media all and (max-width: 909px) {
-        padding: 40px 40px 20px !important;
+        padding: 40px 20px 20px !important;
     }
     .site-header-main {
+        max-width: 1290px;
+        margin: 0 auto;
+        @media all and (max-width: 1330px) {
+            padding: 0 20px;
+        }
+        @media all and (max-width: 909px) {
+            padding: 0;
+        }
         .site-branding {
             a {
                 img {}
@@ -119,7 +125,7 @@ header.site-header {
         padding-top: 10px !important;
         padding-bottom: 10px !important;
         background-color: #0b2758;
-        box-shadow: 2px 2px 15px -2px #d7d7d76b;
+        box-shadow: 0 4px 20px -1px #0000006e;
         .site-header-main {
             max-width: 1290px;
             margin: 0 auto;
@@ -133,6 +139,32 @@ header.site-header {
     }
     100% {
         transform: translateY(0px);
+    }
+}
+
+//styling header for inner pages
+body:not(.home) {
+    header.site-header {
+        background-color: #0b2758;
+        padding: 30px 0 30px 0 !important;
+        box-shadow: 0 4px 20px -1px #0000006e;
+        @media all and (max-width: 909px) {
+            padding: 20px !important;
+        }
+        &.fixed {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+    }
+    #content {
+        padding-top: 90px;
+        .site-main {
+            max-width: 1290px;
+            margin: 0 auto;
+            @media all and (max-width: 1330px) {
+                padding: 0 20px;
+            }
+        }
     }
 }
 

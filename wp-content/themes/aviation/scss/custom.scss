@@ -4,6 +4,7 @@
 @import "news";
 @import "about";
 @import "services";
+@import "news-inner";
 body:not(.custom-background-image):before,
 body:not(.custom-background-image):after {
     height: 0px !important;
@@ -21,6 +22,15 @@ body {
     margin: 0;
     .site-inner {
         max-width: 100%;
+        a {
+            outline: none;
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+                outline: none;
+            }
+        }
         .site-main {
             margin-bottom: 60px;
             @media all and (max-width: 768px) {
@@ -37,15 +47,8 @@ body {
     .content-area {
         width: 100%;
     }
-    a {
-        outline: none;
-        &:hover,
-        &:focus,
-        &:active {
-            text-decoration: none;
-            outline: none;
-        }
-    } //common styling 
+  
+    /*common styling*/ 
     h2.block-title {
         color: #3c3c3c;
         font-size: 28px;
@@ -121,7 +124,8 @@ body {
                 }
             }
         }
-    } //banner and partner2 button
+    }
+    /*banner and partner2 button*/
     .banner-btn,
     .partner-2-body {
         a.grey-big-btn {

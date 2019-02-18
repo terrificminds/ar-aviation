@@ -12,6 +12,9 @@
         @media all and (max-width: 1200px) {
             top: -89%;
         }
+        @media all and (max-width: 700px) {
+            top: -70%;
+        }
         #services-home {
             //slider styling
             .slick-list {
@@ -37,7 +40,7 @@
                     .service-block-left {
                         flex-basis: 50%;
                         @media all and (max-width: 700px) {
-                            height: 200px;
+                            height: 170px;
                         }
                         img {
                             width: 100%;
@@ -94,6 +97,10 @@
                                     -webkit-line-clamp: 3;
                                     height: 86px;
                                 }
+                                @media all and (max-width: 700px) {
+                                    padding-top: 10px;
+                                    height: 80px;
+                                }
                             }
                         }
                         .view-more {
@@ -134,7 +141,7 @@
                     }
                     @media all and (max-width: 700px) {
                         left: 20px;
-                        top: 200px;
+                        top: 170px;
                     }
                     @media all and (max-width: 500px) {
                         left: 10px;
@@ -148,7 +155,7 @@
                     }
                     @media all and (max-width: 700px) {
                         right: 20px;
-                        top: 200px;
+                        top: 170px;
                     }
                     @media all and (max-width: 500px) {
                         right: 10px;
