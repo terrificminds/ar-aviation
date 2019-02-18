@@ -3,28 +3,52 @@
     background-repeat: no-repeat;
     position: relative;
     min-height: 320px;
+    @media all and (max-width: 1300px) {
+        min-height: 380px;
+    }
+    @media all and (max-width: 991px) {
+        min-height: 320px;
+    }
+    @media all and (max-width: 700px) {
+        min-height: 300px;
+    }
     .service-content {
-        height: 100%;
-        position: absolute;
-        left: 0;
         width: 100%;
+        height: 100%;
+        max-width: 1290px;
+        position: absolute;
         top: -68%;
-        @media all and (max-width: 1200px) {
-            //top: -89%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        @media all and (max-width: 1300px) {
+            top: -38%;
         }
         @media all and (max-width: 700px) {
-           // top: -70%;
+            top: -70%;
+        }
+        @media all and (max-width: 600px) {
+            position: static;
+            padding: 30px 20px;
         }
         #services-home {
-            //slider styling
+            width: 785px;
+            margin: 0 auto; //slider styling
+            @media all and (max-width: 768px) {
+                width: 100%;
+            }
             .slick-list {
                 width: 785px;
                 margin: 0 auto;
                 @media all and (max-width: 991px) {
-                    width: 70%;
+                    width: 550px;
                 }
                 @media all and (max-width: 768px) {
                     width: 85%;
+                }
+                @media all and (max-width: 600px) {
+                    width: 100%;
                 }
                 .service-slider {
                     overflow: hidden;
@@ -124,41 +148,42 @@
                     display: inline-block;
                     width: 50px;
                     height: 50px;
-                    line-height: 32px;
+                    line-height: 39px;
                 }
                 &.slick-prev {
-                    left: 45.5%;
+                    left: 39.5%;
                     top: 85%;
-                    @media all and (max-width: 1024px) {
-                        left: 41.9%;
-                    }
                     @media all and (max-width: 991px) {
-                        left: 41.9%;
+                        left: 41%;
+                        top: 83%;
                     }
                     @media all and (max-width: 768px) {
                         left: 40%;
-                        top: 83%;
                     }
                     @media all and (max-width: 700px) {
+                        top: 41%;
                         left: 20px;
-                        top: 170px;
                     }
-                    @media all and (max-width: 500px) {
-                        left: 10px;
+                    @media all and (max-width: 600px) {
+                        left: 0;
                     }
                 }
                 &.slick-next {
-                    right: 49.6%;
+                    right: 49%;
                     top: 95%;
+                    @media all and (max-width: 991px) {
+                        right: 47.6%;
+                        top: 95%;
+                    }
                     @media all and (max-width: 768px) {
                         right: 48.6%;
                     }
                     @media all and (max-width: 700px) {
+                        top: 41%;
                         right: 20px;
-                        top: 170px;
                     }
-                    @media all and (max-width: 500px) {
-                        right: 10px;
+                    @media all and (max-width: 600px) {
+                        right: 0%;
                     }
                 }
             }

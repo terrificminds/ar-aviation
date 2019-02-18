@@ -175,6 +175,12 @@ body:not(.home) {
         display: flex;
         position: relative;
         height: 87vh;
+        @media all and (max-width: 909px) {
+          //  height: 400px; 
+        }
+        @media all and (max-width: 600px) {
+            height: 450px;
+        }
         &:after {
             content: "";
             position: absolute;
@@ -279,8 +285,11 @@ body:not(.home) {
                 padding-right: 40px;
                 padding-left: 40px;
             }
+            @media all and (max-width: 909px) {
+                top: 37%;
+            }
             @media all and (max-width: 450px) {
-                top: 25%;
+                top: 32%;
                 padding-right: 20px;
                 padding-left: 20px;
             }
