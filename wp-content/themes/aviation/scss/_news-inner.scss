@@ -27,21 +27,23 @@
                 .news-bottom {
                     padding: 0;
                 }
-                .loadmore-btn {
-                    button {
-                        box-shadow: 4px 4px 13px 2px #afadad8f;
-                        font-size: 16px;
-                        font-family: SourceSans-Rg;
-                        margin-top: 40px;
-                        padding: 18px 73px;
-                        background-color: #fff;
-                        color: black;
-                        text-transform: capitalize;
-                        border-radius: 5px;
-                        font-weight: normal;
-                        @media all and (max-width: 500px) {
-                            padding: 15px 55px;
-                        }
+                button.btn-load-more {
+                    box-shadow: 4px 4px 13px 2px #afadad8f;
+                    font-size: 16px;
+                    font-family: SourceSans-Rg;
+                    margin-top: 40px;
+                    padding: 18px 73px;
+                    background-color: #fff;
+                    color: black;
+                    text-transform: capitalize;
+                    border-radius: 5px;
+                    font-weight: normal;
+                    @media all and (max-width: 500px) {
+                        padding: 15px 55px;
+                    }
+                    &:hover{
+                        background-color: #efefef;
+                     
                     }
                 }
             }
@@ -65,9 +67,9 @@
                 .wrapper {
                     max-width: 1290px;
                     margin: 0 auto;
-                    padding-top: 50px;
+                    padding-top: 65px;
                     @media all and (max-width: 1330px) {
-                        padding: 50px 20px 0;
+                        padding: 65px 20px 0;
                     }
                     @media all and (max-width: 709px) {
                         padding: 40px 20px 0;

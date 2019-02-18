@@ -17,7 +17,7 @@ $categories = get_terms( array(
 						<?php single_post_title();?>
 					</div>
                 </div>
-                <div class="news-bottom news-content">    
+                <div class="news-bottom news-content loadMore">    
                 <?php 
                     $news = new WP_Query(array(
                         'post_type' => 'news',
@@ -30,7 +30,7 @@ $categories = get_terms( array(
                         $publishDate = get_the_date();
                         $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );    
                     ?>
-                    <div class = "news-block">
+                    <div class = "news-block item">
                         <div class = "news-image">
                             <img class = "news-featured-image" src="<?php echo $featuredImage[0]; ?>">
                         </div>
@@ -52,7 +52,6 @@ $categories = get_terms( array(
                     <?php endwhile;
                     wp_reset_query(); ?>
                 </div>
-                <div class="loadmore-btn"><button>Load More</button></div>
 			</div>
 		</div>
 		<?php endwhile;?>	

@@ -15,6 +15,16 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1
   });
 
+ 
+    
+  $('.loadMore').loadMoreResults({
+   
+          displayedItems: 8
+    
+        });
+     
+    
+
   //to display contents in modal pop up - homepage patners read more link
   $("body").on("click",".js-readmore a",function(e){
     e.preventDefault();
