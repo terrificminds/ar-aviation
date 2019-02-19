@@ -10,18 +10,22 @@ get_header(); ?>
 		<div class = "post-wrapper">
 			<div class = "post-container">
 				<div class = "post-banner">
-					<img src="<?php echo $bannerImage;?>">
-				<div>
+						<div class = "wrapper">
+							<img src="<?php echo $bannerImage;?>">
+						</div>
+				</div>
 				<div class = "post-content">
-					<div class = "post-date">
-						<?php echo get_the_date();?>
+					<div class = "wrapper">
+						<div class = "post-date">
+							<?php echo get_the_date();?>
+						</div>
+						<div class = "post-title">
+							<?php echo get_the_title();?>
+						</div>
+						<div class = "post-content">
+							<?php the_content();?>
+						</div>	
 					</div>
-					<div class = "post-title">
-						<?php echo get_the_title();?>
-					</div>
-					<div class = "post-content">
-						<?php the_content();?>
-					</div>	
 				</div>
 			</div>
 		</div>
