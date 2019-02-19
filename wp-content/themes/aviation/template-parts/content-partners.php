@@ -19,7 +19,7 @@
         <h2><?php echo $category->name;?></h2>
         <div class = "partner-slider">
           <section class="regular slider" id="partner-home">
-            <?php echo $count=1;  //modal popup count// ?>
+            <?php $count=1;  //modal popup count// ?>
             <?php while ($partner_1->have_posts()) {
                 $partner_1->the_post();
                 $post_id = get_the_ID();
@@ -38,7 +38,7 @@
               <div class = "partner-1-left">
                 <div class="partner-1-left-content">
                   <div class = 'partner-1-logo'>
-                      <?php echo $count.":" ?><img src="<?php echo $logoUrl;?>">
+                      <img src="<?php echo $logoUrl;?>">
                   </div>
                   <div class = "partner-image-mob">
                       <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
