@@ -5,7 +5,7 @@
         $news = new WP_Query(array(
             'post_type' => 'news',
             'post_status' => 'publish',
-            'posts_per_page' => -1,   
+            'posts_per_page' => 8,   
         )); 
         while ($news->have_posts()) { 
             $news->the_post();
