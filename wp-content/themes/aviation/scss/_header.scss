@@ -158,13 +158,13 @@ body:not(.home) {
     }
     #content {
         padding-top: 90px;
-        .site-main {
-            max-width: 1290px;
-            margin: 0 auto;
-            @media all and (max-width: 1330px) {
-                padding: 0 20px;
-            }
-        }
+        // .site-main {
+        //     max-width: 1290px;
+        //     margin: 0 auto;
+        //     @media all and (max-width: 1330px) {
+        //         padding: 0 20px;
+        //     }
+        // }
     }
 }
 
