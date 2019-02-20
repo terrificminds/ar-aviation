@@ -161,7 +161,7 @@ body:not(.home) {
         @media all and (max-width: 1200px) {
             padding-top: 90px;
         }
-        .site-main, .careers-content{
+        .careers-content{
             max-width: 1290px;
             margin: 0 auto;
             @media all and (max-width: 1330px) {
@@ -180,7 +180,7 @@ body:not(.home) {
         position: relative;
         height: 87vh;
         @media all and (max-width: 909px) {
-          //  height: 400px; 
+          //  height: 400px;
         }
         @media all and (max-width: 600px) {
             height: 450px;

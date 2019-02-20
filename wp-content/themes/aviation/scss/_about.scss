@@ -65,11 +65,17 @@
 // Style for about us details page //
 .page-template-about {
   .site-inner {
-    header {
-      border: solid green;
-    }
     .site-content {
-        padding-top: 135px !important;
+        padding-top: 110px !important;
+        @media all and (max-width: 1082px) {
+          padding-top: 105px !important;
+        }
+        @media all and (max-width: 909px) {
+          padding-top: 98px !important;
+        }
+        @media all and (max-width: 709px) {
+          padding-top: 90px !important;
+        }
         .content-area {
           .about-content {
             .about-top {
@@ -86,14 +92,15 @@
                   flex-basis: 57%;
                   padding-top: 5%;
                   padding-left: calc((100% - 1290px)/2 + 0px);
+                  padding-right: 20px;
                   @media all and (max-width: 1299px) {
                     padding-top: 2%;
+                    padding-right: 15px;
                     padding-left: 20px
                   }
                   @media all and (max-width: 768px) {
-                    padding-top: 0;
+                    padding: 0;
                     flex-basis: auto;
-                    padding-left: 0;
                   }
 
                   .about-title {
