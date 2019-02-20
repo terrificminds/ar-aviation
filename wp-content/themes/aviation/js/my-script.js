@@ -1,30 +1,31 @@
 jQuery(document).ready(function ($) {
 
-  //To Instantiate Patners slider
-  jQuery("#partner-home").slick({
+  //To Instantiate Patners slider-homepage
+  $("#partner-home").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
-    //To Instantiate Services slider
+    //To Instantiate Services slider-homepage
   $("#services-home").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
-
- 
-    
+  //To Instantiate Service page sliders
+  $(".slider-servicepage").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  //news page lazy loading plugin
   $('.loadMore').loadMoreResults({
-   
           displayedItems: 8
-    
-        });
+  });
      
-    
-
   //to display contents in modal pop up - homepage patners read more link
   $("body").on("click",".js-readmore a",function(e){
     e.preventDefault();
@@ -80,21 +81,5 @@ jQuery(document).ready(function ($) {
       $("header.site-header").removeClass("openMenu");
     }
   }) 
-  $(document).ready(function(){
-    // Add minus icon for collapse element which is open by default
-    $(".collapse.in").each(function(){
-      $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
-    });
-    
-    // Toggle plus minus icon on show hide of collapse element
-    $(".collapse").on('show.bs.collapse', function(){
-      $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
-    }).on('hide.bs.collapse', function(){
-      $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
-    });
-});
-
 
 });
-
-   
