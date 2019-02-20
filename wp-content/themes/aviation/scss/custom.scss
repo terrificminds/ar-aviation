@@ -5,6 +5,7 @@
 @import "about";
 @import "services";
 @import "news-inner";
+@import "services-page";
 body:not(.custom-background-image):before,
 body:not(.custom-background-image):after {
     height: 0px !important;
@@ -131,7 +132,7 @@ body {
     }
     /*banner and partner2 button*/
     .banner-btn,
-    .partner-2-body {
+    .partner-2-body,.action-label {
         a.grey-big-btn {
             button {
                 padding: 18px 73px;

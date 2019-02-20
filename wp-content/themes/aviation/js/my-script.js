@@ -1,30 +1,31 @@
 jQuery(document).ready(function ($) {
 
-  //To Instantiate Patners slider
+  //To Instantiate Patners slider-homepage
   $("#partner-home").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
-    //To Instantiate Services slider
+    //To Instantiate Services slider-homepage
   $("#services-home").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
-
- 
-    
+  //To Instantiate Service page sliders
+  $(".slider-servicepage").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  //news page lazy loading plugin
   $('.loadMore').loadMoreResults({
-   
           displayedItems: 8
-    
-        });
+  });
      
-    
-
   //to display contents in modal pop up - homepage patners read more link
   $("body").on("click",".js-readmore a",function(e){
     e.preventDefault();
