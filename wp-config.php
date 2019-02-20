@@ -26,7 +26,7 @@ define('DB_NAME', 'ar-aviation');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '2016');
+define('DB_PASSWORD', 'YdPrObuqpuJFu6Xm');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

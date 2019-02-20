@@ -1,109 +1,45 @@
-.partners-wrapper .partner-1-background, .partners-wrapper .partner-2-background {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  float: left;
-  padding: 50px 0;
-}
-.partners-wrapper .partner-1-background h2, .partners-wrapper .partner-1-background .partner-slider, .partners-wrapper .partner-1-background .partner-2-content, .partners-wrapper .partner-2-background h2, .partners-wrapper .partner-2-background .partner-slider, .partners-wrapper .partner-2-background .partner-2-content {
-  max-width: 1290px;
-  margin: 0 auto;
-}
-.partners-wrapper .partner-1-background {
-  background-image: url("../images/partners-section-bg.jpg");
-}
-.partners-wrapper .partner-1-background h2 {
-  color: #fff;
-  font-size: 24px;
-  padding-bottom: 30px;
-}
-.partners-wrapper .partner-1-background .partner-slider {
-  background-color: #0000008a;
-  clear: both;
-  width: 100%;
-  overflow: hidden;
-  padding: 30px;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-left {
-  width: 50%;
-  float: left;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-left .partner-1-left-content .partner-1-logo {
-  padding: 20px 0;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-left .partner-1-left-content .partner-1-title {
-  color: #fff;
-  font-size: 18px;
-  padding-bottom: 15px;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-left .partner-1-left-content .partner-1-excerpt {
-  color: #fff;
-  font-size: 14px;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-left .partner-1-left-content .read-more a {
-  color: #fff;
-  font-size: 16px;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-left .partner-1-left-content .read-more a:hover {
-  text-decoration: none;
-  color: #fff;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-right {
-  width: 50%;
-  float: left;
-  text-align: center;
-}
-.partners-wrapper .partner-1-background .partner-slider .partner-1-modal {
-  border: 1px solid red;
-  clear: both;
-  width: 100%;
-  display: none;
-}
-.partners-wrapper .partner-2-background {
-  background-image: url("../images/partners-bg-spicejet.jpg");
-}
-.partners-wrapper .partner-2-background .partner-2-content .partner-2-left {
-  width: 50%;
-  float: left;
-}
-.partners-wrapper .partner-2-background .partner-2-content .partner-2-left .partner-2-logo {
-  padding: 30px 0 20px;
-}
-.partners-wrapper .partner-2-background .partner-2-content .partner-2-left h2 {
-  color: #fff;
-  font-size: 24px;
-  padding-bottom: 30px;
-}
-.partners-wrapper .partner-2-background .partner-2-content .partner-2-left .partner-2-body {
-  color: #fff;
-  font-size: 14px;
-}
-.partners-wrapper .partner-2-background .partner-2-content .partner-2-right {
-  width: 50%;
-  float: left;
-  text-align: right;
-}
+/*
+Error: Invalid CSS after "..."services-page"": expected "{", was ";"
+        on line 9 of /var/www/html/ar-aviation/wp-content/themes/aviation/scss/../scss/custom.scss
 
-body:not(.custom-background-image):before, body:not(.custom-background-image):after {
-  height: 0px !important;
-}
+4: @import "news";
+5: @import "about";
+6: @import "services";
+7: @import "news-inner";
+9: @import "services-page";
+11: @import "careers";
+13: body:not(.custom-background-image):before,
+14: body:not(.custom-background-image):after {
 
-#page {
-  margin: 0;
-}
-#page .site-inner {
-  max-width: 100%;
-}
-
-#content {
-  padding: 0;
-  max-width: 100%;
-  margin: 0 auto;
-  border: solid red;
-}
-#content .content-area {
-  width: 100%;
-}
-
-/*# sourceMappingURL=custom.css.map */
+Backtrace:
+/var/www/html/ar-aviation/wp-content/themes/aviation/scss/../scss/custom.scss:9
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1179:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1115:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1110:in `tok!'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:654:in `block'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:647:in `ruleset'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:673:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:123:in `stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:39:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:403:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:293:in `watch'
+/usr/lib/ruby/vendor_ruby/compass/sass_compiler.rb:46:in `watch!'
+/usr/lib/ruby/vendor_ruby/compass/commands/watch_project.rb:41:in `perform'
+/usr/lib/ruby/vendor_ruby/compass/commands/base.rb:18:in `execute'
+/usr/lib/ruby/vendor_ruby/compass/commands/project_base.rb:19:in `execute'
+/usr/lib/ruby/vendor_ruby/compass/exec/sub_command_ui.rb:43:in `perform!'
+/usr/lib/ruby/vendor_ruby/compass/exec/sub_command_ui.rb:15:in `run!'
+/usr/bin/compass:30:in `block in <main>'
+/usr/bin/compass:44:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...\"services-page\"\": expected \"{\", was \";\"\A         on line 9 of /var/www/html/ar-aviation/wp-content/themes/aviation/scss/../scss/custom.scss\A \A 4: @import \"news\";\A 5: @import \"about\";\A 6: @import \"services\";\A 7: @import \"news-inner\";\A 8: <<<<<<< Updated upstream\A 9: @import \"services-page\";\A 10: =======\A 11: @import \"careers\";\A 12: >>>>>>> Stashed changes\A 13: body:not(.custom-background-image):before,\A 14: body:not(.custom-background-image):after {"; }
