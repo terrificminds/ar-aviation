@@ -7,25 +7,28 @@
                 background-color: transparent;
                 padding-bottom: 40px;
                 .newslist-title {
+                    max-width: 1290px;
+                    margin: 0 auto;
+                   
                     color: white;
                     font-family: SourceSans-Bl;
                     font-size: 45px;
                     text-align: left;
                     padding: 40px 0px;
                     @media all and (max-width: 1330px) {
-                        padding: 40px 0px;
+                       // padding: 0 20px;
+                    }
+                    @media all and (max-width: 1330px) {
+                        padding: 40px 20px;
                     }
                     @media all and (max-width: 991px) {
-                        padding: 30px 0px;
+                        padding: 30px 20px;
                         font-size: 40px;
                     }
                     @media all and (max-width: 768px) {
-                        padding: 20px 0px;
+                        padding: 20px 20px;
                         font-size: 35px;
                     }
-                }
-                .news-bottom {
-                    padding: 0;
                 }
                 button.btn-load-more {
                     box-shadow: 4px 4px 13px 2px #afadad8f;
@@ -41,9 +44,8 @@
                     @media all and (max-width: 500px) {
                         padding: 15px 55px;
                     }
-                    &:hover{
+                    &:hover {
                         background-color: #efefef;
-                     
                     }
                 }
             }
@@ -57,8 +59,8 @@
         background-color: #f5f5f5;
     }
     .site-main {
-        max-width: none !important;
-        padding: 0 !important;
+        //  max-width: none !important;
+        //  padding: 0 !important;
     }
     .post-wrapper {
         .post-container {

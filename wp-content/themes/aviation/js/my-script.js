@@ -1,30 +1,31 @@
 jQuery(document).ready(function ($) {
 
-  //To Instantiate Patners slider
-  jQuery("#partner-home").slick({
+  //To Instantiate Patners slider-homepage
+  $("#partner-home").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
-    //To Instantiate Services slider
+    //To Instantiate Services slider-homepage
   $("#services-home").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
   });
-
- 
-    
+  //To Instantiate Service page sliders
+  $(".slider-servicepage").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  //news page lazy loading plugin
   $('.loadMore').loadMoreResults({
-   
           displayedItems: 8
-    
-        });
+  });
      
-    
-
   //to display contents in modal pop up - homepage patners read more link
   $("body").on("click",".js-readmore a",function(e){
     e.preventDefault();
@@ -80,7 +81,6 @@ jQuery(document).ready(function ($) {
       $("header.site-header").removeClass("openMenu");
     }
   }) 
-  
   $(document).ready(function(){
     // Add minus icon for collapse element which is open by default
     $(".collapse.in").each(function(){
@@ -96,20 +96,18 @@ jQuery(document).ready(function ($) {
 });
 
  //Contact form Floating label transition
-$('input').focus(function(){
-  $(this).parents('.form-group').addClass('focused');
+  $('input').focus(function(){
+    $(this).parents('.form-group').addClass('focused');
+  });
+
+  $('input').blur(function(){
+    var inputValue = $(this).val();
+    if ( inputValue == "" ) {
+      $(this).removeClass('filled');
+      $(this).parents('.form-group').removeClass('focused');  
+    } else {
+      $(this).addClass('filled');
+    }
+  }); 
+
 });
-
-$('input').blur(function(){
-  var inputValue = $(this).val();
-  if ( inputValue == "" ) {
-    $(this).removeClass('filled');
-    $(this).parents('.form-group').removeClass('focused');  
-  } else {
-    $(this).addClass('filled');
-  }
-})  
-
-});
-
-   
