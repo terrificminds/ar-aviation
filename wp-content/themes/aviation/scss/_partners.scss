@@ -157,7 +157,7 @@
             .partner-1-modal {
                 border: 1px solid red;
                 clear: both;
-                width: 100%; //to hide the div wich contains the pop up details 
+                width: 100%; //to hide the div wich contains the pop up details
                 position: fixed;
                 z-index: -1;
                 visibility: hidden;
@@ -211,11 +211,11 @@
                         }
                     }
                     p {
-                        font-size: 19px;
-                        font-family: SourceSans-Bd;
+                      font-family: SourceSans-Semib;
+                      font-size: 18px;
                         line-height: 22px;
                         @media all and (max-width: 768px) {
-                            font-size: 17px;
+                            font-size: 16px;
                         }
                     }
                 }
