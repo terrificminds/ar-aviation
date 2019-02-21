@@ -10,6 +10,9 @@
             flex-basis: 57%;
             padding-top: 5%;
             padding-left: calc((100% - 1290px)/2 + 0px);
+            @media all and (max-width: 4000px) {
+              flex-basis: 56%;
+            }
             @media all and (max-width: 700px) {
                 flex-basis: 58%;
             }
@@ -51,7 +54,28 @@
             }
         }
         .about-right {
-            flex-basis: 55%;
+            @media all and (min-width: 4000px) {
+              flex-basis: 65%;
+            }
+            @media all and (max-width: 3999px) and (min-width: 3200px) {
+              flex-basis: 63%;
+            }
+            @media all and (max-width: 3199px) and (min-width: 2800px) {
+              flex-basis: 60%;
+            }
+            @media all and (max-width: 2799px) and (min-width: 2000px) {
+              flex-basis: 59%;
+            }
+            @media all and (max-width: 1999px) and (min-width: 1680px) {
+              flex-basis: 56%;
+            }
+            @media all and (max-width: 1679px) and (min-width: 1380px) {
+              flex-basis: 55%;
+            }
+            @media all and (max-width: 1379px) and (min-width: 701px) {
+              flex-basis: 54%;
+            }
+            flex-basis: 53%;
             img.about-image {
                 width: 100%;
                 height: 100%;
