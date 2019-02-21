@@ -9,7 +9,7 @@
                 .newslist-title {
                     max-width: 1290px;
                     margin: 0 auto;
-                   
+
                     color: white;
                     font-family: SourceSans-Bl;
                     font-size: 45px;
@@ -31,6 +31,9 @@
                     }
                 }
                 button.btn-load-more {
+                    -webkit-box-shadow: 4px 4px 13px 2px #afadad8f;
+                    -moz-box-shadow: 4px 4px 13px 2px #afadad8f;
+                    -ms-box-shadow: 4px 4px 13px 2px #afadad8f;
                     box-shadow: 4px 4px 13px 2px #afadad8f;
                     font-size: 16px;
                     font-family: SourceSans-Rg;
@@ -53,7 +56,7 @@
     }
 }
 
-//News Details Page styling 
+//News Details Page styling
 .single-news {
     .site {
         background-color: #f5f5f5;
@@ -90,6 +93,9 @@
                     max-width: 1200px;
                     margin: 0 auto;
                     background-color: #f5f5f5;
+                    -webkit-box-shadow: 3px 3px 12px 1px #afadad8f;
+                    -moz-box-shadow: 3px 3px 12px 1px #afadad8f;
+                    -ms-box-shadow: 3px 3px 12px 1px #afadad8f;
                     box-shadow: 3px 3px 12px 1px #afadad8f;
                     padding: 20px 45px;
                     @media all and (max-width: 1330px) {
@@ -102,12 +108,12 @@
                     }
                     .post-date {
                         font-family: SourceSans-Semib;
-                        font-size: 22px;
+                        font-size: 20px;
                         color: #a2aab1;
                         line-height: normal;
                         letter-spacing: 0.5px;
                         @media all and (max-width: 768px) {
-                            font-size: 20px;
+                            font-size: 28px;
                         }
                     }
                     .post-title {
@@ -122,10 +128,10 @@
                     }
                     .post-content {
                         p {
-                            margin-bottom: 0;
+                            margin-bottom: 10px;
                             font-family: SourceSans-Lt;
                             font-size: 18px;
-                            line-height: normal;
+                            line-height: 1.5;
                             letter-spacing: 0.5px;
                             @media all and (max-width: 768px) {
                                 font-size: 16px;

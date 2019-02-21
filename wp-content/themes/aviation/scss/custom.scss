@@ -19,8 +19,9 @@ body {
         font-family: SourceSans-Rg;
     }
     * {
+        font-weight: normal !important;
         @-moz-document url-prefix() {
-            font-weight: normal;
+            font-weight: normal !important;
         }
     }
 }
@@ -60,6 +61,7 @@ body {
         font-size: 28px;
         padding-bottom: 20px;
         font-family: SourceSans-Bd;
+        font-weight: 500;
         @media all and (max-width: 860px) {
             font-size: 24px;
         }
@@ -136,8 +138,8 @@ body {
     .partner-2-body,.action-label {
         a.grey-big-btn {
             button {
-                padding: 18px 73px;
-                font-size: 19px;
+                padding: 18px 55px;
+                font-size: 18px;
                 font-family: SourceSans-Lt;
                 text-transform: none;
                 color: #001658;
@@ -145,12 +147,12 @@ body {
                 border-radius: 5px;
                 border: 2px solid #fff;
                 @media all and (max-width: 1200px) {
-                    padding: 15px 55px;
+                    padding: 15px 45px;
                     font-size: 16px;
                 }
                 @media all and (max-width: 768px) {
-                    padding: 15px 50px;
-                    font-size: 14px;
+                    padding: 15px 40px;
+                    font-size: 15px;
                 }
                 &:hover {
                     @media all and (min-width: 768px) {

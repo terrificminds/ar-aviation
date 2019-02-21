@@ -32,7 +32,7 @@
             position: static;
             padding: 30px 20px;
         }
-    
+
     }
 }
 //styling for homepage slider and serves page sliders
@@ -83,7 +83,7 @@
                 padding: 60px 0 0 35px;
                 color: white;
                 @media all and (max-width: 700px) {
-                    padding: 40px 15px 15px;
+                    padding: 40px 15px 30px;
                 }
                 .service-count {
                     line-height: 14px;
@@ -153,6 +153,7 @@
             width: 50px;
             height: 50px;
             line-height: 39px;
+            font-weight: 500;
         }
         &.slick-prev {
             left: 39.5%;
