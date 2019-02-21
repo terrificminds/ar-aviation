@@ -58,13 +58,26 @@
                 }
                 .slick-prev {
                     position: absolute;
-                    left: -45px;
+                    left: -38px;
                     transform: translate(-50%, -25px);
+                    width: 45px;
+                    height: 45px;
+                    @media all and (max-width: 1024px) {
+                        left: -32px;
+                    }
+                    @media all and (max-width: 650px) {
+                        left: -25px;
+                    }
                 }
                 .slick-next {
                     position: absolute;
-                    right: -36px;
+                    right: -77px;
                     transform: translate(-50%, -25px);
+                    width: 45px;
+                    height: 45px;
+                    @media all and (max-width: 650px) {
+                        right: -65px;
+                    }
                 }
                 .slick-slide {
                     transition: all ease-in-out .3s;
@@ -92,6 +105,9 @@
                 }
                 .partner-1-left-content {
                     padding-left: 10px;
+                    @media all and (max-width: 991px) {
+                        padding-right: 10px;
+                    }
                     .partner-1-logo {
                         padding: 20px 0;
                         @media all and (max-width: 991px) {
