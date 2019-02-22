@@ -70,12 +70,14 @@
                       <div class = "partner-logo">
                         <img src="<?php echo $modalLogo;?>">
                       </div>
-                      <div class = "partner-body">
-                          <?php the_content();?>
+                      <div class="partner-content">
+                        <div class = "partner-body">
+                            <?php the_content();?>
+                        </div>
+                        <a href = "<?php echo $websiteLink?>">
+                            <button type="button"> Visit Website </button>
+                        </a>
                       </div>
-                      <a href = "<?php echo $websiteLink?>">
-                          <button type="button"> Visit Website </button>
-                      </a>
                   </div>
                   <div class = "partner-modal-right">
                       <img src="<?php echo $modalImage;?>">
