@@ -1,51 +1,54 @@
 .page-template-contact{
+    .content-area {
+        background: linear-gradient(to bottom, #0b2758 0, #0b2758 350px, #f5f5f5 350px, #f5f5f5 600px, #ffffff 600px, #ffffff 100%);
+    }
     .contact-content{
-        .contact-container, .contact-form, .contact-content{
+        .contact-form, .contact-content{
             max-width: 1290px;
             margin: 0 auto;
         }
-            .contact-title {
-                color:#fff !important;
-                padding: 0 0 30px;
-                @media all and (max-width: 991px) {
-                    padding: 20px;
-                }
+        .contact-wrapper{
+            padding-top: 0;
+            background-color: transparent;
+            padding-bottom: 40px;
+        }
+        .contact-container{
+            max-width: 1290px;
+            margin: 0 auto;
+            padding: 40px 0px;
+            @media all and (max-width: 991px) {
+                padding: 20px 0;
             }
-            .contact-top{
-                background-color: #001658;
-                padding-top: 60px;
-                padding-bottom: 60px;
-                overflow: hidden;
-                position: relative;
-                height: 45vh;
-                @media all and (max-width: 991px) {
-                    padding-top: 30px;
-                    padding-bottom: 30px;
+        }
+            .contact-title {
+                color: #fff;
+                font-size: 28px;
+                padding-bottom: 50px;
+                font-family: SourceSans-Bd;
+                font-weight: 500;
+                @media all and (max-width: 768px) {
+                  text-align: center;
                 }
-            } 
-            .contact-wrapper{
-                background-color: #f5f5f5;
-                position: relative;
-                min-height: 320px;
+                padding: 20px 0;
+                @media all and (max-width: 991px) {
+                    padding:10px 20px;
+                }
+               
             }
             .contact-form{
-                background-color: #fff;  
-                padding: 20px; 
-                position: absolute;
-                top: -45%;
-                left:0;
-                right:0;
+                background-color: #fff;
+                padding: 20px;
+                max-width: 1290px;
+                margin: 0 auto;
+                text-align: left;
                 @media all and (max-width: 991px) {
-                    margin:20px;  
+                    margin:0 20px 20px 20px;  
                 }
                 .wpcf7{
                     .row{
                         .form-group {
                             position:relative;  
                             margin: 20px 0;
-                            // & + .form-group {
-                            //   margin-top: 30px;
-                            // }
                             .form-label {
                                 position: absolute;
                                 left: 17px;
@@ -127,22 +130,25 @@
                 }
         }
         .contact-bottom{
+            
+            @media all and (min-width: 991px) {
+                padding-top: 40px;
+            }
             .contact-content{
                 padding-top: 40px;
                 padding-bottom: 40px;
                 clear: both;
                 overflow: hidden;
-                @media all and (max-width: 991px) {
-                    padding: 20px;
+                @media all and (max-width: 1024px) {
+                    padding: 30px 20px;
                 }
                 .physical-address{
                     float: left;
                     width: 40%;
                     vertical-align: middle;
-                    @media all and (max-width: 991px) {
+                    @media all and (max-width: 767px) {
                         float:none;
                         width: 100%;
-                        padding-top:30px;
                     }
                     p {
                         font-family: SourceSans-Rg;
@@ -163,7 +169,7 @@
                     float: right;
                     width: 50%;
                     vertical-align: middle;
-                    @media all and (max-width: 991px) {
+                    @media all and (max-width: 767px) {
                         float:none;
                         width: 100%;
                         padding-top:30px;
