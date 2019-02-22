@@ -34,7 +34,7 @@
 					<div class = "footer-column-3">
 						<div class = "title">ADDRESS</div>	
 						<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
-						<div class = "tel"><span>Tel:</span><?php echo get_theme_mod('telephone-block') ;?></div>				
+						<div class = "tel">Tel : <?php echo get_theme_mod('telephone-block') ;?></div>				
 					</div>
 				</div>
 				<div class = "footer-bottom">
