@@ -5,14 +5,15 @@
 	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post();?>
 		<div class="contact-content">
+        <div class="contact-wrapper">
 			<div class="contact-top">
                 <div class="contact-container">
 					<h2 class="contact-title">
 						<?php single_post_title();?>
-                    </h2>
+                    </h2> 
                 </div>
             </div>
-            <div class="contact-wrapper">
+            
             <div class="contact-form">
                         <h2 class="block-title">Drop us a line</h2>
                         <?php echo do_shortcode('[contact-form-7 id="134" title="Contact form 1"]')?>

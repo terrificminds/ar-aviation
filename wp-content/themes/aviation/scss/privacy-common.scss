@@ -63,6 +63,25 @@
         .error-404{
             .common-content{
                 text-align: center;
+                h1, h3{
+                    
+                    font-size: 50px;
+                    padding-bottom: 10px;
+                    @media all and (max-width: 1200px) {
+                        font-size: 40px;
+                    }
+                    @media all and (max-width: 768px) {
+                        font-size: 30px;
+                    }
+                }
+                h1{
+                    color:#bc0606;
+                    font-family: SourceSans-Bd;
+                }
+                h3{
+                    color:#001658;
+                    font-family: SourceSans-Rg;
+                }
             }
         }
     }
