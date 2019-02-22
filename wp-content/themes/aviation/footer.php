@@ -44,7 +44,7 @@
 					<div class = "footer-column-2">
 						<div class = "footer-links">
 							<a href="<?php echo get_page_link(get_theme_mod('website-terms'))?>">Terms and Conditions</a> |
-							<a href="<?php echo get_page_link(get_theme_mod('website-policy'))?>">Privacy Policy</a>
+							<a href="<?php echo get_page_link(get_theme_mod('website-privacy'))?>">Privacy Policy</a>
 						</div>
 					</div>	
 				</div>

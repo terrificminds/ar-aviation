@@ -144,13 +144,21 @@
         width: 45px;
         height: 45px;
         &:before {
+            content: "";
             color: #001658;
             font-size: 40px;
             display: inline-block;
-            width: 50px;
-            height: 50px;
+            opacity: 1;
+            width: 45px;
+            height: 45px;
             line-height: 39px;
             font-weight: 500;
+         
+        }
+        &:hover{
+            &:before{
+                background-color: #efefef !important;
+            }
         }
         &.slick-prev {
             left: 39.5%;
@@ -165,6 +173,9 @@
             @media all and (max-width: 700px) {
                 top: 41%;
                 left: 0;
+            }
+            &:before{
+                background: url(../images/icons8-chevron-left-30.png) no-repeat center;
             }
            
         }
@@ -182,6 +193,9 @@
             @media all and (max-width: 700px) {
                 top: 41%;
                 right: 0px;
+            }
+            &:before{
+                background: url(../images/icons8-chevron-right-30.png) no-repeat center;
             }
             
         }
