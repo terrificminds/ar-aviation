@@ -10,7 +10,9 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<div class="page-content">
-                    <img class="404-image" src="<?php echo wp_get_attachment_url(get_theme_mod('404-image')) ?>"/>
+				<div class="common-content">
+					<img class="404-image" src="<?php echo wp_get_attachment_url(get_theme_mod('404-image')) ?>"/>
+					</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
