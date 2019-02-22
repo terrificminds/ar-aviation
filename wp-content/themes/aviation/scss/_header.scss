@@ -8,6 +8,9 @@ header.site-header {
     z-index: 999;
     &.openMenu {
         background-color: #001658;
+        -webkit-box-shadow: 0 4px 20px -1px #0000006e;
+        -moz-box-shadow: 0 4px 20px -1px #0000006e;
+        -ms-box-shadow: 0 4px 20px -1px #0000006e;
         box-shadow: 0 4px 20px -1px #0000006e;
     }
     @media all and (max-width: 1300px) {
@@ -27,7 +30,9 @@ header.site-header {
         }
         .site-branding {
             a {
-                img {}
+                img {
+                    max-width: none;
+                }
             }
         }
         button.menu-toggle {
@@ -53,6 +58,10 @@ header.site-header {
         }
         .site-header-menu {
             margin: 0;
+            @media all and (max-width: 768px) and (orientation:landscape) {
+                overflow-x: auto;
+                height: 300px;
+            }
             ul.primary-menu {
                 li {
                     a {
@@ -124,7 +133,10 @@ header.site-header {
         z-index: 999;
         padding-top: 10px !important;
         padding-bottom: 10px !important;
-        background-color: #0b2758;
+        background-color: #001658;    
+        -webkit-box-shadow: 0 4px 20px -1px #0000006e;
+        -moz-box-shadow: 0 4px 20px -1px #0000006e;
+        -ms-box-shadow: 0 4px 20px -1px #0000006e;
         box-shadow: 0 4px 20px -1px #0000006e;
         .site-header-main {
             max-width: 1290px;
@@ -145,8 +157,11 @@ header.site-header {
 //styling header for inner pages
 body:not(.home) {
     header.site-header {
-        background-color: #0b2758;
+        background-color: #001658;
         padding: 30px 0 30px 0 !important;
+        -webkit-box-shadow: 0 4px 20px -1px #0000006e;
+        -moz-box-shadow: 0 4px 20px -1px #0000006e;
+        -ms-box-shadow: 0 4px 20px -1px #0000006e;
         box-shadow: 0 4px 20px -1px #0000006e;
         @media all and (max-width: 909px) {
             padding: 20px !important;
@@ -159,16 +174,15 @@ body:not(.home) {
     #content {
         padding-top: 112px;
         @media all and (max-width: 1200px) {
-        padding-top: 90px;
+            padding-top: 90px;
         }
-        .careers-content{
+        .careers-content {
             max-width: 1290px;
             margin: 0 auto;
             @media all and (max-width: 1330px) {
-            padding: 0 20px;
+                padding: 0 20px;
             }
         }
-
     }
 }
 
@@ -180,9 +194,9 @@ body:not(.home) {
         position: relative;
         height: 87vh;
         @media all and (max-width: 909px) {
-          //  height: 400px; 
+            //  height: 400px; 
         }
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 768px) {
             height: 450px;
         }
         &:after {
@@ -282,10 +296,17 @@ body:not(.home) {
             top: 25%;
             z-index: 990;
             color: #fff;
-            left: 12%;
+            right: 0;
+            left: 0;
+            max-width: 1290px;
+            margin-left: auto;
+            margin-right: auto;
             padding-right: 20px;
+            @media all and (max-width: 1450px) {
+                left: 10%;
+            }
             @media all and (max-width: 909px) {
-                left: auto;
+                left: 0;
                 padding-right: 40px;
                 padding-left: 40px;
             }

@@ -162,6 +162,27 @@ function save_aviation_fields_meta( $post_id ) {
 }
 add_action( 'save_post', 'save_aviation_fields_meta' );
 
+function aviation_customize_404($wp_customize){
+    $wp_customize->add_section(
+        '404_section',
+        array(
+            'title' => __('404 Page'),
+            'priority' => null,
+            'description'	=> __('Change footer contents'),
+        )
+    );
+    $wp_customize->add_setting('404-image');
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'404-image',array(
+            'label'	=> __('404 image'),
+            'section'	=> '404_section',
+            'settings' => '404-image',
+            'height' => '1000',
+            'width' => '2500'
+    )));
+}
+
+add_action( 'customize_register', 'aviation_customize_404' );
+
 
 /**
  * Register and enqueue a custom script in the WordPress admin.
