@@ -8,6 +8,8 @@
 @import "services-page";
 @import "careers";
 @import "contact";
+@import "privacy-common";
+
 body:not(.custom-background-image):before,
 body:not(.custom-background-image):after {
     height: 0px !important;
