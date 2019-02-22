@@ -47,8 +47,9 @@
                 }
                 .slick-prev:before,
                 .slick-next:before {
+                    content: "";
                     color: black;
-                    background-color: #ffffff;
+                    background-color: #ffffff !important;
                     opacity: 1;
                     font-size: 40px;
                     display: inline-block;
@@ -56,28 +57,40 @@
                     height: 50px;
                     line-height: 39px;
                 }
+                .slick-arrow{
+                    width: 45px;
+                    height: 45px;
+                    &:hover{
+                        &:before{
+                            background-color: #efefef !important;
+                        }
+                    }
+                }
                 .slick-prev {
                     position: absolute;
                     left: -38px;
                     transform: translate(-50%, -25px);
-                    width: 45px;
-                    height: 45px;
+                 
                     @media all and (max-width: 1024px) {
                         left: -32px;
                     }
                     @media all and (max-width: 650px) {
                         left: -25px;
                     }
+                    &:before{
+                        background: url(../images/icons8-chevron-left-30.png) no-repeat center;
+                    }                  
                 }
                 .slick-next {
                     position: absolute;
                     right: -77px;
-                    transform: translate(-50%, -25px);
-                    width: 45px;
-                    height: 45px;
+                    transform: translate(-50%, -25px);                
                     @media all and (max-width: 650px) {
                         right: -65px;
                     }
+                    &:before{
+                        background: url(../images/icons8-chevron-right-30.png) no-repeat center;
+                    }                   
                 }
                 .slick-slide {
                     transition: all ease-in-out .3s;
