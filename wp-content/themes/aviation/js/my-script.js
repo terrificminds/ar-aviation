@@ -1,5 +1,8 @@
 jQuery(document).ready(function ($) {
 
+  //remove height and width of custom logo
+  $('.custom-logo').removeAttr('width').removeAttr('height');
+
   //To Instantiate Patners slider-homepage
   $("#partner-home").slick({
     dots: true,
