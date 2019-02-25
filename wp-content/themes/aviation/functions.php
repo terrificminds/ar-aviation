@@ -254,7 +254,6 @@ function add_theme_scripts() {
         array( 'jquery' )
     );
 }
-
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 include_once( get_stylesheet_directory() .'/includes/services.php');
 include_once( get_stylesheet_directory() .'/includes/footer-section.php');
@@ -263,10 +262,4 @@ include_once( get_stylesheet_directory() .'/includes/about.php');
 include_once( get_stylesheet_directory() .'/includes/banner.php');
 include_once( get_stylesheet_directory() .'/includes/careers.php');
 include_once( get_stylesheet_directory() .'/includes/contact.php');
-?>
-<?php add_filter('wpcf7_form_elements', function($content) {
-    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
-
-    return $content;
-});
 ?>
