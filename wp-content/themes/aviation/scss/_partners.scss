@@ -48,8 +48,9 @@
                 }
                 .slick-prev:before,
                 .slick-next:before {
+                    content: "";
                     color: black;
-                    background-color: #ffffff;
+                    background-color: #ffffff !important;
                     opacity: 1;
                     font-size: 40px;
                     display: inline-block;
@@ -57,28 +58,40 @@
                     height: 50px;
                     line-height: 39px;
                 }
+                .slick-arrow{
+                    width: 45px;
+                    height: 45px;
+                    &:hover{
+                        &:before{
+                            background-color: #efefef !important;
+                        }
+                    }
+                }
                 .slick-prev {
                     position: absolute;
                     left: -38px;
                     transform: translate(-50%, -25px);
-                    width: 45px;
-                    height: 45px;
+                 
                     @media all and (max-width: 1024px) {
                         left: -32px;
                     }
                     @media all and (max-width: 650px) {
                         left: -25px;
                     }
+                    &:before{
+                        background: url(../images/icons8-chevron-left-30.png) no-repeat center;
+                    }                  
                 }
                 .slick-next {
                     position: absolute;
                     right: -77px;
-                    transform: translate(-50%, -25px);
-                    width: 45px;
-                    height: 45px;
+                    transform: translate(-50%, -25px);                
                     @media all and (max-width: 650px) {
                         right: -65px;
                     }
+                    &:before{
+                        background: url(../images/icons8-chevron-right-30.png) no-repeat center;
+                    }                   
                 }
                 .slick-slide {
                     transition: all ease-in-out .3s;
@@ -276,18 +289,46 @@
             display: flex;
             padding: 0;
             .partner-modal-left {
-                padding: 60px 30px 30px;
+                padding: 60px 0 30px 30px;
                 flex-basis: 65%;
                 max-height: 520px;
-                overflow-y: auto;
+                // overflow-y: auto;
+                @media all and (max-width: 599px) {
+                  flex-basis: auto;
+                }
                 .partner-logo {
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                     img {
                         max-width: 150px;
                         @media all and (max-width: 500px) {
                             max-width: 100px;
                         }
                     }
+                }
+                .partner-content {
+                  max-height: 340px;
+                  overflow-y: auto;
+                  padding: 20px 20px 0 0;
+                  &::-webkit-scrollbar-track{
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                    -moz-box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                    box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                    -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                    border-radius: 8px;
+                    background-color: #F5F5F5;
+                  }
+                  &::-webkit-scrollbar {
+                    width: 10px;
+                    background-color: #F5F5F5;
+                  }
+                  &::-webkit-scrollbar-thumb{
+                    border-radius: 8px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+                    -moz-box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                    box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                    -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                    background-color: #001658;
+                  }
                 }
                 .partner-body {
                     p {
@@ -304,7 +345,8 @@
                     box-shadow: 3px 3px 12px 1px #afadad8f;
                     font-size: 12px;
                     font-family: SourceSans-Rg;
-                    margin-top: 30px;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
                     padding: 15px 45px;
                     @media all and (max-width: 500px) {
                         padding: 10px 35px;
@@ -313,6 +355,9 @@
             }
             .partner-modal-right {
                 flex-basis: 50%;
+                @media all and (max-width: 599px) {
+                  display: none;
+                }
                 img {
                     @media all and (max-width: 991px) {
                         width: 100%;

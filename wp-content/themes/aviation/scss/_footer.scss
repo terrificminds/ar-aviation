@@ -39,7 +39,12 @@ footer.site-footer {
             .footer-column {
                 &-1 {
                     flex-basis: 40%;
+                    @media all and (max-width: 991px) {
+                        flex-basis: 34%;
+                    }
                     img {
+                        width: 100%;
+                        max-width: 330px;
                         margin-bottom: 30px;
                     }
                     p {
@@ -55,7 +60,10 @@ footer.site-footer {
                     }
                 }
                 &-2 {
-                    flex-basis: 30%;
+                    flex-basis: 25%;
+                    @media all and (max-width: 991px) {
+                        flex-basis: 15%;
+                    }
                     nav.footer-navigation {
                         ul.footer-menu {
                             list-style: none;
@@ -79,7 +87,7 @@ footer.site-footer {
                     }
                 }
                 &-3 {
-                    flex-basis: 22%;
+                    flex-basis: 300px;
                     font-size: $footer-font-size;
                     @media all and (max-width: 768px) {
                         font-size: $footer-font-size-resp;
@@ -129,6 +137,7 @@ footer.site-footer {
                       padding-left: 18px;
                       background-position-y: 8px;
                       font-size: 16px;
+                      display: inline-block;
                     }
                 }
                 &-2 {
