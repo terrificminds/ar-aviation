@@ -69,9 +69,11 @@ $categories = get_terms( array(
 										<div class = "service-body">
 											<?php the_content();?>
 										</div>
+										<?php if(($button_link != "") && ($button_label != "")):?>
 										<div class = "action-label">
 											<a class="grey-big-btn" href = "<?php echo $button_link ?>"><button><?php echo $button_label;?></button></a>
 										</div>
+										<?php endif;?>
 									</div>
 								</div>
 							<?php endwhile;	?>
