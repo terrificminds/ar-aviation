@@ -31,10 +31,13 @@
                     }
                 }
                 button.btn-load-more {
-                    -webkit-box-shadow: 4px 4px 13px 2px #afadad8f;
-                    -moz-box-shadow: 4px 4px 13px 2px #afadad8f;
-                    -ms-box-shadow: 4px 4px 13px 2px #afadad8f;
-                    box-shadow: 4px 4px 13px 2px #afadad8f;
+                    // -webkit-box-shadow: 4px 4px 13px 2px #afadad8f;
+                    // -moz-box-shadow: 4px 4px 13px 2px #afadad8f;
+                    // -ms-box-shadow: 4px 4px 13px 2px #afadad8f;
+                    // box-shadow: 4px 4px 13px 2px #afadad8f;
+                    box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.1) !important;
+                    -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.1) !important;
+                    -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.1) !important;
                     font-size: 16px;
                     font-family: SourceSans-Rg;
                     margin-top: 40px;
