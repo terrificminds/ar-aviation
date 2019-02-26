@@ -22,19 +22,21 @@
         }
             .contact-title {
                 color: #fff;
-                font-size: 28px;
+                font-size: 45px;
                 padding-bottom: 50px;
                 font-family: SourceSans-Bd;
                 font-weight: 500;
                 text-transform: capitalize;
-                @media all and (max-width: 768px) {
-                  text-align: center;
-                }
                 padding: 20px 0;
                 @media all and (max-width: 991px) {
                     padding:10px 20px;
+                    font-size: 40px;
                 }
-               
+                @media all and (max-width: 768px) {
+                  text-align: center;
+                  font-size: 35px;
+                }
+  
             }
             .contact-form{
                 background-color: #fff;
