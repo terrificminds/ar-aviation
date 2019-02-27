@@ -8,7 +8,7 @@
             margin: 0 auto;
         }
         .contact-wrapper{
-            padding-top: 0;
+            padding-top: 20px;
             background-color: transparent;
             padding-bottom: 40px;
         }
@@ -27,7 +27,7 @@
                 font-family: SourceSans-Bd;
                 font-weight: 500;
                 text-transform: capitalize;
-                padding: 20px 0;
+                padding: 20px;
                 @media all and (max-width: 991px) {
                     padding:10px 20px;
                     font-size: 40px;
@@ -44,7 +44,7 @@
                 max-width: 1290px;
                 margin: 0 auto;
                 text-align: left;
-                @media all and (max-width: 991px) {
+                @media all and (max-width: 1350px) {
                     margin:0 20px 20px 20px;  
                 }
                 .wpcf7{
