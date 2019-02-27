@@ -35,7 +35,16 @@ header.site-header {
             a {
                 img {
                     
-                    max-width: none;
+                    max-width: 340px;
+                    @media all and (max-width: 1330px) {
+                        max-width: 290px;
+                    }
+                    @media all and (max-width: 991px) {
+                        max-width: 240px;
+                    }
+                    @media all and (max-width: 400px) {
+                        max-width: 200px;
+                    }
                 }
             }
         }
@@ -67,6 +76,9 @@ header.site-header {
                 height: 200px;
             }
             ul.primary-menu {
+                @media all and (max-width: 909px) {
+                    padding-top: 10px;
+                }
                 li {
                     a {
                         color: white;
@@ -145,6 +157,16 @@ header.site-header {
         .site-header-main {
             max-width: 1290px;
             margin: 0 auto;
+            .site-branding{
+                a{
+                    img{
+                        max-width: 240px;
+                        @media all and (max-width: 400px) {
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

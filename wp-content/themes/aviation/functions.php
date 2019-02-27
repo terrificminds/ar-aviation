@@ -1,5 +1,19 @@
 <?php
 
+function aviation_setup() {
+	/*
+	 * Enable support for custom logo.
+	 *
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'      => 400,
+		'width'       => 400,
+		'flex-height' => true,
+	) );
+}
+add_action( 'after_setup_theme', 'aviation_setup', 11 );
+
+
 // Adding Custom Post Type for Adding Partners
 
 function aviation_post_partners() {
