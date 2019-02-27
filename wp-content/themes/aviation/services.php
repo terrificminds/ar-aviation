@@ -59,7 +59,7 @@ $categories = get_terms( array(
 								$featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );  
 							?>
 								<div class = "service-slider">
-									<div class = "service-block-left">
+									<div class = "service-block-left" style="background-image: url(<?php echo $featuredImage[0]; ?>)">
 										<img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
 									</div>    
 									<div class = "service-block-right">
