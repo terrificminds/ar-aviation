@@ -17,14 +17,14 @@ $categories = get_terms( array(
 						<div class="service-title">
 							<?php single_post_title();?>
 						</div>
-						<div class="services-image">
-						<?php the_post_thumbnail();?>
+						<div class="services-image" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>)">
+							<?php the_post_thumbnail();?>
 						</div>
 						<div class="service-description">
 							<?php the_content();?>
 						</div>
 					</div>
-					<div class="services-top-right">
+					<div class="services-top-right" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>)">
 						<?php the_post_thumbnail();?>
 					</div>
 				</div>
