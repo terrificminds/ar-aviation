@@ -86,7 +86,7 @@
             h2.block-title{
                 font-family: SourceSans-Semib;
                 &:after{
-                    width: 183px;
+                    width: 183px !important;
                 }
             }
             p , a{
