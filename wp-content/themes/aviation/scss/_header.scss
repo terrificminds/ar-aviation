@@ -37,7 +37,7 @@ header.site-header {
                     
                     max-width: 340px;
                     @media all and (max-width: 1330px) {
-                        max-width: 290px;
+                        max-width: 280px;
                     }
                     @media all and (max-width: 991px) {
                         max-width: 240px;
@@ -53,7 +53,10 @@ header.site-header {
             background: url(../images/menu.png) no-repeat center;
             border: none;
             width: 34px;
-            height: 34px;
+            height: 25px;
+            padding: 0;
+            margin: 0;
+            align-self: flex-end;
             @media all and (max-width: 600px) {
                 background-size: 80% !important;
             }
@@ -71,6 +74,17 @@ header.site-header {
         }
         .site-header-menu {
             margin: 0;
+            position: relative;
+            top: 13px;
+            @media all and (max-width: 1330px) {
+                top: 9px;
+            }
+            @media all and (max-width: 1082px) {
+                top: 12px;
+            }
+            @media all and (max-width: 400px) {
+               // top: 13px;
+            }
             @media all and (max-width: 768px) and (orientation:landscape) {
                 overflow-x: auto;
                 height: 200px;
@@ -80,18 +94,24 @@ header.site-header {
                     padding-top: 10px;
                 }
                 li {
+                    margin-top: 12px;
+                    @media all and (max-width: 910px) {
+                        margin-top: 0px;
+                    }
                     a {
                         color: white;
                         font-family: SourceSans-Semib;
                         font-size: 18px;
                         text-decoration: none;
                         outline: none;
+                        padding-bottom: 0;
                         @media all and (min-width: 910px) and (max-width: 1082px) {
                             padding: 0.65625em 9px;
                             font-size: 16px;
                         }
                         @media all and (max-width: 910px) {
                             text-align: right;
+                            padding: 0.84375em 0;
                         }
                         @media all and (min-width: 910px) {
                             &::after {
@@ -148,7 +168,7 @@ header.site-header {
         animation: smoothScroll 1s forwards;
         z-index: 999;
         padding-top: 10px !important;
-        padding-bottom: 10px !important;
+        padding-bottom: 15px !important;
         background-color: #001658;    
         box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
         -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
@@ -165,6 +185,9 @@ header.site-header {
                         }
                     }
                 }
+            }
+            .site-header-menu {
+                position: static;
             }
         }
     }
