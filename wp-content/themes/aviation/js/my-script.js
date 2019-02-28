@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
       $("header.site-header").removeClass("openMenu");
     }
   }) 
-  $(document).ready(function(){
+ 
     // Add minus icon for collapse element which is open by default
     $(".collapse.in").each(function(){
       $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
@@ -96,8 +96,7 @@ jQuery(document).ready(function ($) {
     }).on('hide.bs.collapse', function(){
       $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
     });
-});
-
+ 
  //Contact form Floating label transition
   $('input').focus(function(){
     $(this).parents('.form-group').addClass('focused');
