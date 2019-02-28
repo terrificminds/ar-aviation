@@ -75,12 +75,12 @@ header.site-header {
         .site-header-menu {
             margin: 0;
             position: relative;
-            top: 13px;
+            top: 4px;
             @media all and (max-width: 1330px) {
-                top: 9px;
+                top: 3px;
             }
             @media all and (max-width: 1082px) {
-                top: 12px;
+                top: 8px;
             }
             @media all and (max-width: 400px) {
                // top: 13px;
