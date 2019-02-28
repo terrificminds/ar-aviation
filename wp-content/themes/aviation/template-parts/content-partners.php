@@ -74,7 +74,7 @@
                         <div class = "partner-body">
                             <?php the_content();?>
                         </div>
-                        <a href = "<?php echo $websiteLink?>">
+                        <a href = "<?php echo $websiteLink?>" target="_blank">
                             <button type="button"> Visit Website </button>
                         </a>
                       </div>
