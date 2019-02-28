@@ -34,7 +34,7 @@
                       <?php the_excerpt();?>
                   </div>
                   <div class = 'view-more'>
-                      <a href = "/">View more services</a>
+                      <a href = "<?php echo get_page_link(get_theme_mod('service_page_link'))?>">View more services</a>
                   </div>
               </div>
           </div>
