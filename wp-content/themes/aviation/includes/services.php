@@ -122,3 +122,22 @@ function save_aviation_services_fields_meta( $post_id ) {
 }
 add_action( 'save_post', 'save_aviation_services_fields_meta' );
 
+function aviation_customize_service($wp_customize){
+    $wp_customize->add_section(
+        'service_section',
+        array(
+            'title' => __('Service Section'),
+            'priority' => null,
+            'description'	=> __('Change service section link'),
+        )
+    );
+    $wp_customize->add_setting('service_page_link');
+    $wp_customize->add_control('service_page_link',array(
+            'label'	=> __('Service Page Link'),
+            'section'	=> 'service_section',
+            'settings' => 'service_page_link',
+            'type'	=> 'dropdown-pages',
+    ));
+}
+add_action( 'customize_register', 'aviation_customize_service' );
+
