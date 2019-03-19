@@ -1,4 +1,18 @@
 @import "alvfonts";
+body.home {
+  header.site-header {
+    .site-header-main {
+      .site-branding {
+        border: 1px solid #001658;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
+        -moz-box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
+        box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
+      }
+    }
+  }
+}
 header.site-header {
     padding: 0 0 20px 0 !important;
     position: absolute;
@@ -17,10 +31,13 @@ header.site-header {
         -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
     }
     @media all and (max-width: 1300px) {
-        padding: 60px 20px 20px !important;
+        padding: 0 20px 20px !important;
     }
     @media all and (max-width: 909px) {
-        padding: 40px 20px 20px !important;
+        padding: 0 20px 20px !important;
+    }
+    @media all and (max-width: 767px) {
+      padding: 0 15px 15px !important;
     }
     .site-header-main {
         max-width: 1290px;
@@ -34,12 +51,7 @@ header.site-header {
         .site-branding {
           background: #001658;
           padding: 20px 15px 15px;
-          border: 1px solid #001658;
-          border-bottom-left-radius: 10px;
-          border-bottom-right-radius: 10px;
-          -webkit-box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
-          -moz-box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
-          box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
+
             a {
                 img {
 
@@ -65,6 +77,8 @@ header.site-header {
             padding: 0;
             margin: 0;
             align-self: flex-end;
+            position: relative;
+            top: -15px;
             @media all and (max-width: 600px) {
                 background-size: 80% !important;
             }
@@ -113,11 +127,15 @@ header.site-header {
                         text-decoration: none;
                         outline: none;
                         padding-bottom: 0;
-                        @media all and (min-width: 910px) and (max-width: 1082px) {
+                        @media all and (min-width: 991px) and (max-width: 1199px) {
                             padding: 0.65625em 9px;
                             font-size: 16px;
                         }
-                        @media all and (max-width: 910px) {
+                        @media all and (min-width: 910px) and (max-width: 991px) {
+                            padding: 0.65625em 9px;
+                            font-size: 15px;
+                        }
+                        @media all and (max-width: 909px) {
                             text-align: right;
                             padding: 0.84375em 0;
                         }
@@ -215,7 +233,7 @@ header.site-header {
 body:not(.home) {
     header.site-header {
         background-color: #001658;
-        padding: 0px 0 30px 0 !important;
+        padding: 0px 0 15px 0 !important;
         // -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         // -moz-box-shadow: 0 4px 20px -1px #0000006e;
         // -ms-box-shadow: 0 4px 20px -1px #0000006e;
@@ -224,7 +242,7 @@ body:not(.home) {
         -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
         -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
         @media all and (max-width: 909px) {
-            padding: 20px !important;
+            padding: 0 20px 20px !important;
         }
         &.fixed {
             padding-top: 10px !important;
@@ -232,9 +250,15 @@ body:not(.home) {
         }
     }
     #content {
-        padding-top: 112px;
+        padding-top: 95px;
+        @media all and (max-width: 1330px) {
+          padding-top: 85px;
+        }
         @media all and (max-width: 1200px) {
             padding-top: 90px;
+        }
+        @media all and (max-width: 1200px) {
+            padding-top: 80px;
         }
         .careers-content {
             max-width: 1290px;

@@ -1,14 +1,17 @@
  .page-template-services {
      #content {
-         padding-top: 112px !important;
-         @media all and (max-width: 1083px) {
-             padding-top: 107px !important;
+         padding-top: 95px !important;
+         @media all and (max-width: 1330px) {
+           padding-top: 90px !important;
          }
-         @media all and (max-width: 909px) {
-             padding-top: 100px !important;
+         @media all and (max-width: 991px) {
+             padding-top: 84px !important;
          }
          @media all and (max-width: 709px) {
-             padding-top: 92px !important;
+             padding-top: 89px !important;
+         }
+         @media all and (max-width: 400px) {
+             padding-top: 82px !important;
          }
      }
      .services-content {
@@ -87,11 +90,11 @@
                  }
                  .services-top-right {
                      flex-grow: 2;
-                
+
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center center;
-                     
+
                      img {
                          width: 100%;
                          height: 100%;
