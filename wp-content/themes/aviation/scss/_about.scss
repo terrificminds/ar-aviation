@@ -90,15 +90,12 @@
 .page-template-about {
   .site-inner {
     .site-content {
-        padding-top: 110px !important;
-        @media all and (max-width: 1082px) {
-          padding-top: 105px !important;
-        }
-        @media all and (max-width: 909px) {
-          padding-top: 98px !important;
-        }
-        @media all and (max-width: 709px) {
+        padding-top: 95px !important;
+        @media all and (max-width: 1330px) {
           padding-top: 90px !important;
+        }
+        @media all and (max-width: 991px) {
+          padding-top: 83px !important;
         }
         .content-area {
           .about-content {
@@ -368,7 +365,7 @@
               .members-wrapper{
                 width: 23.3%;
                 float: left;
-                margin: 0 10px;                
+                margin: 0 10px;
                 padding-bottom: 20px;
                 @media all and (max-width: 1229px) {
                   margin: 0 7px;
