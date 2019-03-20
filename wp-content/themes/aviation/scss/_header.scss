@@ -11,6 +11,13 @@ body.home {
         box-shadow: 0px 2px 10px 1px rgba(31, 31, 31, 0.6);
       }
     }
+    &.fixed {
+      .site-header-main {
+        .site-branding {
+          box-shadow: none;
+        }
+      }
+    }
   }
 }
 header.site-header {
