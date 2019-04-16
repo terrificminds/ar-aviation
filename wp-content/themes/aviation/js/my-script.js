@@ -7,6 +7,8 @@ jQuery(document).ready(function ($) {
   $("#partner-home").slick({
     dots: true,
     infinite: true,
+    autoplay: true, 
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
@@ -14,6 +16,8 @@ jQuery(document).ready(function ($) {
   $("#services-home").slick({
     dots: true,
     infinite: true,
+    autoplay: true, 
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
@@ -21,6 +25,8 @@ jQuery(document).ready(function ($) {
   $(".slider-servicepage").slick({
     dots: true,
     infinite: true,
+    autoplay: true, 
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
