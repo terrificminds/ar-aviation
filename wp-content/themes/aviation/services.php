@@ -57,6 +57,7 @@ $categories = get_terms( array(
 								$post_id = get_the_ID();
 								$button_label = get_post_meta(get_the_ID(), 'service-button-label', TRUE);
 								$button_link = get_post_meta(get_the_ID(), 'service-button-link', TRUE);
+								$modalImage = get_post_meta(get_the_ID(), 'service_modal_image', TRUE);
 								$featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );  
 							?>
 								<div class = "service-slider">
@@ -91,7 +92,7 @@ $categories = get_terms( array(
 											<div class="modal-body">
 												<!-- modal data -->
 												<div class = "service-block-left">
-													<img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
+													<img class = "service-featured-image" src="<?php echo $modalImage; ?>">
 												</div>    
 												<div class = "service-block-right ">
 													<div class = "service-title">
@@ -112,9 +113,7 @@ $categories = get_terms( array(
 											</div> -->
 										</div>
 									</div>
-									</div>
-														
-
+									</div>					
 							<?php endwhile;	?>
 							</div>
 							<!-- </section>	 -->

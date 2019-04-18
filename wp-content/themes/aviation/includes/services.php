@@ -70,6 +70,14 @@ function aviation_taxonomies_services() {
 add_action( 'init', 'aviation_taxonomies_services', 0 );
 
 function add_aviation_service_meta_box() {
+    add_meta_box(
+		'add_aviation_service_modal_image_meta_box', // $id
+		'Service Modal Image', // $title
+		'aviation_service_modal_image_meta_box', // $callback
+		'services', // $screen
+		'normal', // $context
+		'high' // $priority
+	);
 	add_meta_box(
 		'add_aviation_service_meta_box', // $id
 		'Service Action Button', // $title
@@ -88,6 +96,18 @@ function add_aviation_service_meta_box() {
 	);
 }
 add_action( 'add_meta_boxes', 'add_aviation_service_meta_box' );
+
+function aviation_service_modal_image_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'service_modal_image', true);?>
+    <p>
+        <label for="service-modal-image">Upload flight chart 2</label><br>
+        <input type="text" name="service-modal-image" id="service-modal-image" class="service-modal-image regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="button" class="button service-modal-image-upload" value="Browse">
+    </p>
+    <div class="service-modal-image-preview"><img class = "service-modal-image" src="<?php echo $meta; ?>" style="max-width: 250px;"></div>
+    <?php
+}
 
 function aviation_service_action_meta_box(){
     global $post;
@@ -117,6 +137,7 @@ function save_aviation_services_fields_meta( $post_id ) {
     update_post_meta($post->ID, "service-display", '1');
     else
     update_post_meta($post->ID, "service-display", '0');
+    update_post_meta($post->ID,"service_modal_image",$_POST["service-modal-image"]);
     update_post_meta($post->ID, "service-button-link", $_POST["service-button-link"]);
     update_post_meta($post->ID, "service-button-label", $_POST["service-button-label"]);
 }

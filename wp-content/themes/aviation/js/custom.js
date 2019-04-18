@@ -124,5 +124,36 @@ jQuery(document).ready(function ($) {
       // Opens the media library frame.
       meta_logo_frame.open();
     });
+
+    $('.service-modal-image-upload').click(function (e) {
+      var meta_modal_frame;
+      // Get preview pane
+      var meta_logo_preview = $('.service-modal-image-preview .service-modal-image');
+      // Prevents the default action from occuring.
+      e.preventDefault();
+      var meta_logo = $('.service-modal-image');
+      // If the frame already exists, re-open it.
+      if (meta_modal_frame) {
+        meta_modal_frame.open();
+        return;
+      }
+      // Sets up the media library frame
+      meta_modal_frame = wp.media.frames.meta_image_frame = wp.media({
+        title: meta_logo.title,
+        button: {
+          text: meta_logo.button
+        }
+      });
+      // Runs when an image is selected.
+      meta_modal_frame.on('select', function () {
+        // Grabs the attachment selection and creates a JSON representation of the model.
+        var media_attachment = meta_modal_frame.state().get('selection').first().toJSON();
+        // Sends the attachment URL to our custom image input field.
+        meta_logo.val(media_attachment.url);
+        meta_logo_preview.attr('src', media_attachment.url);
+      });
+      // Opens the media library frame.
+      meta_modal_frame.open();
+    });
     
   });
