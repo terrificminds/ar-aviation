@@ -283,4 +283,5 @@ include_once( get_stylesheet_directory() .'/includes/banner.php');
 include_once( get_stylesheet_directory() .'/includes/careers.php');
 include_once( get_stylesheet_directory() .'/includes/contact.php');
 include_once( get_stylesheet_directory() .'/includes/flights.php');
+include_once( get_stylesheet_directory() .'/includes/associates.php');
 ?>
