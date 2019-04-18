@@ -44,16 +44,6 @@ jQuery(document).ready(function ($) {
       .find(".modal-body").empty().append(data).end()					
       .modal("show");
   });
-  //to display contents in modal pop up - Sevices page read more link
-  // $("body").on("click",".js-readmore-services a",function(e){
-  //   e.preventDefault();
-  //   var slideParent = $(this).closest('.js-slide-services');
-  //   var data = $(slideParent).html();
-  //   $("#servicesReadMoreModal")
-  //     .find(".modal-body").empty().append(data).end()					
-  //     .modal("show");
-  // });
-
   //Sticky Header
   $(window).scroll(function () {
     var sticky = $('.site-header'),
