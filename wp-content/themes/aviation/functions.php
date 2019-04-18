@@ -208,6 +208,12 @@ function aviation_custom_scripts() {
         get_stylesheet_directory_uri() . '/js/custom.js',
         array( 'jquery' )
     );
+    //flights post type admin page js
+    wp_enqueue_script(
+        'flight-admin-script',
+        get_stylesheet_directory_uri() . '/js/flights.js',
+        array( 'jquery' )
+    );
 
 }
 
@@ -276,4 +282,5 @@ include_once( get_stylesheet_directory() .'/includes/about.php');
 include_once( get_stylesheet_directory() .'/includes/banner.php');
 include_once( get_stylesheet_directory() .'/includes/careers.php');
 include_once( get_stylesheet_directory() .'/includes/contact.php');
+include_once( get_stylesheet_directory() .'/includes/flights.php');
 ?>

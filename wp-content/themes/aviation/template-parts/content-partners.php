@@ -6,6 +6,8 @@
             'post_type' => 'partner',
             'post_status' => 'publish',
             'posts_per_page' => -1,
+            'orderby'=> 'title', 
+            'order' => 'ASC',
             'tax_query' => array(
                 array (
                     'taxonomy' => 'partner_category',
