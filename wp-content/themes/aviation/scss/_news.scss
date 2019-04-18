@@ -1,5 +1,6 @@
 @import "alvfonts";
-.news-wrapper {
+
+.news-wrapper,.services-wrapper {
     background-color: #fff;
     padding-top: 60px;
     text-align: center;
@@ -26,7 +27,8 @@
         @media all and (max-width: 1330px) {
             padding: 0 20px;
         }
-        .news-block {
+    }
+        .news-block,.service-slider {
             margin-bottom: 3px;
             margin-right: 3px;
             flex-basis: 24.6%;
@@ -43,7 +45,7 @@
                 flex-basis: 100%;
                 margin-right: 0px;
             }
-            .news-image {
+            .news-image,.service-block-left {
                 position: relative;
                 img {
                     width: 100%;
@@ -59,7 +61,7 @@
                     display: block;
                 }
             }
-            .news-details-wrapper {
+            .news-details-wrapper,.service-block-right {
                 position: absolute;
                 top: 0;
                 width: 100%;
@@ -91,7 +93,7 @@
                     font-size: 16px;
                 }
                 .news-date,
-                .news-title {
+                .news-title,.service-title {
                     -webkit-transform: translate3d(0, 140px, 0);
                     transform: translate3d(0, 140px, 0);
                     webkit-transition: -webkit-transform 0.35s;
@@ -109,7 +111,25 @@
                         transform: translate3d(0, 140px, 0);
                     }
                 }
-                .news-title {
+                .service-title {
+                    -webkit-transform: translate3d(0, 85px, 0);
+                    transform: translate3d(0, 85px, 0);
+                    webkit-transition: -webkit-transform 0.35s;
+                    transition: transform 0.35s;
+                    @media all and (max-width: 1100px) {
+                        // -webkit-transform: translate3d(0, 130px, 0);
+                        // transform: translate3d(0, 130px, 0);
+                    }
+                    @media all and (max-width: 550px) {
+                        // -webkit-transform: translate3d(0, 110px, 0);
+                        // transform: translate3d(0, 100px, 0);
+                    }
+                    @media all and (max-width: 400px) {
+                        // -webkit-transform: translate3d(0, 140px, 0);
+                        // transform: translate3d(0, 140px, 0);
+                    }
+                }
+                .news-title,.service-title {
                     p {
                         font-size: 18px; 
                         white-space: nowrap;
@@ -128,7 +148,7 @@
                     }
                 }
                 .news-excerpt,
-                .news-readmore {
+                .news-readmore,.service-body {
                     opacity: 0;
                     -webkit-transform: translate3d(0, 40px, 0);
                     transform: translate3d(0, 40px, 0);
@@ -199,24 +219,24 @@
                 }
             }
             &.active {
-                .news-details-wrapper {
+                .news-details-wrapper,.service-block-right  {
                     justify-content: flex-start;
                     .news-date,
-                    .news-title {
+                    .news-title,.service-title {
                         -webkit-transition-delay: 0.05s;
                         transition-delay: 0.05s;
                         -webkit-transition-duration: 0.35s;
                         transition-duration: 0.35s;
                         -webkit-transform: translate3d(0, 0, 0);
                     }
-                    .news-title {
+                    .news-title,.service-title {
                         margin-bottom: 20px;
                         &:after {
                             display: none;
                         }
                     }
                     .news-excerpt,
-                    .news-readmore {
+                    .news-readmore,.service-body {
                         opacity: 1;
                         -webkit-transition-delay: 0.2s;
                         transition-delay: 0.2s;
@@ -227,5 +247,5 @@
                 }
             }
         }
-    }
+    // }
 }

@@ -44,6 +44,15 @@ jQuery(document).ready(function ($) {
       .find(".modal-body").empty().append(data).end()					
       .modal("show");
   });
+  //to display contents in modal pop up - Sevices page read more link
+  // $("body").on("click",".js-readmore-services a",function(e){
+  //   e.preventDefault();
+  //   var slideParent = $(this).closest('.js-slide-services');
+  //   var data = $(slideParent).html();
+  //   $("#servicesReadMoreModal")
+  //     .find(".modal-body").empty().append(data).end()					
+  //     .modal("show");
+  // });
 
   //Sticky Header
   $(window).scroll(function () {
@@ -70,6 +79,14 @@ jQuery(document).ready(function ($) {
         toggleOn || $(this).removeClass('active');
       }
     );
+    
+    $(".service-slider").hover(
+      function () {
+        $(this).addClass('active');
+      }, function () {
+        toggleOn || $(this).removeClass('active');
+      }
+    );
   }
   else {
     // tablet and mobile interaction
@@ -78,6 +95,12 @@ jQuery(document).ready(function ($) {
       $(this).toggleClass('active');
 
     });
+    $(".service-slider").click(function () {
+      $(".service-slider").removeClass('active');
+      $(this).toggleClass('active');
+
+    });
+    
   }
   
   //add class to header to add background color for resp header menu
