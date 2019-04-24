@@ -12,6 +12,36 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+  $("#patnerslogo-home").slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+      },
+      {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+      },
+      {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1
+          }
+      }
+
+  ]
+  });
     //To Instantiate Services slider-homepage
   $("#services-home").slick({
     dots: true,
@@ -44,7 +74,6 @@ jQuery(document).ready(function ($) {
       .find(".modal-body").empty().append(data).end()					
       .modal("show");
   });
-
   //Sticky Header
   $(window).scroll(function () {
     var sticky = $('.site-header'),
@@ -70,6 +99,14 @@ jQuery(document).ready(function ($) {
         toggleOn || $(this).removeClass('active');
       }
     );
+    
+    $(".service-slider").hover(
+      function () {
+        $(this).addClass('active');
+      }, function () {
+        toggleOn || $(this).removeClass('active');
+      }
+    );
   }
   else {
     // tablet and mobile interaction
@@ -78,6 +115,12 @@ jQuery(document).ready(function ($) {
       $(this).toggleClass('active');
 
     });
+    $(".service-slider").click(function () {
+      $(".service-slider").removeClass('active');
+      $(this).toggleClass('active');
+
+    });
+    
   }
   
   //add class to header to add background color for resp header menu
