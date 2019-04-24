@@ -12,6 +12,36 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+  $("#patnerslogo-home").slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+      },
+      {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+      },
+      {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1
+          }
+      }
+
+  ]
+  });
     //To Instantiate Services slider-homepage
   $("#services-home").slick({
     dots: true,

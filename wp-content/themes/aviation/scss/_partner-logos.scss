@@ -1,0 +1,127 @@
+.associates-wrapper {
+    clear: both;
+    background: #d4d4d4;
+    padding: 20px 0;
+
+    .associates-content {
+        max-width: 1290px;
+        margin: 0 auto;
+        padding: 20px 0;
+
+        .slick-slider {
+            width: 95%;
+            margin: 0 auto;
+            @media all and (max-width: 1400px) {
+                width: 86%;
+            }
+            @media all and (max-width: 600px) {
+                width: 78%;
+            }
+            @media all and (max-width: 400px) {
+                width: 70%;
+            }
+
+            .slick-slide {
+                .associates-slider-logo {
+                    height: 100px;
+                    display: flex !important;
+
+                    a {
+                        margin: 10px 5px;
+                        padding: 10px;
+                        background-color: white;
+                        display: block;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;                   
+                        display: flex;
+                        align-items: center;
+                        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3) !important;
+                        -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3) !important;
+                        -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3) !important;
+                        @media all and (max-width: 991px) {
+                            margin: 10px 10px;
+                        }
+                        @media all and (max-width: 600px) {
+                            margin: 10px 20px;
+                        }
+                        @media all and (max-width: 400px) {
+                            margin: 10px 10px;
+                        }
+
+                        img {
+                            width: 100%;
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                content: "";
+                color: black;
+                background-color: #ffffff !important;
+                opacity: 1;
+                font-size: 40px;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                line-height: 39px;
+                @media all and (max-width: 991px) {
+                    width: 35px;
+                    height: 35px;
+                    background-size: 60% !important;
+                }
+            }
+
+            .slick-arrow {
+                width: 45px;
+                height: 45px;
+
+                &:hover {
+                    &:before {
+                        background-color: #efefef !important;
+                    }
+                }
+            }
+
+            .slick-prev {
+                position: absolute;
+                left: -38px;
+                transform: translate(-50%, -25px);
+
+                @media all and (max-width: 1024px) {
+                    left: -32px;
+                }
+                @media all and (max-width: 991px) {
+                    left: -20px;
+                }
+
+                @media all and (max-width: 650px) {
+                   // left: -25px;
+                }
+
+                &:before {
+                    background: url(../images/icons8-chevron-left-30.png) no-repeat center;
+                }
+            }
+
+            .slick-next {
+                position: absolute;
+                right: -77px;
+                transform: translate(-50%, -25px);
+                @media all and (max-width: 991px) {
+                    right: -65px;
+                }
+                @media all and (max-width: 650px) {
+                  //  right: -65px;
+                }
+
+                &:before {
+                    background: url(../images/icons8-chevron-right-30.png) no-repeat center;
+                }
+            }
+        }
+    }
+}
