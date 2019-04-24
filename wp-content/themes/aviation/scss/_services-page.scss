@@ -163,6 +163,7 @@
                              @media all and (max-width: 1024px) {
                                  max-height: 350px;
                              }
+
                              .service-block-left {
                                  height: 100%;
 
@@ -171,9 +172,11 @@
                                      object-fit: cover;
                                  }
                              }
+
                              .service-title {
                                  font-family: SourceSans-Semib;
                              }
+
                              .service-body {
                                  p {
                                      display: -webkit-box;
@@ -186,52 +189,109 @@
                                      text-overflow: ellipsis;
                                  }
                              }
-                             .action-label,.service-maincontent {
+
+                             .action-label,
+                             .service-maincontent {
                                  display: none;
                              }
                          }
+
                          .modal {
+                             top: 10%;
                              .modal-dialog {
                                  .modal-content {
                                      .modal-header {
                                          padding: 0;
-                                         height: 0;
-                                         button.close {
-                                             position: relative;
-                                             top: 0;
-                                             right: 0;
-                                             font-size: 50px;
+                                         border: none;
+
+                                         button {
+                                             color: black;
+                                             font-size: 40px;
+                                             opacity: 1;
+                                             position: absolute;
+                                             right: 10px;
+                                             top: 10px;
+                                             z-index: 999;
+
+                                             &:hover {
+                                                 background: none;
+                                                 color: #0000008c;
+                                             }
                                          }
                                      }
+
                                      .modal-body {
-                                        display: flex;
-                                        padding: 0;
-                                        .service-block-left {
-                                            flex-basis: 50%;
-                                            img {
-                                                width: 100%;
-                                            }
-                                        }
-                                        .service-block-right  {
-                                            padding: 30px 60px 0 30px;
-                                            flex-basis: 65%;
-                                            max-height: 520px;
-                                            .service-title {
-                                                font-size: 20px;
-                                                font-family: SourceSans-SemiB;
-                                                margin-bottom: 0;
-                                            }
-                                            .service-body {
-                                                max-height: 340px;
-                                                overflow-y: auto;
-                                                padding: 20px 20px 0 0;
-                                                p {
-                                                    font-size: 15px;
-                                                    font-family: SourceSans-SemiB;
-                                                    margin-bottom: 25px;
-                                                }
-                                            }
-                                        }
+                                         display: flex;
+                                         padding: 0;
+
+                                         .service-block-left {
+                                             flex-basis: 50%;
+                                             @media all and (max-width: 600px) {
+                                                 display: none;
+                                             }
+
+                                             img {
+                                                 width: 100%;
+                                                 height: 100%;
+                                                 object-fit: cover;
+                                                 //max-height: 500px;
+                                             }
+                                         }
+
+                                         .service-block-right {
+                                             padding: 30px 60px 30px 30px;
+                                             flex-basis: 65%;
+                                             max-height: 520px;
+                                             @media all and (max-width: 600px) {
+                                                padding: 30px 30px 30px 30px;
+                                                flex-basis: 100%;
+                                             }
+
+                                             .service-title {
+                                                 font-size: 20px;
+                                                 font-family: SourceSans-SemiB;
+                                                 margin-bottom: 0;
+                                             }
+
+                                             .service-body {
+                                                 max-height: 400px;
+                                                 overflow-y: auto;
+                                                 padding: 20px 20px 0 0;
+                                                 &::-webkit-scrollbar-track{
+                                                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                                                    -moz-box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                                                    box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                                                    -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                                                    border-radius: 8px;
+                                                    background-color: #F5F5F5;
+                                                  }
+                                                  &::-webkit-scrollbar {
+                                                    width: 10px;
+                                                    background-color: #F5F5F5;
+                                                  }
+                                                  &::-webkit-scrollbar-thumb{
+                                                    border-radius: 8px;
+                                                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+                                                    -moz-box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                                                    box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
+                                                    -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                                                    background-color: #001658;
+                                                  }
+
+                                                 p {
+                                                     font-size: 15px;
+                                                     font-family: SourceSans-SemiB;
+                                                     margin-bottom: 25px;
+                                                 }
+                                             }
+
+                                             .action-label button {
+                                                 box-shadow: 0px 2px 15px 1px rgba(93, 93, 93, 0.5);
+                                                 -webkit-box-shadow: 0px 2px 15px 1px rgba(93, 93, 93, 0.5);
+                                                 -moz-box-shadow: 0px 2px 15px 1px rgba(93, 93, 93, 0.5);
+                                                 padding: 10px 30px !important;
+                                             }
+                                         }
                                      }
                                  }
                              }
