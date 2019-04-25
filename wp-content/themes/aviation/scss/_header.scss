@@ -27,16 +27,16 @@ header.site-header {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: white;
+    //background-color: white;
     &.openMenu {
-       // background-color: #001658;
+        background-color: #001658;
         // -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         // -moz-box-shadow: 0 4px 20px -1px #0000006e;
         // -ms-box-shadow: 0 4px 20px -1px #0000006e;
         // box-shadow: 0 4px 20px -1px #0000006e;
-        box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
-        -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
-        -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
+        // box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
+        // -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
+        // -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.9) !important;
     }
     @media all and (max-width: 1300px) {
         padding: 0 20px 20px !important;
@@ -129,7 +129,7 @@ header.site-header {
                         margin-top: 0px;
                     }
                     a {
-                        color: black;
+                        color: white;
                         font-family: SourceSans-Semib;
                         font-size: 18px;
                         text-decoration: none;
@@ -154,7 +154,7 @@ header.site-header {
                                 width: 0;
                                 height: 2px;
                                 margin-top: 3px;
-                                background: black;
+                                background: white;
                                 transition: width .3s;
                             }
                             &:hover::after {
@@ -179,7 +179,7 @@ header.site-header {
                     float: right;
                     a {
                         border: none;
-                        color: black;
+                        color: white;
                         &:hover {
                             text-decoration: none;
                         }
@@ -203,10 +203,10 @@ header.site-header {
         z-index: 999;
         padding-top: 10px !important;
         padding-bottom: 15px !important;
-        //background-color: #001658;
-        box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
-        -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
-        -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
+        background-color: #001658;
+        // box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
+        // -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
+        // -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.6);
         .site-header-main {
             max-width: 1290px;
             margin: 0 auto;
