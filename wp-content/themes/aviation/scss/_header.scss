@@ -240,7 +240,8 @@ header.site-header {
 //styling header for inner pages
 body:not(.home) {
     header.site-header {
-        //background-color: #001658;
+        background-color: #001658;
+        //padding: 30px 0 30px 0 !important;
         padding: 0px 0 15px 0 !important;
         // -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         // -moz-box-shadow: 0 4px 20px -1px #0000006e;
@@ -385,6 +386,7 @@ body:not(.home) {
         }
         .banner-text-container {
             position: absolute;
+            top: 32%;
             z-index: 990;
             color: #fff;
             right: 0;
