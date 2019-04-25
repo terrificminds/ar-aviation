@@ -10,8 +10,8 @@
  */
 ?>
 	</div><!-- .site-content -->
+		<?php get_template_part( 'template-parts/content', 'associates' );?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_template_part( 'template-parts/content', 'associates' );?>
 			<div class = "footer-container">
 				<div class = "footer-top">
 					<div class = "footer-column-1">
