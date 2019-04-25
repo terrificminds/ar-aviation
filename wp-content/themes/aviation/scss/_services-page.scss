@@ -160,30 +160,57 @@
                          text-align: left;
 
                          .service-slider {
+                            flex-basis: 33%;
                              @media all and (max-width: 1024px) {
-                                 max-height: 350px;
+                                // max-height: 350px;
+                                 flex-basis: 32%;
                              }
-
+                            
+                            @media all and (max-width: 768px) {
+                                flex-basis: 49%;
+                            }
+                            @media all and (max-width: 400px) {
+                                flex-basis: 100%;
+                                 
+                            }
                              .service-block-left {
                                  height: 100%;
+
+                                 &:after {
+                                     content: none;
+                                 }
 
                                  img {
                                      height: 100%;
                                      object-fit: cover;
+                                     max-height: 300px;
                                  }
+                             }
+
+                             .service-block-right {
+                                 padding: 0;
                              }
 
                              .service-title {
                                  font-family: SourceSans-Semib;
+                                 background-color: #011659;
+                                //  -webkit-transform: translate3d(0, 165px, 0);
+                                //  transform: translate3d(0, 165px, 0);
+                                 text-align: center;
+                                 padding: 10px 0;
+                              
+                                 &:after {
+                                     content: none;
+                                 }
                              }
 
                              .service-body {
                                  p {
                                      display: -webkit-box;
-                                     height: 46px;
+                                     height: 109px;
                                      //margin-bottom: 10%;
                                      line-height: 22px;
-                                     -webkit-line-clamp: 2;
+                                     -webkit-line-clamp: 5;
                                      -webkit-box-orient: vertical;
                                      overflow: hidden;
                                      text-overflow: ellipsis;
@@ -194,10 +221,37 @@
                              .service-maincontent {
                                  display: none;
                              }
+
+                             &.active {
+                                 .service-block-right {
+                                     background-color: rgba(1, 22, 89, 0.8);
+                                     transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) !important;
+                                     padding: 30px 20px;
+
+                                     .service-title {
+                                         -webkit-transform: translate3d(0, 0, 0);
+                                         transform: translate3d(0, 0, 0);
+                                         background-color: transparent;
+                                         text-align: left;
+                                         font-family: SourceSans-Bd;
+                                         font-size: 22px;
+                                         @media all and (max-width: 600px) {
+                                            font-size: 18px;                                     
+                                        }
+        
+                                     }
+                                     .service-body {
+                                        @media all and (max-width: 600px) {
+                                            font-size: 16px;                                     
+                                        }
+                                     }
+                                 }
+                             }
                          }
 
                          .modal {
                              top: 10%;
+
                              .modal-dialog {
                                  .modal-content {
                                      .modal-header {
@@ -226,6 +280,7 @@
 
                                          .service-block-left {
                                              flex-basis: 50%;
+
                                              @media all and (max-width: 600px) {
                                                  display: none;
                                              }
@@ -242,9 +297,10 @@
                                              padding: 30px 60px 30px 30px;
                                              flex-basis: 65%;
                                              max-height: 520px;
+
                                              @media all and (max-width: 600px) {
-                                                padding: 30px 30px 30px 30px;
-                                                flex-basis: 100%;
+                                                 padding: 30px 30px 30px 30px;
+                                                 flex-basis: 100%;
                                              }
 
                                              .service-title {
@@ -257,26 +313,29 @@
                                                  max-height: 400px;
                                                  overflow-y: auto;
                                                  padding: 20px 20px 0 0;
-                                                 &::-webkit-scrollbar-track{
-                                                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-                                                    -moz-box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
-                                                    box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
-                                                    -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-                                                    border-radius: 8px;
-                                                    background-color: #F5F5F5;
-                                                  }
-                                                  &::-webkit-scrollbar {
-                                                    width: 10px;
-                                                    background-color: #F5F5F5;
-                                                  }
-                                                  &::-webkit-scrollbar-thumb{
-                                                    border-radius: 8px;
-                                                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
-                                                    -moz-box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
-                                                    box-shadow:  inset 0 0 6px rgba(0,0,0,0.5);
-                                                    -ms-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-                                                    background-color: #001658;
-                                                  }
+
+                                                 &::-webkit-scrollbar-track {
+                                                     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     border-radius: 8px;
+                                                     background-color: #F5F5F5;
+                                                 }
+
+                                                 &::-webkit-scrollbar {
+                                                     width: 10px;
+                                                     background-color: #F5F5F5;
+                                                 }
+
+                                                 &::-webkit-scrollbar-thumb {
+                                                     border-radius: 8px;
+                                                     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
+                                                     -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                                     background-color: #001658;
+                                                 }
 
                                                  p {
                                                      font-size: 15px;
