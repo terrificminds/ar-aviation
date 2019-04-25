@@ -160,11 +160,19 @@
                          text-align: left;
 
                          .service-slider {
+                            flex-basis: 33%;
                              @media all and (max-width: 1024px) {
-                                 max-height: 350px;
+                                // max-height: 350px;
+                                 flex-basis: 32%;
                              }
-
-
+                            
+                            @media all and (max-width: 768px) {
+                                flex-basis: 49%;
+                            }
+                            @media all and (max-width: 400px) {
+                                flex-basis: 100%;
+                                 
+                            }
                              .service-block-left {
                                  height: 100%;
 
@@ -186,11 +194,11 @@
                              .service-title {
                                  font-family: SourceSans-Semib;
                                  background-color: #011659;
-                                 -webkit-transform: translate3d(0, 98px, 0);
-                                 transform: translate3d(0, 165px, 0);
+                                //  -webkit-transform: translate3d(0, 165px, 0);
+                                //  transform: translate3d(0, 165px, 0);
                                  text-align: center;
                                  padding: 10px 0;
-
+                              
                                  &:after {
                                      content: none;
                                  }
@@ -227,6 +235,15 @@
                                          text-align: left;
                                          font-family: SourceSans-Bd;
                                          font-size: 22px;
+                                         @media all and (max-width: 600px) {
+                                            font-size: 18px;                                     
+                                        }
+        
+                                     }
+                                     .service-body {
+                                        @media all and (max-width: 600px) {
+                                            font-size: 16px;                                     
+                                        }
                                      }
                                  }
                              }
