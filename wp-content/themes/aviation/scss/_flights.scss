@@ -1,0 +1,185 @@
+.nav-tabs {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.nav-tabs>li {
+    float: none;
+    display: inline-block;
+}
+
+.flights-content-wrapper {
+    .flights-container {
+        .flights-content {
+            background: #ffffff url(../images/flights.jpg) no-repeat right top;
+            padding-top: 70px;
+            @media all and (max-width: 1024px) {
+               background-size: 100%;
+            }
+
+
+            .flight-tab-slider {
+                background: #ffffff;
+                box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.2) !important;
+                -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.2) !important;
+                -moz-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.2) !important;
+                padding: 0;
+                max-width: 1290px;
+                margin: 0 auto;
+
+                @media all and (max-width: 1330px) {
+                    margin: 0 20px;
+                }
+
+                ul.nav-tabs {
+                    margin: 0;
+                    padding: 0;
+                    white-space: nowrap;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    border-bottom: none;
+                    padding: 0 50px;
+                    @media all and (max-width: 768px) {
+                        padding: 0 25px;
+                    }
+                      @media all and (max-width: 500px) {
+                        padding: 0 15px;
+                    }
+                    
+
+                    >li {
+                        float: none;
+                        display: inline-block;
+                        margin: 40px 20px 20px 0;
+                        @media all and (max-width: 768px) {
+                            margin: 30px 10px 20px 0;
+                        }
+
+                        a {
+                            font-size: 25px;
+                            font-family: SourceSans-Semib;
+                            color: black;
+                            border: none;
+                            padding: 0 5px 10px;
+
+                            @media all and (max-width: 1024px) {
+                                font-size: 22px;
+                            }
+
+                            @media all and (max-width: 768px) {
+                                font-size: 20px;
+                            }
+
+                            @media all and (max-width: 500px) {
+                                font-size: 18px;
+                            }
+                        }
+
+                        &.active {
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                height: 6px;
+                                background-color: #011659;
+                                border-radius: 40px;
+                                @media all and (max-width: 768px) {
+                                    height: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tab-content {
+                    .tab-pane {
+                        .flight-featured-image {
+                            padding: 20px 50px;
+                            text-align: center;
+                            @media all and (max-width: 768px) {
+                                padding: 20px 25px;
+                            }
+                            @media all and (max-width: 500px) {
+                                padding: 20px 15px;
+                            }
+                            
+        
+
+                            img {}
+                        }
+
+                        .flight-featured-text {
+                            padding: 0 50px;
+                            @media all and (max-width: 768px) {
+                                padding: 0 25px;
+                            }
+                            @media all and (max-width: 500px) {
+                                padding: 0 15px;
+                            }
+
+                            p {
+                                font-family: SourceSans-Rg;
+                                font-size: 24px;
+                                line-height: 30px;
+
+                                @media all and (max-width: 1024px) {
+                                    font-size: 22px;
+                                }
+
+                                @media all and (max-width: 768px) {
+                                    font-size: 20px;
+                                }
+
+                                @media all and (max-width: 500px) {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .flight-chart-1 {
+                                img {
+                                    max-width: 100%;
+                                    width: 100%;
+                                    height: auto;
+
+                                }
+                            }
+
+                            .flight-bottom-content {
+                                display: flex;
+                                padding: 30px 0 50px;
+
+                                @media all and (max-width: 800px) {
+                                    flex-direction: column;
+                                }
+
+                                .flight-chart-2 {
+                                    flex: 0 0 auto;
+
+                                }
+
+                                .flight-body {
+                                    flex: 2 2 100%;
+                                    padding: 40px 20px 20px;
+                                    @media all and (max-width: 800px) {
+                                        padding: 40px 0px 20px;
+                                    }
+
+                                    p {
+
+                                        font-size: 20px;
+                                        line-height: 25px;
+                                    }
+
+                                    strong {
+                                        font-family: SourceSans-Semib;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
