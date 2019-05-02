@@ -30,7 +30,7 @@
             }
         }
         .partner-slider {
-            background-color: #0000008a;
+            background-color:rgba(0, 0, 0, 0.5);
             clear: both;
             width: 100%;
             padding: 30px;
@@ -204,7 +204,8 @@
         .partner-2-content {
             .partner-2-left {
                 width: 50%;
-                float: left;
+                float: right;
+                padding-left: 10px;
                 @media all and (max-width: 1200px) {
                     width: 100%;
                 }
@@ -221,17 +222,15 @@
                 }
                 .partner-2-body {
                     color: #fff;
-                    padding-right: 10px;
-                    @media all and (max-width: 1200px) {
-                        padding-right: 0;
-                    }
+                 
+                     
                     img {
                         display: none;
                         @media all and (max-width: 1200px) {
                             display: block;
-                            float: right;
+                            float: left;
                             width: 40%;
-                            margin-left: 20px;
+                            margin-right: 20px;
                             margin-bottom: 20px;
                         }
                         @media all and (max-width: 480px) {
@@ -253,8 +252,8 @@
             }
             .partner-2-right {
                 width: 50%;
-                float: left;
-                text-align: right;
+                float: right;
+                text-align: left;
                 @media all and (max-width: 1200px) {
                     display: none;
                 }
