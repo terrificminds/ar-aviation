@@ -7,6 +7,7 @@
           'posts_per_page' => -1,  
           'order' => 'ASC',
       )); 
+      $count = 1;
       ?>
     <section class="services-homepage" id="services-homepage">
       <?php while ($services->have_posts()) { 
@@ -17,7 +18,8 @@
 		  $modalImage = get_post_meta(get_the_ID(), 'service_modal_image', TRUE);
           $show_in_homepage = get_post_meta(get_the_ID(), 'service-display', TRUE);
           $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );  
-          if($show_in_homepage == '1'):  
+          if($show_in_homepage == '1' && $count <=3):  
+          $count++;  
       ?>
         <div class = "service">
             <div class = "service-block">
