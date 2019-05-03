@@ -141,7 +141,14 @@
                                     max-width: 100%;
                                     width: 100%;
                                     height: auto;
+                                    @media all and (max-width: 991px) {
+                                        width: auto;
+                                        max-width: none;
+                                    }
 
+                                }
+                                @media all and (max-width: 991px) {
+                                   overflow-x: scroll;
                                 }
                             }
 
@@ -150,7 +157,7 @@
                                 padding: 30px 0 50px;
 
                                 @media all and (max-width: 800px) {
-                                    flex-direction: column;
+                                   display: block;
                                 }
 
                                 .flight-chart-2 {
