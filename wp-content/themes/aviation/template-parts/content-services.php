@@ -33,11 +33,6 @@
                 <div class = 'news-readmore'>
                         <a href="#" data-toggle="modal" data-target="#servicesReadMoreModal<?php echo $post_id; ?>">Read More</a>
                 </div>     
-                <?php if(($button_link != "") && ($button_label != "")):?>
-                <div class = "action-label">
-                    <a class="grey-big-btn" target="_blank" href = "<?php echo $button_link ?>"><button><?php echo $button_label;?></button></a>
-                </div>
-                <?php endif;?>
             </div>
         </div>
         <!-- Modal For Services ReadMore Link -->
