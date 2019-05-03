@@ -36,6 +36,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="site-header-main">
 				<div class="site-branding">
 					<?php the_custom_logo(); ?>
+					<?php if(get_theme_mod('secondary_logo')):?>
+						<div class="secondary-logo">
+							<a href="<?php echo get_option( 'home' );?>">
+							<img src="<?php echo get_theme_mod('secondary_logo') ?>" alt="<?php echo get_bloginfo( 'name' )?>">
+							</a>
+						</div>
+					<?php endif;?>
 				</div><!-- .site-branding -->
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
