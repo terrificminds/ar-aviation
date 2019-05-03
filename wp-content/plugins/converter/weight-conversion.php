@@ -11,9 +11,9 @@ Author URI: http://www.terrificminds.com
 function html_form_code() {
 	echo '<div class="aviation-calculation-wrapper">';
     echo '<select class="aviation-calculation">';
-    echo '<option value="COW">CONVERTION OF WEIGHTS</option>';
+    echo '<option value="COW">CONVERSION OF WEIGHTS</option>';
     echo '<option value="VOW">TOTAL VOLUME OF WEIGHTS</option>';
-    echo '<option value="NAC">NAC THC CALCULATION</option>';
+    echo '<option value="NAC">NAS THC CALCULATION</option>';
 	echo '</select>';
 	echo '<span class="hr-line">underline</span>';
 	echo '';
@@ -21,18 +21,18 @@ function html_form_code() {
 	echo '<div class="weight-calc">';
 	echo '<div class="box-wrapper full">';
     echo '<select class="weight-calculation">';
-    echo '<option value="CTI">Centimetres To Inches</option>';
-    echo '<option value="CTM">Centimetres To Metres</option>';
-    echo '<option value="FTC">Feet To Centimetres</option>';
+    echo '<option value="CTI">Centimeters To Inches</option>';
+    echo '<option value="CTM">Centimeters To Metres</option>';
+    echo '<option value="FTC">Feet To Centimeters</option>';
     echo '<option value="FTM">Feet To Metres</option>';
     echo '<option value="FTI">Feet To Inches</option>';
-    echo '<option value="ITC">Inches To Centimetres</option>';
-    echo '<option value="MTC">Metres To Centimetres</option>';
+    echo '<option value="ITC">Inches To Centimeters</option>';
+    echo '<option value="MTC">Metres To Centimeters</option>';
     echo '<option value="CTK">CBM to Kgs</option>';
 	echo '</select>';
 	echo '</div>';
 	echo '<div class="box-wrapper half first">';
-	echo '<label for="convert-from" class="from-measurement">Centimetres</label>';
+	echo '<label for="convert-from" class="from-measurement">Centimeters</label>';
 	echo '<input type="text" name="convert-from" class ="convert-from" placeholder="To Convert">';
 	echo '</div>';
 	echo '<div class="box-wrapper half">';
@@ -70,8 +70,8 @@ function html_form_code() {
 		echo '</span>';
 	echo '</div>';
 	echo '</div>';
-		echo '<a href="#" class="remove_field">Remove</a>';
 		echo '<input type="button" value="Add Row" class="cbm-add-row" />';
+		echo '<a href="#" class="remove_field">Remove</a>';
 		echo '<input type="button" data-id="1" value="Calculate" class="cbm-calculate" />';
 		echo '<div class="cbm-bottom">';
 		echo '<span>';
