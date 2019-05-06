@@ -6,6 +6,10 @@
     background-repeat: no-repeat;
     position: relative;
     padding: 50px 0;
+    @media all and (max-width: 1024px) {
+        padding: 35px 0;
+
+    }
 
     .block-title {
         max-width: 1290px;
@@ -20,20 +24,39 @@
         padding: 0;
         max-width: 1290px;
         margin: 0 auto;
+        justify-content: center;
 
         @media all and (max-width: 1330px) {
             padding: 0 20px;
         }
     }
-    .action-label.view-all-services{
+
+    .action-label.view-all-services {
         text-align: center;
         padding-top: 50px;
-        a{
-            button{
+
+        @media all and (max-width: 1024px) {
+            padding-top: 35px;
+
+        }
+ 
+
+        a {
+            button {
                 box-shadow: 2px 5px 15px 1px rgba(93, 93, 93, 0.5);
                 -webkit-box-shadow: 2px 5px 15px 1px rgba(93, 93, 93, 0.5);
                 -moz-box-shadow: 2px 5px 15px 1px rgba(93, 93, 93, 0.5);
                 padding: 20px 55px !important;
+
+                @media all and (max-width: 1200px) {
+                    padding: 15px 45px !important;
+
+                }
+
+                @media all and (max-width: 768px) {
+                    padding: 15px 40px !important;
+
+                }
             }
         }
     }

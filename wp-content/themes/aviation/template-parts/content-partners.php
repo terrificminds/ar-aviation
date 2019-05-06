@@ -120,10 +120,11 @@
     ?>
     <div class = "partner-2-content">
         <div class = "partner-2-left">
+        <h2 class="block-title"><?php echo $category->name;?></h2>
             <div class = "partner-2-logo">
                 <img src="<?php echo $logoUrl;?>">
             </div>
-            <h2 class="block-title"><?php echo $category->name;?></h2>
+          
             <div class = 'partner-2-body'>
                 <img class = "partner-featured-image" src="<?php echo $featuredImage[0]; ?>">
                 <?php echo the_content();?>
