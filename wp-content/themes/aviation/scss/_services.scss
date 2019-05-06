@@ -1,203 +1,40 @@
-.service-wrapper {
-    background-image: linear-gradient(to right, #f5f5f5, #f5f5f5, 51%, white 50%); // background-attachment: fixed;
+.services-homepage-container {
+    background-color: #ffff;
+    background: linear-gradient(to right, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 1) 51%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+    background-size: 100% 50%;
+    background-position: bottom;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 380px;
-    @media all and (max-width: 1300px) {
-        min-height: 400px;
-    }
-    @media all and (max-width: 991px) {
-        min-height: 350px;
-    }
-    @media all and (max-width: 700px) {
-        min-height: 300px;
-    }
-    .service-content {
-        width: 100%;
-        height: 100%;
-        max-width: 1290px;
-        position: absolute;
-        top: -35%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        @media all and (max-width: 1300px) {
-            top: -25%;
-        }
-        @media all and (max-width: 768px) {
-            position: static;
-            padding: 30px 20px;
-        }
+    padding: 50px 0;
 
-    }
-}
-//styling for homepage slider and serves page sliders
-#services-home,.slider-servicepage {
-    width: 785px;
-    margin: 0 auto; //slider styling
-    @media all and (max-width: 768px) {
-        width: 100%;
-    }
-    .slick-list {
-        width: 785px;
+    .block-title {
+        max-width: 1290px;
         margin: 0 auto;
-        @media all and (max-width: 991px) {
-            width: 550px;
-        }
-        @media all and (max-width: 768px) {
-            width: 100%;
-        }
-        @media all and (max-width: 600px) {
-          //  width: 100%;
-        }
-        .service-slider {
-            overflow: hidden;
-            display: flex !important;
-            height: 430px;
-            @media all and (max-width: 991px) {
-                height: 362px;
-            }
-            @media all and (max-width: 700px) {
-                flex-direction: column;
-                height: auto;
-            }
-            .service-block-left {
-                flex-basis: 50%;
-                @media all and (max-width: 700px) {
-                    height: 170px;
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .service-block-right {
-                flex-basis: 60%;
-                background-image: linear-gradient(to right, #0c2160, #0c2160, 60%, #001658 40%); //background-attachment: fixed;
-                background-repeat: no-repeat;
-                padding: 60px 0 0 35px;
-                color: white;
-                @media all and (max-width: 700px) {
-                    padding: 40px 15px 30px;
-                }
-                .service-count {
-                    line-height: 14px;
-                    span {
-                        font-size: 60px;
-                        font-family: SourceSans-Bl;
-                        color: #c4c4c4;
-                        @media all and (max-width: 768px) {
-                            font-size: 50px;
-                        }
-                    }
-                }
-                .service-title {
-                    font-size: 25px;
-                    font-family: SourceSans-Bd;
-                    @media all and (max-width: 768px) {
-                        font-size: 20px;
-                    }
-                }
-                .service-excerpt,.service-body{
-                    p {
-                        font-size: 18px;
-                        font-family: SourceSans-Rg;
-                        line-height: 20px;
-                        padding-top: 20px;
-                        padding-right: 50px;
-                        display: -webkit-box;
-                        height: 130px;
-                        margin-bottom: 20px;
-                        line-height: 22px;
-                        -webkit-line-clamp: 5;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        @media all and (max-width: 768px) {
-                            font-size: 16px;
-                            margin-bottom: 15px;
-                            padding-right: 20px;
-                            -webkit-line-clamp: 3;
-                            height: 86px;
-                        }
-                        @media all and (max-width: 700px) {
-                            padding-top: 10px;
-                            height: 80px;
-                        }
-                    }
-                }
-                .view-more {
-                    width: 220px;
-                    @media all and (max-width: 991px) {
-                        width: 215px
-                    }
-                }
-            }
+
+        @media all and (max-width: 1330px) {
+            padding: 0 20px;
         }
     }
-    .slick-arrow {
-        z-index: 9;
-        background-color: white !important;
-        border-radius: 0;
-        width: 45px;
-        height: 45px;
-        &:before {
-            content: "";
-            color: #001658;
-            font-size: 40px;
-            display: inline-block;
-            opacity: 1;
-            width: 45px;
-            height: 45px;
-            line-height: 39px;
-            font-weight: 500;
-         
+
+    .services-wrapper {
+        padding: 0;
+        max-width: 1290px;
+        margin: 0 auto;
+
+        @media all and (max-width: 1330px) {
+            padding: 0 20px;
         }
-        &:hover{
-            &:before{
-                background-color: #efefef !important;
+    }
+    .action-label.view-all-services{
+        text-align: center;
+        padding-top: 50px;
+        a{
+            button{
+                box-shadow: 2px 5px 15px 1px rgba(93, 93, 93, 0.5);
+                -webkit-box-shadow: 2px 5px 15px 1px rgba(93, 93, 93, 0.5);
+                -moz-box-shadow: 2px 5px 15px 1px rgba(93, 93, 93, 0.5);
+                padding: 20px 55px !important;
             }
-        }
-        &.slick-prev {
-            left: 39.5%;
-            top: 85%;
-            @media all and (max-width: 991px) {
-                left: 41%;
-                top: 82%;
-            }
-            @media all and (max-width: 768px) {
-                left: 39%;
-            }
-            @media all and (max-width: 700px) {
-                top: 41%;
-                left: 0;
-            }
-            &:before{
-                background: url(../images/icons8-chevron-left-30.png) no-repeat center;
-            }
-           
-        }
-        &.slick-next {
-            right: 49%;
-            top: 95%;
-            @media all and (max-width: 991px) {
-                right: 47.6%;
-                top: 94%;
-            }
-            @media all and (max-width: 768px) {
-                right: 48.6%;
-              
-            }
-            @media all and (max-width: 700px) {
-                top: 41%;
-                right: 0px;
-            }
-            &:before{
-                background: url(../images/icons8-chevron-right-30.png) no-repeat center;
-            }
-            
         }
     }
 }

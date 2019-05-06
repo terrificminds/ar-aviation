@@ -1,5 +1,6 @@
-<div class = "service-wrapper">
-  <div class = "service-content">
+<div class = "services-homepage-container">
+<h2 class="block-title">Our Services</h2>
+  <div class = "services-wrapper">
       <?php 
       $services = new WP_Query(array(
           'post_type' => 'services',
@@ -9,7 +10,7 @@
       )); 
       $count = 1;
       ?>
-    <section class="services-homepage" id="services-homepage">
+ 
       <?php while ($services->have_posts()) { 
           $services->the_post();
           $post_id = get_the_ID();
@@ -21,22 +22,25 @@
           if($show_in_homepage == '1' && $count <=3):  
           $count++;  
       ?>
-        <div class = "service">
-            <div class = "service-block">
-                <img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
-                <div class = "service-title">
-                    <?php echo get_the_title();?>
-                </div>
-            </div>    
-            <div class = "service-block-overlay">
-                <div class = "service-body">
-                    <?php the_excerpt();?>										
-                </div>		
-                <div class = 'news-readmore'>
-                        <a href="#" data-toggle="modal" data-target="#servicesReadMoreModal<?php echo $post_id; ?>">Read More</a>
+ 
+        <div class = "service-slider">
+			<div class = "service-block-left">
+				<img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
+			</div>    
+			<div class = "service-block-right ">
+				<div class = "service-title">
+					<?php echo get_the_title();?>
+				</div>
+				<div class = "service-body">
+					<?php the_excerpt();?>										
+				</div>		
+				<div class = 'news-readmore'>
+                    <a href="#" data-toggle="modal" data-target="#servicesReadMoreModal<?php echo $post_id; ?>">Read More</a>
                 </div>     
-            </div>
-        </div>
+				<?php if(($button_link != "") && ($button_label != "")):?>
+				<?php endif;?>
+			</div>
+		</div>
         <!-- Modal For Services ReadMore Link -->
         <div class="modal fade" id="servicesReadMoreModal<?php echo $post_id; ?>" role="dialog">
             <div class="modal-dialog modal-lg">
@@ -74,6 +78,8 @@
           endif; 
         }
       wp_reset_query(); ?>
-       </section>
+    </div>
+    <div class = 'action-label view-all-services'>
+        <a href = "<?php echo get_page_link(get_theme_mod('service_page_link'))?>" class="grey-big-btn"><button>See All Services</button></a>
     </div>
 </div>
