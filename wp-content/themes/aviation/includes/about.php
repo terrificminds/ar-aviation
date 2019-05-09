@@ -100,7 +100,8 @@ function aviation_post_members() {
     function aviation_member_action_meta_box(){
         global $post;
         $memberName = get_post_meta($post->ID, 'member-name', true);
-        $memberDesignation = get_post_meta($post->ID, 'member-designation', true);?>
+        $memberDesignation = get_post_meta($post->ID, 'member-designation', true);
+        $memberQuote = get_post_meta($post->ID, 'member-quote', true);?>
         <label for="member-name">Member Name</label>
         <p>
             <input type="text" name="member-name" id="member-name" class="member-name regular-text" value="<?php echo $memberName; ?>">
@@ -109,6 +110,12 @@ function aviation_post_members() {
         <p>
             <input type="text" name="member-designation" id="member-designation" class="member-designation regular-text" value="<?php echo $memberDesignation; ?>">
         </p>
+        <label for="member-designation">Member Quote</label>
+        <p>
+            <textarea rows = "5" cols = "50" name="member-quote" id="member-quote" class="member-quote regular-text">
+            <?php echo $memberQuote;?>
+            </textarea>
+        </p>
         <?php
     }
     
@@ -116,6 +123,7 @@ function aviation_post_members() {
         global $post;
         update_post_meta($post->ID, "member-designation", $_POST["member-designation"]);
         update_post_meta($post->ID, "member-name", $_POST["member-name"]);
+        update_post_meta($post->ID, "member-quote", $_POST["member-quote"]);
     }
     add_action( 'save_post', 'save_aviation_members_fields_meta' );
 
