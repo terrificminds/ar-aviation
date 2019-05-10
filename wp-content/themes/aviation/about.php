@@ -66,7 +66,8 @@
                         'post_status' => 'publish',
                         'posts_per_page' => -1,
                         'order' => 'ASC',
-                    ));
+					));
+					$count=1;
                     ?>
                     <?php while ($members->have_posts()):
                         $members->the_post();
@@ -76,25 +77,29 @@
 						$memberQuote = get_post_meta(get_the_ID(), 'member-quote', TRUE);
                         $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                     ?>
-                    <div class = "members-wrapper">
+                    <div class = "members-wrapper member-<?php echo $count;?>">
                         <div class = "member-block">
                             <div class = "member-image">
                                 <img class = "member-image" src="<?php echo $featuredImage[0]; ?>">
-                            </div>
-                            <div class = "member-name">
-                                <h5><?php echo $memberName;?></h5>
-                            </div>
-                            <div class = "member-designation">
-                                <p><?php echo $memberDesignation;?></p>
-                            </div>
-							<?php if($memberQuote!=""):?>
-							<div class = "member-quote">
-                                <p>"<?php echo $memberQuote;?>"</p>
-                            </div>
-							<?php endif;?>
+							</div>
+							<div class="member-details-block">
+								<div class = "member-name">
+									<h5><?php echo $memberName;?></h5>
+								</div>
+								<div class = "member-designation">
+									<p><?php echo $memberDesignation;?></p>
+								</div>
+								<?php if($memberQuote!=""):?>
+								<div class = "member-quote">
+									<p>"<?php echo $memberQuote;?>"</p>
+								</div>
+								<?php endif;?>
+							</div>                            
                         </div>
-                    </div>
-                    <?php endwhile;	?>
+					</div>		
+					<?php $count++; ?>			
+					<?php endwhile;	?>
+					
                 </div>
 			</div>
 		</div>
