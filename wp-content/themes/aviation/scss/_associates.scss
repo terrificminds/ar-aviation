@@ -1,0 +1,154 @@
+.associates-wrapper {
+    background-image: url('../images/associates-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    .associates-content { 
+        @media all and (max-width: 1330px) {
+            padding: 0 20px;
+        }
+        a {
+            &:hover {
+                color: transparent;
+            }
+        }
+        .associate-main-block {
+            .block-title { 
+                font-size: 28px;
+                padding-bottom: 50px;
+                font-family: SourceSans-Bd;
+                font-weight: 500;
+                text-transform: capitalize;
+                color: #fff;
+                &::after {
+                    display: block;
+                    content: "";
+                    width: 200px;
+                    border-bottom: solid 6px #fff;
+                    border-radius: 20px;
+                    margin-top: 15px;
+                } 
+            }
+            .associate-content { 
+                margin-bottom: 30px;
+                .associate-block { 
+                    display: flex;
+                    background-repeat: no-repeat;
+                    background-position-x: right;
+                    background-size: cover;
+                    min-height: 90px; 
+                    @media all and (max-width: 870px) {
+                        min-height: 85px;
+                    }
+                    @media all and (max-width: 599px) {
+                        display: block;
+                    }
+                    .associates-image {
+                        background-color: #fff;
+                        flex-basis: 30%;
+                        text-align: center;     
+                        @media all and (max-width: 768px) {
+                            flex-basis: 40%;
+                        }                   
+                        img {
+                            width:90%;
+                            padding: 20px  0px;
+                            @media all and (max-width: 599px)
+                            {
+                                width: 70%;
+                            }
+                            @media all and (max-width: 420px) {
+                                width: 97%;
+                            }
+                         }
+                    }
+                    .associates-link {
+                        flex-basis: 70%;
+                        @media all and (max-width: 768px) {
+                            flex-basis: 60%;
+                        } 
+                        .assoc-link-wrapper {   
+                            clear: both;
+                            overflow: hidden;  
+                            padding: 30px 0 0;
+                            min-height: 90px;
+                            @media all and (max-width: 870px) {
+                                min-height: 85px;
+                                padding: 15px 0 0;
+                            }     
+                            @media all and (max-width: 599px) {
+                                padding: 10px 0;
+                            }
+                            p {                                
+                                color: #001658;
+                                margin: 0;
+                            }                  
+                            .associates-title {
+                                width: 70%;
+                                float: left;  
+                                @media all and (max-width: 768px) {
+                                    width: 100%;
+                                    float: none;
+                                } 
+                                p {
+                                    padding-left: 50px;
+                                    font-size: 22px;
+                                    font-family: SourceSans-Bd;
+                                    @media all and (max-width: 991px) {
+                                        padding-left: 30px;
+                                        font-size: 20px;
+                                    }
+                                    @media all and (max-width: 768px) {
+                                        font-family: 16px;
+                                    }
+                                }                              
+                            }
+                            .associates-visit-website { 
+                                width: 30%;
+                                float: right;
+                                @media all and (max-width: 768px) {
+                                    width: 100%;
+                                    float: none;
+                                } 
+                                p {
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    font-family: SourceSans-SemiB;
+                                    font-size: 16px;
+                                    @media all and (max-width: 768px) {
+                                        font-family: 14px;
+                                        padding-left: 30px;
+                                    }
+                                    &::after {
+                                        display: inline-block;
+                                        content: "";
+                                        width: 30px;
+                                        height: 2px;
+                                        right: 0;
+                                        background-color: #001658;
+                                        top: 15px;
+                                        transform: translate(15px, -3px);
+                                        @media all and (min-width: 768px) {
+                                            -webkit-transition: width 0.6s;
+                                            transition: width 0.6s;
+                                        }
+                                        @media all and (max-width: 768px) {
+                                            transform: translate(10px, -2px);
+                                        }                                        
+                                    }
+                                    &:hover {
+                                        @media all and (min-width: 768px) {
+                                            &:after {
+                                                width: 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
