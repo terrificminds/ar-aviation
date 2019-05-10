@@ -49,6 +49,14 @@ function add_aviation_associate_meta_box() {
 		'advanced', // $context
 		'high' // $priority
     );
+    add_meta_box(
+		'add_aviation_associate_background_meta_box', // $id
+		'Associate Block Background', // $title
+		'aviation_associate_background_meta_box', // $callback
+		'associates', // $screen
+		'advanced', // $context
+		'high' // $priority
+    );
 }
 add_action( 'add_meta_boxes', 'add_aviation_associate_meta_box' );
 
@@ -62,9 +70,22 @@ function aviation_associate_website_meta_box(){
     <?php
 }
 
+function aviation_associate_background_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'associate_background', true);?>
+    <p>
+        <label for="associate-background">Associate Block Background</label><br>
+        <input type="text" name="associate-background" id="associate-background" class="associate-background regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="button" class="button associate-background-upload" value="Browse">
+    </p>
+    <div class="associate-background-preview"><img class = "associate-background-image" src="<?php echo $meta; ?>" style="max-width: 250px;"></div>
+    <?php
+}
+
 function save_aviation_associates_fields_meta( $post_id ) {   
     global $post;
     update_post_meta($post->ID, "associate_website_link", $_POST["associate-website-link"]);
+    update_post_meta($post->ID, "associate_background", $_POST["associate-background"]);
 }
 add_action( 'save_post', 'save_aviation_associates_fields_meta' );
 

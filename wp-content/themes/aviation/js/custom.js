@@ -155,5 +155,36 @@ jQuery(document).ready(function ($) {
       // Opens the media library frame.
       meta_modal_frame.open();
     });
+
+    $('.associate-background-upload').click(function (e) {
+      var meta_chart_frame;
+      // Get preview pane
+      var meta_image_preview = $('.associate-background-preview .associate-background-image');
+      // Prevents the default action from occuring.
+      e.preventDefault();
+      var meta_image = $('.associate-background');
+      // If the frame already exists, re-open it.
+      if (meta_chart_frame) {
+          meta_chart_frame.open();
+        return;
+      }
+      // Sets up the media library frame
+      meta_chart_frame = wp.media.frames.meta_chart_frame = wp.media({
+        title: meta_image.title,
+        button: {
+          text: meta_image.button
+        }
+      });
+      // Runs when an image is selected.
+      meta_chart_frame.on('select', function () {
+        // Grabs the attachment selection and creates a JSON representation of the model.
+        var media_attachment = meta_chart_frame.state().get('selection').first().toJSON();
+        // Sends the attachment URL to our custom image input field.
+        meta_image.val(media_attachment.url);
+        meta_image_preview.attr('src', media_attachment.url);
+      });
+      // Opens the media library frame.
+      meta_chart_frame.open();
+    });
     
   });

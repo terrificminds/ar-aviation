@@ -72,7 +72,8 @@
                         $members->the_post();
                         $post_id = get_the_ID();
                         $memberName = get_post_meta(get_the_ID(), 'member-name', TRUE);
-                        $memberDesignation = get_post_meta(get_the_ID(), 'member-designation', TRUE);
+						$memberDesignation = get_post_meta(get_the_ID(), 'member-designation', TRUE);
+						$memberQuote = get_post_meta(get_the_ID(), 'member-quote', TRUE);
                         $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                     ?>
                     <div class = "members-wrapper">
@@ -86,6 +87,11 @@
                             <div class = "member-designation">
                                 <p><?php echo $memberDesignation;?></p>
                             </div>
+							<?php if($memberQuote!=""):?>
+							<div class = "member-quote">
+                                <p>"<?php echo $memberQuote;?>"</p>
+                            </div>
+							<?php endif;?>
                         </div>
                     </div>
                     <?php endwhile;	?>

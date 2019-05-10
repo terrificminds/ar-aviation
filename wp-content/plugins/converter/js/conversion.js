@@ -12,6 +12,12 @@ $('.weight-calculation').on('change', function() {
 
 $('.aviation-calculation').on('change', function() {
   setCalculator();
+  $('.aviation-calculation-wrapper').find(':input').each(function () {
+    switch (this.type) {
+      case 'text': $(this).val('');
+      break;
+    }
+  });
 });
 
 function setCalculator(){
@@ -78,7 +84,12 @@ function setLable(){
 
 $(".convert-weight").click(function(){
   var fromValue = $('.convert-from').val();
-  $('.convert-into').val(fromValue*operatorValue);
+  var result = fromValue*operatorValue;
+  if(isNaN(result)){
+    alert('Please enter a valid input');
+   }else{
+    $('.convert-into').val(result.toFixed(2));
+  }
 });
 
 $(".cbm-add-row").click(function(){
@@ -121,8 +132,18 @@ $(".cbm-calculate").click(function(){
       totalVolume = totalVolume + parseFloat($('.cbmvolume-'+j).val());   
       totalCbm = totalCbm + parseFloat($('.cbmcbm-'+j).val());     
     }
-    $('.cbm-total-volume').val(totalVolume);
-    $('.cbm-total').val(totalCbm);
+    if(isNaN(totalVolume) || isNaN(totalCbm)){
+      $('.cbm-total-volume').val('');
+      $('.cbm-total').val('');
+      for(var j=1;j<=rows;j++){
+        $('.cbmvolume-'+j).val('');   
+        $('.cbmcbm-'+j).val('');     
+      }
+      alert('Please enter a valid input');
+     }else{
+      $('.cbm-total-volume').val(totalVolume.toFixed(2));
+      $('.cbm-total').val(totalCbm.toFixed(2));
+    }
 });
 
 $('.remove_field').click(function(){
@@ -150,8 +171,14 @@ $(".nas-calculate").click(function(){
     thc = 2+9+20+(-(Math.floor(-(weightInKG-5000)/50))*0.15);
     thc = thc.toFixed(3);
   }
-  $('.nas-formula').val(thc);
-  $('.thc-in-kd').val(thc);
+  if(isNaN(thc)){
+    $('.nas-formula').val('');
+    $('.thc-in-kd').val('');
+    alert('Please enter a valid input');
+   }else{
+    $('.nas-formula').val(thc);
+    $('.thc-in-kd').val(thc);
+  }
 });
 
 function round(value, decimals) {
