@@ -311,12 +311,12 @@
         .cbm-calculation {
             .cbm-table {
                 .cbm-row {
-                    @media all and (max-width: 500px) {
+                    @media all and (max-width: 768px) {
                         padding: 15px;
                     }
 
                     &:nth-child(odd) {
-                        @media all and (max-width: 500px) {
+                        @media all and (max-width: 768px) {
                             background-color: #f5f5f5;
 
                         }
@@ -363,7 +363,7 @@
                 justify-content: space-between;
             }
 
-            @media all and (max-width: 500px) {
+            @media all and (max-width: 768px) {
                 flex-direction: column;
             }
 
@@ -376,7 +376,7 @@
                     margin-right: 0px;
                 }
 
-                @media all and (max-width: 500px) {
+                @media all and (max-width: 768px) {
                     margin-bottom: 20px;
                 }
 
@@ -471,7 +471,7 @@
             display: flex;
             margin-bottom: 50px;
 
-            @media all and (max-width: 500px) {
+            @media all and (max-width: 768px) {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 margin-bottom: 25px;
@@ -479,12 +479,29 @@
 
             span {
                 margin-right: 20px;
-
-                @media all and (max-width: 500px) {
+                @media all and (max-width: 768px) {
                     flex-basis: 45%;
                     margin-right: 0px;
 
                 }
+                &:nth-last-child(2), &:nth-last-child(1) {
+                    flex-basis: 477px;
+                    @media all and (max-width: 1024px) {
+                        flex-basis: 575px;
+                    }
+                    @media all and (max-width: 768px) {
+                        flex-basis: 760px; 
+                    }
+                    input{
+                        font-size: 20px;
+                        height: 57px;
+                        @media all and (max-width: 768px) {
+                            font-size: 24px;
+                        }
+                         
+                    }
+                }
+                
 
                 label {
                     font-size: 16px;
@@ -558,6 +575,7 @@
                         font-size: 28px;
                         font-family: SourceSans-Rg;
                     }
+                
                 }
             }
         }
