@@ -39,8 +39,7 @@ function html_form_code() {
 	echo '<label for="convert-into" class="into-measurement">Inches</label>';
 	echo '<input type="text" name="convert-into" class ="convert-into" placeholder="Into" readonly>';
 	echo '</div>';
-	echo '<input type="button" value="convert" class="convert-weight" />';
-	echo '<input type="button" value="Reset" class="reset-calculator"/>';
+	echo '<div class="calculate-action"><input type="button" value="convert" class="convert-weight" /><input type="button" value="Reset" class="reset-calculator"/></div>';
 	echo '</div>';
 	echo '<div class="cbm-calculation">';
 	echo '<div class="cbm-table">';
@@ -72,8 +71,8 @@ function html_form_code() {
 	echo '</div>';
 	echo '</div>';
 		echo '<input type="button" value="Add Row" class="cbm-add-row" />';
-		echo '<input type="button" data-id="1" value="Calculate" class="cbm-calculate" />';
-		echo '<input type="button" value="Reset" class="reset-calculator"/>';
+		echo '<div class="calculate-action"><input type="button" data-id="1" value="Calculate" class="cbm-calculate" />
+		      <input type="button" value="Reset" class="reset-calculator"/></div>';
 		echo '<div class="cbm-bottom">';
 		echo '<span>';
 		echo '<label for="cbm-total-volume">Total volume of weight</label>';
@@ -96,8 +95,8 @@ function html_form_code() {
 		echo '<input type="text" name="nas-formula" class ="nas-formula" placeholder="0" readonly>';
 		echo '<span>';
 		echo '</div>';	
-		echo '<input type="button" value="Calculate" class="nas-calculate"/>';
-		echo '<input type="button" value="Reset" class="reset-calculator"/>';
+		echo '<div class="calculate-action"><input type="button" value="Calculate" class="nas-calculate"/>
+				<input type="button" value="Reset" class="reset-calculator"/></div>';
 		echo '<div class="nas-bottom">';
 		echo '<span>';
 		echo '<label for="thc-in-kd">Total THC in KD</label>';

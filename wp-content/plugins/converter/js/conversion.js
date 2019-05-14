@@ -115,7 +115,7 @@ $(".cbm-add-row").click(function(){
 		html += '<input type="text" name="cbmvolume-1" class ="cbmvolume-1" placeholder="0" readonly></span>';
 		html += '<span><label for="cbmcbm-1">CBM</label>';
     html += '<input type="text" name="cbmcbm-1" class ="cbmcbm-1" placeholder="0" readonly></span>';
-    html += '<input type="button" value="Remove" class="remove_field_1"/>';
+    html += '<div class="remove-btn"><input type="button" value="Remove" class="remove_field_1"/></div>';
   html += '</div>';
   $('.cbm-calculate').attr("data-id",rowcount);
   $('.cbm-table').append(html);
