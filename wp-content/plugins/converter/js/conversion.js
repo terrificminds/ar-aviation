@@ -19,12 +19,21 @@ $('.reset-calculator').on('click', function() {
 });
 
 function resetCalculator(){
+  removeRows();
   $('.aviation-calculation-wrapper').find(':input').each(function () {
     switch (this.type) {
       case 'text': $(this).val('');
       break;
     }
   });
+}
+
+function removeRows(){
+  var limit = $('.cbm-calculate').attr("data-id");
+  for(var i=1;i<=limit;i++){
+    $('.cbm-row').eq(1).remove();
+  }
+
 }
 
 function setCalculator(){
@@ -122,7 +131,6 @@ $(".cbm-add-row").click(function(){
 });
 
 $(document).on('click', '.remove_field_1', function (event) {
-  alert('send');
   $(this).parent('div').remove();
   var rowcount = (parseInt($('.cbm-calculate').attr("data-id"))-1);
   $('.cbm-calculate').attr("data-id",rowcount);
