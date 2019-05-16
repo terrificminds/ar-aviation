@@ -57,8 +57,8 @@
     .calculate-action {
         display: inherit;
         margin: 30px 0;
-        .convert-weight, .reset-calculator {
-            margin: 0 10px;
+        .reset-calculator {
+            margin: 0 0 0 20px;
         }
     }
 
@@ -162,6 +162,9 @@
         @media all and (max-width: 400px) {
             font-size: 18px;
             padding: 10px 25px;
+        }
+        @media all and (max-width: 330px) {       
+            padding: 10px 20px;
         }
 
     }
@@ -314,8 +317,10 @@
 
     }
 
-    .cbm-calculation {
+    .cbm-calculation {      
         .cbm-table {
+            max-height: 450px;
+            overflow: auto;
             @media all and (min-width: 769px) {
                 .cbm-row-1 {
                     width: 95%;
@@ -399,6 +404,9 @@
         }
         .cbm-add-row {
             padding-bottom: 4px;
+            @media all and (max-width: 768px) {
+               margin-top: 20px;
+            }
         }
     }
 
