@@ -53,7 +53,6 @@ header.site-header {
         background-color: #001658;
 
         .site-branding {
-
             -webkit-box-shadow: none !important;
             -moz-box-shadow: none !important;
             box-shadow: none !important;
@@ -93,10 +92,11 @@ header.site-header {
         @media all and (max-width: 1330px) {
             padding: 0 20px;
         }
-
-        @media all and (max-width: 909px) {
-            padding: 0;
+        @media all and (max-width: 1080px) {
+            padding: 0 ;
         }
+
+        
 
         .site-branding {
             background: white;
@@ -111,10 +111,12 @@ header.site-header {
                         max-width: 280px;
                     }
 
-                    @media all and (max-width: 991px) {
+                    @media all and (max-width: 1050px) {
+                        max-width: 220px;
+                    }
+                    @media all and (max-width: 910px) {
                         max-width: 240px;
                     }
-
                     @media all and (max-width: 400px) {
                         max-width: 200px;
                     }
@@ -204,7 +206,7 @@ header.site-header {
                         }
 
                         @media all and (min-width: 910px) and (max-width: 991px) {
-                            padding: 0.65625em 9px;
+                            padding: 10px 7px;
                             font-size: 15px;
                         }
 
