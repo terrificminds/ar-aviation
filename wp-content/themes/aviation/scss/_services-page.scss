@@ -145,6 +145,9 @@
 
                  .service-type {
                      margin-bottom: 70px;
+                     &.service-type-8 {
+                         display: none;
+                     }
 
                      @media all and (max-width: 991px) {
                          margin-bottom: 40px;
