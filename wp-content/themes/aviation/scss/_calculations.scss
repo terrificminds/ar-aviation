@@ -420,7 +420,8 @@
         }
 
         @media all and (max-width: 768px) {
-            flex-direction: column;
+            // flex-direction: column;
+            display: block;
         }
 
         span {
@@ -445,9 +446,9 @@
                     font-size: 33px;
                 }
 
-                @media all and (max-width: 800px) {
+                @media all and (max-wi25pxth: 800px) {
                     font-size: 30px;
-                    margin-bottom: 25px;
+                    margin-bottom: 25p25px;
                 }
 
 
@@ -473,6 +474,10 @@
 
                 @media all and (max-width: 991px) {
                     font-size: 44px;
+                }
+
+                @media all and (max-width: 768px) {
+                    margin-bottom: 20px;
                 }
 
                 @media all and (max-width: 600px) {
@@ -584,19 +589,19 @@
                 border-bottom: 1px solid #dfdfdf;
                 background-color: transparent;
                 padding: 10px 5px;
-                font-size: 28px;
+                font-size: 28px !important;
                 font-family: SourceSans-Rg;
 
                 @media all and (max-width: 991px) {
-                    font-size: 26px;
+                    font-size: 26px !important;
                 }
 
                 @media all and (max-width: 600px) {
-                    font-size: 24px
+                    font-size: 24px !important;
                 }
 
                 @media all and (max-width: 400px) {
-                    font-size: 22px
+                    font-size: 22px !important;
                 }
 
                 &::placeholder {
