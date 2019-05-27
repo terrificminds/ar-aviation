@@ -122,6 +122,18 @@
                     @media all and (max-width: 768px) {
                         font-size: 16px;
                     }
+                    .vacancy-contact {
+                        margin: 10px 0;
+                        a {
+                            font-size: 16px;
+                            color: #007acc;
+                            display: contents;
+                            font-style: italic;
+                            &:hover {
+                                color:#007acc;
+                            }
+                        }
+                    }
                 }
                 a {
                     display: block;
