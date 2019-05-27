@@ -33,7 +33,7 @@ function removeRows(){
   for(var i=1;i<=limit;i++){
     $('.cbm-row').eq(1).remove();
   }
-
+  $('.cbm-calculate').attr("data-id",1);
 }
 
 function setCalculator(){
@@ -113,13 +113,13 @@ $(".cbm-add-row").click(function(){
   var html ="";
   html += '<div class="cbm-row cbm-row-'+rowcount+' add-calc-row">';
 		html += '<span><label for="cbmlength-1">Length</label>';
-		html += '<input type="text" name="cbmlength-1" class ="cbmlength-1" placeholder="0" maxlength="10"></span>';
+		html += '<input type="text" name="cbmlength-1" class ="cbmlength-1" placeholder="0" maxlength="5"></span>';
 		html += '<span><label for="cbmbreadth-1">Breadth</label>';
-		html += '<input type="text" name="cbmbreadth-1" class ="cbmbreadth-1" placeholder="0" maxlength="10"></span>';
+		html += '<input type="text" name="cbmbreadth-1" class ="cbmbreadth-1" placeholder="0" maxlength="5"></span>';
 		html += '<span><label for="cbmwidth-1">Width</label>';
-    html += '<input type="text" name="cbmwidth-1" class ="cbmwidth-1" placeholder="0" maxlength="10"></span>';
+    html += '<input type="text" name="cbmwidth-1" class ="cbmwidth-1" placeholder="0" maxlength="5"></span>';
     html += '<span><label for="cbmpieces-1">Pieces</label>';
-		html += '<input type="text" name="cbmpieces-1" class ="cbmpieces-1" placeholder="0" maxlength="10"></span>';
+		html += '<input type="text" name="cbmpieces-1" class ="cbmpieces-1" placeholder="0" maxlength="5"></span>';
 		html += '<span><label for="cbmvolume-1">Volume</label>';
 		html += '<input type="text" name="cbmvolume-1" class ="cbmvolume-1" placeholder="0" readonly></span>';
 		html += '<span><label for="cbmcbm-1">CBM</label>';
@@ -131,12 +131,17 @@ $(".cbm-add-row").click(function(){
 });
 
 $(document).on('click', '.remove_field_1', function (event) {
-  $(this).parent('div').remove();
+  $(this).closest('.cbm-row').remove();
   var rowcount = (parseInt($('.cbm-calculate').attr("data-id"))-1);
   $('.cbm-calculate').attr("data-id",rowcount);
+  calculate();
 });  
 
-$(".cbm-calculate").click(function(){
+$(document).on('click', '.cbm-calculate', function (event) {
+  calculate();
+});
+
+function calculate(){
     var totalVolume = 0;
     var totalCbm = 0;
     var volume;
@@ -168,14 +173,15 @@ $(".cbm-calculate").click(function(){
       $('.cbm-total-volume').val(totalVolume.toFixed(4));
       $('.cbm-total').val(totalCbm.toFixed(4));
     }
-});
+}
 
 $(".nas-calculate").click(function(){
   var weightInKG = $('.weight-in-kg').val();
   var thc;
   weightInKG = Number(weightInKG);
   if(weightInKG <= 100){
-    thc = 2.000;    
+    thc = 2.000;  
+    thc = thc.toFixed(4);  
   } else if (weightInKG <= 1000 && weightInKG > 100){
     thc = 2+(-(Math.floor(-(weightInKG-100)/50))*0.5);
     thc = thc.toFixed(4);

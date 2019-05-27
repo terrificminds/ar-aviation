@@ -73,7 +73,7 @@ function aviation_flight_chart_1_meta_box(){
     $meta = get_post_meta($post->ID, 'flights_chart_1', true);?>
     <p>
         <label for="flights-chart-1">Upload flight chart 1</label><br>
-        <input type="text" name="flights-chart-1" id="flights-chart-1" class="flights-chart-1 regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="text" name="flights-chart-1" id="flights-chart-1" class="flights-chart-1 regular-text" value="<?php echo $meta; ?>">
         <input type="button" class="button flights-chart-1-upload" value="Browse">
     </p>
     <div class="flights-chart-1-preview"><img class = "flights-chart-1-image" src="<?php echo $meta; ?>" style="max-width: 250px;"></div>
@@ -85,7 +85,7 @@ function aviation_flights_chart_2_meta_box(){
     $meta = get_post_meta($post->ID, 'flights_chart_2', true);?>
     <p>
         <label for="flights-chart-2">Upload flight chart 2</label><br>
-        <input type="text" name="flights-chart-2" id="flights-chart-2" class="flights-chart-2 regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="text" name="flights-chart-2" id="flights-chart-2" class="flights-chart-2 regular-text" value="<?php echo $meta; ?>">
         <input type="button" class="button flights-chart-2-upload" value="Browse">
     </p>
     <div class="flights-chart-2-preview"><img class = "flights-chart-2-image" src="<?php echo $meta; ?>" style="max-width: 250px;"></div>

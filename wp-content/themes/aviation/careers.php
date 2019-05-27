@@ -45,14 +45,16 @@
                                 <div class="panel-title vacancy-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionGroupClosed" href="#<?php echo $i ?>" aria-expanded="true" aria-controls="<?php echo $i ?>">
                                     <?php echo get_the_title();?>
-        </a>
+                                    </a>
                                 </div>
                             </div>
                             <div id="<?php echo $i ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                  <div class="panel-body">
                                      <?php echo $jobDescription;?>
                                     <div class = "vacancy-contact">
-                                        <span>Send your cv to <?php echo $jobEmail;?></span>
+                                        <?php if($jobEmail != ""):?>
+                                        <span>Send your cv to <a href = "mailto: <?php echo $jobEmail;?>"><?php echo $jobEmail;?></a></span>
+                                        <?php endif;?>
                                     </div>
                                   </div>
                                 </div>

@@ -53,7 +53,8 @@ function aviation_careers_meta_box(){
     $jobEmail = get_post_meta($post->ID, 'job-email', true);?>
     <label for="service-button-label">Job Description</label>
     <p>
-        <textarea name="job-description" id="job-description" class="job-description regular-text" ><?php echo $jobDesc ; ?></textarea>
+        <!-- <textarea name="job-description" id="job-description" class="job-description regular-text" ><?php echo $jobDesc ; ?></textarea> -->
+        <?php wp_editor( $jobDesc, 'job-description', array("media_buttons" => true)); ?>
     </p>
     <label for="service-button-link">Email Address</label><br>
     <i>email address of the company/organization.</i>

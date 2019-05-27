@@ -41,17 +41,23 @@
 									?>
 									<div role="tabpanel" class="tab-pane <?php if($count==0){ echo "active";} $count++ ?>" id="tab-<?php echo $post_id;?>">
 										<div class = "flight-featured-image">
+											<?php if(isset($featuredImage[0]) || $featuredImage[0] != ""):?>
 											<img src="<?php echo $featuredImage[0]; ?>">
+											<?php endif;?>
 										</div>    
 										<div class = "flight-featured-text">
-											<p><?php echo $featuredContent;?></p>						 
+											<p><?php echo $featuredContent;?></p>	
+											<?php if($chart1Link != ""):?>					 
 											<div class = "flight-chart-1">
 												<img src="<?php echo $chart1Link?>">
 											</div>
+											<?php endif;?>
 											<div class = "flight-bottom-content">
+												<?php if($chart2Link != ""):?>
 												<div class = "flight-chart-2">
 													<img src="<?php echo $chart2Link?>">
 												</div>
+												<?php endif;?>
 												<div class = "flight-body">
 													<?php the_content();?>
 												</div>
