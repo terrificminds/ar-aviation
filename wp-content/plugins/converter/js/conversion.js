@@ -111,7 +111,7 @@ $(".convert-weight").click(function(){
 $(".cbm-add-row").click(function(){
   var rowcount = (parseInt($('.cbm-calculate').attr("data-id"))+1);
   var html ="";
-  html += '<div class="cbm-row cbm-row-'+rowcount+'">';
+  html += '<div class="cbm-row cbm-row-'+rowcount+' add-calc-row">';
 		html += '<span><label for="cbmlength-1">Length</label>';
 		html += '<input type="text" name="cbmlength-1" class ="cbmlength-1" placeholder="0" maxlength="10"></span>';
 		html += '<span><label for="cbmbreadth-1">Breadth</label>';
