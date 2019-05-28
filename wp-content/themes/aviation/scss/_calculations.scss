@@ -349,9 +349,6 @@
                 @media all and (max-width: 768px) {
                     grid-column: 1 / 3;
                 }
-                @media all and (max-width: 420px) {
-                    grid-column: 1 / 2;
-                }
                 input.remove_field_1 {
                     @media all and (min-width: 992px) {
                         background: url(../images/Trash_Can-512.png) no-repeat center;
@@ -627,9 +624,6 @@
         @media all and (max-width: 768px) {
             grid-template-columns: repeat(2,1fr);
         }
-        @media all and (max-width: 420px) {
-            grid-template-columns: 1fr;
-        }
         
         @media all and (min-width: 992px) {
             &.add-calc-row {
@@ -665,8 +659,17 @@
             &:nth-last-child(2), &:nth-last-child(1) {                
                 input{
                     height: 57px;
+                    @media all and (max-width: 991px) {
+                        height: 54px;
+                    }
                     @media all and (max-width: 768px) {
                         font-size: 24px;
+                    }
+                    @media all and (max-width: 599px) {
+                        height: 51px;
+                    }                    
+                    @media all and (max-width: 400px) {
+                        height: 49px;
                     }
                      
                 }
