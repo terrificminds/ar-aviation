@@ -58,16 +58,19 @@ header.site-header {
             box-shadow: none !important;
             border: none !important;
             background: none !important;
-            a.custom-logo-link{
+
+            a.custom-logo-link {
                 display: none;
             }
-            .secondary-logo{
+
+            .secondary-logo {
                 display: block !important;
             }
         }
-        #site-navigation{
-            li{
-                     margin-top: 0px !important; 
+
+        #site-navigation {
+            li {
+                margin-top: 0px !important;
             }
         }
 
@@ -92,11 +95,12 @@ header.site-header {
         @media all and (max-width: 1330px) {
             padding: 0 20px;
         }
+
         @media all and (max-width: 1080px) {
-            padding: 0 ;
+            padding: 0;
         }
 
-        
+
 
         .site-branding {
             background: white;
@@ -114,9 +118,11 @@ header.site-header {
                     @media all and (max-width: 1050px) {
                         max-width: 220px;
                     }
+
                     @media all and (max-width: 910px) {
                         max-width: 240px;
                     }
+
                     @media all and (max-width: 400px) {
                         max-width: 200px;
                     }
@@ -161,18 +167,22 @@ header.site-header {
         .site-header-menu {
             margin: 0;
             position: relative;
-            top: 4px;
+            top: 10px;
 
             @media all and (max-width: 1330px) {
-                top: 3px;
+                top: 7px;
             }
 
             @media all and (max-width: 1082px) {
                 top: 8px;
             }
 
-            @media all and (max-width: 400px) {
-                // top: 13px;
+            @media all and (max-width: 1050px) {
+                top: 1px;
+            }
+
+            @media all and (max-width: 991px) {
+                top: 8px;
             }
 
             @media all and (max-width: 768px) and (orientation:landscape) {
@@ -198,16 +208,21 @@ header.site-header {
                         font-size: 18px;
                         text-decoration: none;
                         outline: none;
-                        padding-bottom: 0;
+                        padding: 12px 15px 0;
+
+                        @media all and (max-width: 1240px) {
+                            padding: 12px 10px 0;
+                        }
 
                         @media all and (min-width: 991px) and (max-width: 1199px) {
-                            padding: 0.65625em 9px;
+                            padding: 12px 9px 0;
                             font-size: 16px;
                         }
 
                         @media all and (min-width: 910px) and (max-width: 991px) {
                             padding: 10px 7px;
                             font-size: 15px;
+
                         }
 
                         @media all and (max-width: 909px) {
@@ -337,7 +352,8 @@ body:not(.home) {
             a.custom-logo-link {
                 display: none;
             }
-            .secondary-logo{
+
+            .secondary-logo {
                 display: block;
             }
         }
