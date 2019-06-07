@@ -421,7 +421,7 @@ body:not(.home) {
         .social-links {
             position: absolute;
             top: 36%;
-            left: 30px;
+            right: 0px;
             z-index: 990;
 
             @media all and (max-width: 909px) {
@@ -554,14 +554,17 @@ body:not(.home) {
 
                 h2 {
                     font-family: SourceSans-Bl;
-                    font-size: 40px;
+                    font-size: 50px;
+                    line-height: 70px;
 
                     @media all and (max-width: 1200px) {
-                        font-size: 30px;
+                        font-size: 40px;
+                        line-height: 50px;
                     }
 
                     @media all and (max-width: 768px) {
-                        font-size: 20px;
+                        font-size: 25px;
+                        line-height: 35px;
                     }
                 }
             }
@@ -586,6 +589,11 @@ body:not(.home) {
                         font-size: 14px;
                     }
                 }
+            }
+
+            //banner contact us button hidden
+            .banner-btn {
+                display: none;
             }
         }
     }
