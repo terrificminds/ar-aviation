@@ -73,22 +73,22 @@
                         .assoc-link-wrapper {   
                             clear: both;
                             overflow: hidden;  
-                            padding: 50px 0 0;
+                            padding: 30px 0 0;
                             min-height: 100px;
                             @media all and (max-width: 991px) {
-                                padding: 40px 0 0;
+                                padding: 25px 0 0;
                                 min-height: 90px;
                             }
                             @media all and (max-width: 768px) {
                                 min-height: 85px;
-                                padding: 30px 0 0;
+                                padding: 10px 0 0;
                             }     
                             @media all and (max-width: 599px) {
                                 padding: 10px 0;
                             }
                             p {                                
                                 color: #001658;
-                                margin: 0;
+                                margin: 0;                                
                             }                  
                             .associates-title {
                                 width: 70%;
@@ -118,6 +118,7 @@
                                     float: none;
                                 } 
                                 p {
+                                    line-height: 40px;
                                     padding-left: 10px;
                                     padding-right: 10px;
                                     font-family: SourceSans-SemiB;
