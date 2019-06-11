@@ -18,10 +18,10 @@
             <span class="sl-text">Connect</span>
         </div>
         <div class = "banner-left">
-            <img src="<?php echo wp_get_attachment_url(get_theme_mod('banner-image')) ?>"/>
+            <img src="<?php echo wp_get_attachment_url(get_theme_mod('banner-image')) ?>"/> 
         </div>
         <div class = "banner-right">
-            <video width="320" height="240" autoplay="autoplay" loop muted>
+            <video width="320" height="240" autoplay="autoplay" loop muted poster="<?php echo get_stylesheet_directory_uri(); ?>/images/banner-poster.png">
                 <source src="<?php echo wp_get_attachment_url(get_theme_mod('banner-video')) ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video> 	
