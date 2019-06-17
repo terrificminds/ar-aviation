@@ -64,7 +64,13 @@ jQuery(document).ready(function ($) {
   $('.loadMore').loadMoreResults({
           displayedItems: 8
   });
-     
+
+     //show/hide loadmore button - news and events page
+     var noOfNews = $(".news-content").attr("data-count");
+     if (noOfNews <= 8) {
+       $(".new-container .btn-load-more").addClass('hide');
+     }
+    
   //to display contents in modal pop up - homepage patners read more link
   $("body").on("click",".js-readmore a",function(e){
     e.preventDefault();

@@ -124,7 +124,17 @@
                     }
                     h4 {
                         font-weight: 600 !important;
-                        margin: 20px 0 10px;                    
+                        margin: 20px 0 20px;                    
+                    }
+                    ul{
+                        list-style: none;
+                        margin-left: 0;
+                        li{
+                            margin-bottom: 10px;
+                            background: url(../images/bullet-icon.png) no-repeat 0 1px;
+                            padding-left: 30px;                             
+                        
+                        }
                     }
                     .vacancy-contact {
                         margin: 10px 0;

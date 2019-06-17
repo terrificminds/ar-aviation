@@ -361,10 +361,22 @@
                                 -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
                                 background-color: #001658;
                             }
-
-                            p {
+                            ul{
+                                list-style: none;
+                                margin-left: 0;
+                                li{
+                                    margin-bottom: 10px;
+                                    background: url(../images/bullet-icon.png) no-repeat 0 3px;
+                                    padding-left: 30px;                             
+                                
+                                }
+                            }
+                            p,ul li {
                                 font-size: 15px;
                                 font-family: SourceSans-SemiB;
+                              
+                            }
+                            p{
                                 margin-bottom: 25px;
                             }
                         }
